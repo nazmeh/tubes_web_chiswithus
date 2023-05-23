@@ -107,3 +107,8 @@
     top: -24px;
     font-weight: 600;
 }
+
+
+#complete{
+    right: -100%;
+}

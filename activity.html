@@ -15,7 +15,9 @@
     <body>
         <nav class="navbar navbar-expand-lg fixed-top bg-dark">
             <div class="container">
-                <a class="navbar-brand fs-4 text-white" href="#"><img src="assets/logo.svg" alt=""></a>
+                <a class="navbar-brand fs-4 text-white" href="#"
+                    ><img src="assets/logo.svg" alt=""
+                /></a>
                 <button
                     class="navbar-toggler"
                     type="button"
@@ -39,7 +41,9 @@
                             >
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active text-white" href="about.html"
+                            <a
+                                class="nav-link active text-white"
+                                href="about.html"
                                 >About</a
                             >
                         </li>
@@ -70,7 +74,9 @@
                                     >
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="activity.html"
+                                    <a
+                                        class="dropdown-item"
+                                        href="activity.html"
                                         ><img
                                             class="me-3"
                                             src="assets/iconactivity.svg"
@@ -92,17 +98,26 @@
             </div>
         </nav>
 
-        <section
-            id="Home"
-            style="
-                background-color: #C37B52;
-                height: 100vh;
-                background-size: cover;
-                background-repeat: no-repeat;
-            ">
-            <div
-                class="container h-100 d-flex align-items-center justify-content-between">
-                <div></div>
+        <section class="mt-5">
+            <div class="container">
+                <h1>ACTIVITY</h1>
+                <div class="row">
+                    <div class="col-md">
+                        <button type="button" onclick="upcoming()">Upcoming</button>
+                    </div>
+                    <div class="col-md">
+                        <button type="button" onclick="complete()">Complete</button>
+                    </div>
+                </div>
+
+                <div class="row position-relative text-center">
+                    <div class="col-md-12 position-absolute" id="upcoming">
+                        <p>ini page upcoming</p>
+                    </div>
+                    <div class="col-md-12 position-absolute" id="complete">
+                        <p>ini page complete</p>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -130,5 +145,6 @@
             integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
             crossorigin="anonymous"></script>
         <script src="main.js"></script>
+        <script src="tes.js"></script>
     </body>
 </html>
