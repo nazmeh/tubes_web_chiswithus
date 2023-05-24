@@ -49,12 +49,50 @@
                         <li class="nav-item">
                             <a
                                 class="nav-link text-white"
-                                href="reservation.html"
+                                href="reservation.php"
                                 >Reservation</a
                             >
                         </li>
                     </ul>
-                    m
+                    <div class="d-flex">
+                        <div class="dropdown">
+                            <button
+                                class="dropdown bg-transparent border-0"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <img src="assets/profile.svg" alt="" />
+                                <img src="assets/panahprofile.svg" alt="" />
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="profile.html"
+                                        ><img
+                                            class="me-3"
+                                            src="assets/iconprofile.svg"
+                                            alt="" />Profile</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        class="dropdown-item"
+                                        href="activity.html"
+                                        ><img
+                                            class="me-3"
+                                            src="assets/iconactivity.svg"
+                                            alt="" />Activy</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="index.html"
+                                        ><img
+                                            class="me-3"
+                                            src="assets/iconlogout.svg"
+                                            alt="" />Logout</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </nav>

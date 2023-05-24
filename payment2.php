@@ -82,69 +82,14 @@
 
         <div style="height: 64px"></div>
 
-        <section>
             <div class="container">
-                <p class="fw-bold d-flex justify-content-center mt-5 fs-4">
-                    FINISH YOUR PAYMENT
-                </p>
-                <div
-                    class="d-flex justify-content-center mb-3"
-                    style="font-size: smaller">
-                    <img
-                        src="assets/choosepayment2.svg"
-                        alt=""
-                        width="12px" />CHOOSE PAYMENT >
-                    <img
-                        class="ms-3"
-                        src="assets/paynow2.svg"
-                        alt=""
-                        width="12px" />PAY NOW
-                </div>
-                <div
-                    class="grid d-flex gap-3 text-center d-flex justify-content-center">
-                    <div
-                        class="g-col-2 shadow px-5 py-3 rounded-3"
-                        style="background-color: #fff">
-                        <p>PLEASE COMPLATE THE PAYMENT</p>
-                        <div
-                            class="border rounded-2"
-                            style="background-color: #fec84b">
-                            <p>Pay Before 17th May 2023, 10.16 WITA</p>
-                        </div>
-                        <div class="p-5">
-                            <img src="assets/bca.jpg" alt="" width="160px" />
-                            <p class="mt-3">
-                                3928285942916170
-                                <img
-                                    src="assets/salin.svg"
-                                    alt=""
-                                    height="16px" />
-                            </p>
-                            <p class="mt-5">AMOUNT TO BE PAID</p>
-                            <p class="fw-bold">Rp 81.000,00</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="mt-4 d-flex justify-content-center">
-                    <button
-                        type="submit"
-                        class="btn rounded mb-5 mt-3 border-0"
-                        style="
-                            background-color: #c37b52;
-                            border: none;
-                            color: white;
-                        ">
-                        Place Order
+                <div class="upload">
+                    <button type="button" class="btn-warning" >
+                        <i class = "fa fa-upload"></i> Upload File
+                        <input type="file">
                     </button>
                 </div>
-                <ul>
-                    <li>
-                        Please confirm your reservation and get a payment code
-                        after clicking the place order button
-                    </li>
-                </ul>
-            </div>
-        </section>
+                </div>
 
         <script
             src="https://code.jquery.com/jquery-3.2.1.slim.min.js "
