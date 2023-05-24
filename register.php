@@ -49,7 +49,7 @@
                                 Already have an account?
                                 <span
                                     ><a
-                                        href="login.html"
+                                        href="login.php"
                                         class="text-decoration-none fw-bold"
                                         style="color: #1a776f"
                                         >Login</a
@@ -57,7 +57,7 @@
                                 >
                             </p>
                         </div>
-                        <form>
+                        <form action="tes.php" method="POST">
                             <!-- <div class="form-group">
                             <label for="inputName">Nama </label>
                             <input type="text" class="form-control border-radius-none h-40 fs-14px" id="inputName" aria-describedby="emailHelp" placeholder="Nama Lengkap">
@@ -66,6 +66,7 @@
                                 <label for="inputUsername">Username</label>
                                 <input
                                     type="text"
+                                    name="username"
                                     class="form-control border-radius-none h-40 fs-14px"
                                     id="inputUsername"
                                     placeholder="Username" />
@@ -74,6 +75,7 @@
                                 <label for="inputEmail">Email</label>
                                 <input
                                     type="email"
+                                    name="email"
                                     class="form-control border-radius-none h-40 fs-14px"
                                     id="inputEmail"
                                     aria-describedby="emailHelp"
@@ -83,6 +85,7 @@
                                 <label for="inputPassword">Password</label>
                                 <input
                                     type="password"
+                                    name="password"
                                     class="form-control border-radius-none h-40 fs-14px"
                                     id="inputPassword"
                                     placeholder="Password" />
@@ -93,6 +96,7 @@
                                 >
                                 <input
                                     type="password"
+                                    name="confirmPassword"
                                     class="form-control border-radius-none h-40 fs-14px"
                                     id="confirmPassword"
                                     placeholder="Konfirmasi Password" />
@@ -105,6 +109,7 @@
                             </div>
                                 <button
                                     type="submit"
+                                    name="register"
                                     class="btn btn-primary btn-block border-radius-none border-none h-40 fs-14px"
                                     style="background-color: #c37b52">
                                     Register

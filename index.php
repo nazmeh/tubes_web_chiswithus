@@ -63,7 +63,7 @@
                                 Login
                             </button>
                         </a>
-                        <a href="register.html"
+                        <a href="register.php"
                             ><button
                                 type="button"
                                 class="btn btn-primary rounded-0 border-0 bg-white bg-opacity-10 ms-4 text-white">

@@ -74,7 +74,7 @@
                         <p class="text-center mt-3">
                             Dont have an account?
                             <a
-                                href="register.html"
+                                href="register.php"
                                 class="text-decoration-none fw-bold"
                                 style="color: #c37b52"
                                 >Sign up</a
