@@ -138,3 +138,22 @@ body {
     border-bottom: #C37B52 2px solid;
     margin-bottom: 16px;
 }
+
+input[type="file"]{
+    display: none;
+}
+
+label{
+    color: white;
+    height: 60px;
+    width: 250px;
+    background-color: #FFC876;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+}
