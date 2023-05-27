@@ -1,4 +1,12 @@
-<?php include "koneksi.php";?>
+<?php 
+session_start();
+if(!isset($_SESSION ["login"])){
+    header("Location: login.php");
+    exit;
+}
+include "koneksi.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -37,21 +45,21 @@
                             <a
                                 class="nav-link text-white"
                                 aria-current="page"
-                                href="index.html"
+                                href="home.php"
                                 >Home</a
                             >
                         </li>
                         <li class="nav-item">
                             <a
-                                class="nav-link active text-white"
-                                href="about.html"
+                                class="nav-link text-white"
+                                href="about.php"
                                 >About</a
                             >
                         </li>
                         <li class="nav-item">
                             <a
                                 class="nav-link text-white"
-                                href="reservation.html"
+                                href="reservation.php"
                                 >Reservation</a
                             >
                         </li>
@@ -67,7 +75,7 @@
                             </button>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a class="dropdown-item" href="profile.html"
+                                    <a class="dropdown-item" href="profile.php"
                                         ><img
                                             class="me-3"
                                             src="assets/iconprofile.svg"
@@ -77,7 +85,7 @@
                                 <li>
                                     <a
                                         class="dropdown-item"
-                                        href="activity.html"
+                                        href="activity.php"
                                         ><img
                                             class="me-3"
                                             src="assets/iconactivity.svg"
@@ -85,7 +93,7 @@
                                     >
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="index.html"
+                                    <a class="dropdown-item" href="logout.php"
                                         ><img
                                             class="me-3"
                                             src="assets/iconlogout.svg"

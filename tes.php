@@ -1,4 +1,5 @@
 <?php
+session_start();
 include "koneksi.php";
 
 if(isset($_POST['register'])){
@@ -43,8 +44,12 @@ if(isset($_POST['register'])){
       $result = mysqli_query($conn, $sql);
   
       if (mysqli_num_rows($result) == 1) {
+
+        // set session
+        $_SESSION["login"] = true;
+
           echo "<script>
-              window.location = 'index.php';
+              window.location = 'home.php';
           </script>";
       } else {
           // Login gagal

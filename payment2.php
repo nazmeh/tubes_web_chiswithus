@@ -1,4 +1,12 @@
-<?php include "koneksi.php";?>
+<?php 
+session_start();
+if(!isset($_SESSION ["login"])){
+    header("Location: login.php");
+    exit;
+}
+include "koneksi.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -66,7 +74,7 @@
                                     >
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="index.html"
+                                    <a class="dropdown-item" href="logout.html"
                                         ><img
                                             class="me-3"
                                             src="assets/iconlogout.svg"
