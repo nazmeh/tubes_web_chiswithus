@@ -344,6 +344,9 @@ include "koneksi.php";
                         </div>
                     </div>
                 </div>
+                <p class="pt-4">
+                    *Addition 20K/Person in 1 Session
+                </p>
             </div>
         </section>
 
