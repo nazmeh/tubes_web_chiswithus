@@ -323,7 +323,7 @@ include "koneksi.php";
 
         <div class="row d-flex justify-content-center" style="margin-top: 80px">
             <form class="w-80">
-                <p style="text-align: center">CONFIRM BOOKING</p>
+                <p style="text-align: center; font-size: 12px;">CONFIRM BOOKING</p>
                 <div class="mb-3">
                     <label for="exampleInputName" class="form-label opacity-75"
                         >Name</label
@@ -380,13 +380,16 @@ include "koneksi.php";
                 <div class="mb-3">
                     <label
                         for="exampleInputPassword"
-                        class="form-label opacity-75"
+                        class="form-label opacity-75 border-dark-subtle"
                         >Background</label
                     >
-                    <input
-                        type="text"
-                        class="form-control border-dark-subtle"
-                        id="exampleInputPassword" />
+                <select class="form-select form-control border-dark-subtle" id="inputGroupSelect01">
+                    <option selected>Choose</option>
+                    <option value="1">Blue</option>
+                    <option value="2">Brown</option>
+                    <option value="3">White</option>
+                </select>
+                    
                 </div>
                 <div class="mb-3">
                     <label
@@ -394,21 +397,24 @@ include "koneksi.php";
                         class="form-label opacity-75"
                         >Paket</label
                     >
-                    <input
-                        type="text"
-                        class="form-control border-dark-subtle"
-                        id="exampleInputPassword" />
+                    <select class="form-select form-control border-dark-subtle" id="inputGroupSelect01">
+                    <option selected>Choose</option>
+                    <option value="1">Weekdays</option>
+                    <option value="2">Weekend</option>
+                    <option value="3">Promo</option>
+                </select>
                 </div>
                 <button
-                    type="submit"
-                    class="btn btn-warning w-30 rounded-5 mb-5 mt-3 border-0"
-                    style="
-                        background-color: #c37b52;
-                        border: none;
-                        color: white;
-                    ">
-                    Confirm Booking
-                </button>
+                                type="submit"
+                                class="btn btn-warning w-30 rounded-5 mb-5 mt-3 border-0"
+                                style="
+                                    background-color: #c37b52;
+                                    border: none;
+                                    color: white;
+                                    font-size: 12px;
+                                ">
+                                Confirm Booking
+                            </button>
             </form>
         </div>
 
