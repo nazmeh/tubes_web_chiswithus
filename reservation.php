@@ -323,7 +323,7 @@ include "koneksi.php";
 
         <div class="row d-flex justify-content-center" style="margin-top: 80px">
             <form class="w-80">
-                <p style="text-align: center; font-size: 12px;">CONFIRM BOOKING</p>
+                <p style="text-align: center">CONFIRM BOOKING</p>
                 <div class="mb-3">
                     <label for="exampleInputName" class="form-label opacity-75"
                         >Name</label
@@ -357,14 +357,14 @@ include "koneksi.php";
                 </div>
                 <div class="mb-3">
                     <label
-                        for="exampleInputPassword"
+                        for="exampleInputInstagram"
                         class="form-label opacity-75"
                         >Instagram Account</label
                     >
                     <input
-                        type="password"
+                        type="text"
                         class="form-control border-dark-subtle"
-                        id="exampleInputPassword" />
+                        id="exampleInputInstagram" />
                 </div>
                 <div class="mb-3">
                     <label
@@ -405,16 +405,15 @@ include "koneksi.php";
                 </select>
                 </div>
                 <button
-                                type="submit"
-                                class="btn btn-warning w-30 rounded-5 mb-5 mt-3 border-0"
-                                style="
-                                    background-color: #c37b52;
-                                    border: none;
-                                    color: white;
-                                    font-size: 12px;
-                                ">
-                                Confirm Booking
-                            </button>
+                    type="submit"
+                    class="btn btn-warning w-30 rounded-5 mb-5 mt-3 border-0"
+                    style="
+                        background-color: #c37b52;
+                        border: none;
+                        color: white;
+                    ">
+                    Confirm Booking
+                </button>
             </form>
         </div>
 
