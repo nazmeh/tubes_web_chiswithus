@@ -322,7 +322,7 @@ include "koneksi.php";
         </section>
 
         <div class="row d-flex justify-content-center" style="margin-top: 80px">
-            <form class="w-80">
+            <form class="w-80" action="tes.php" method="POST">
                 <p style="text-align: center">CONFIRM BOOKING</p>
                 <div class="mb-3">
                     <label for="exampleInputName" class="form-label opacity-75"
@@ -357,14 +357,14 @@ include "koneksi.php";
                 </div>
                 <div class="mb-3">
                     <label
-                        for="exampleInputPassword"
+                        for="exampleInputInstagram"
                         class="form-label opacity-75"
                         >Instagram Account</label
                     >
                     <input
-                        type="password"
+                        type="text"
                         class="form-control border-dark-subtle"
-                        id="exampleInputPassword" />
+                        id="exampleInputInstagram" />
                 </div>
                 <div class="mb-3">
                     <label
@@ -401,6 +401,7 @@ include "koneksi.php";
                 </div>
                 <button
                     type="submit"
+                    name="submit"
                     class="btn btn-warning w-30 rounded-5 mb-5 mt-3 border-0"
                     style="
                         background-color: #c37b52;
