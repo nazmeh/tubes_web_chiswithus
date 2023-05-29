@@ -94,6 +94,11 @@
     font-weight: 500;
 }
 
+.timeReservation:hover {
+    background: #C37B52;
+    text-decoration: none;
+}
+
 .bg-cream{
     background-color: #F5F3EB;
 }

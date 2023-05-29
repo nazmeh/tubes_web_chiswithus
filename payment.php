@@ -148,7 +148,7 @@
                                     <p class="fw-bold">Rp 81.000,00</p>
                                 </div>
                             </div>
-                            <div class="container">
+                            <div class="container text-center">
                                 <div class="upload">
                                     <button type="button" class="btn-warning" >
                                         <i class = "fa fa-upload"></i> Upload File
