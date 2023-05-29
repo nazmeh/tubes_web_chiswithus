@@ -322,7 +322,7 @@ include "koneksi.php";
         </section>
 
         <div class="row d-flex justify-content-center" style="margin-top: 80px">
-            <form class="w-80">
+            <form class="w-80" action="tes.php" method="POST">
                 <p style="text-align: center">CONFIRM BOOKING</p>
                 <div class="mb-3">
                     <label for="exampleInputName" class="form-label opacity-75"
@@ -330,6 +330,7 @@ include "koneksi.php";
                     >
                     <input
                         type="text"
+                        name="name"
                         class="form-control border-dark-subtle"
                         id="exampleInputName" />
                 </div>
@@ -341,6 +342,7 @@ include "koneksi.php";
                     >
                     <input
                         type="email"
+                        name="email"
                         class="form-control border-dark-subtle"
                         id="exampleInputEmail1" />
                 </div>
@@ -352,6 +354,7 @@ include "koneksi.php";
                     >
                     <input
                         type="text"
+                        name="phone"
                         class="form-control border-dark-subtle"
                         id="exampleInputNumber" />
                 </div>
@@ -363,6 +366,7 @@ include "koneksi.php";
                     >
                     <input
                         type="text"
+                        name="instagram"
                         class="form-control border-dark-subtle"
                         id="exampleInputInstagram" />
                 </div>
@@ -374,6 +378,7 @@ include "koneksi.php";
                     >
                     <input
                         type="text"
+                        name="numOfPeople"
                         class="form-control border-dark-subtle"
                         id="exampleInputNumber" />
                 </div>
@@ -383,7 +388,7 @@ include "koneksi.php";
                         class="form-label opacity-75 border-dark-subtle"
                         >Background</label
                     >
-                <select class="form-select form-control border-dark-subtle" id="inputGroupSelect01">
+                <select class="form-select form-control border-dark-subtle" id="inputGroupSelect01" name="background">
                     <option selected>Choose</option>
                     <option value="1">Blue</option>
                     <option value="2">Brown</option>
@@ -397,7 +402,7 @@ include "koneksi.php";
                         class="form-label opacity-75"
                         >Paket</label
                     >
-                    <select class="form-select form-control border-dark-subtle" id="inputGroupSelect01">
+                    <select class="form-select form-control border-dark-subtle" id="inputGroupSelect01" name="paket">
                     <option selected>Choose</option>
                     <option value="1">Weekdays</option>
                     <option value="2">Weekend</option>
@@ -406,6 +411,7 @@ include "koneksi.php";
                 </div>
                 <button
                     type="submit"
+                    name="submit"
                     class="btn btn-warning w-30 rounded-5 mb-5 mt-3 border-0"
                     style="
                         background-color: #c37b52;

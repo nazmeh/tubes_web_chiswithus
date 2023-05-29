@@ -62,36 +62,39 @@ if (isset($_POST['login'])) {
   }
 }
 
-/*if (isset($_POST['reservation'])) {
-  // Mengambil nilai dari form
-  $name = $_POST['name'];
-  $email = $_POST['email'];
-  $phone = $_POST['phone'];
-  $instagram = $_POST['instagram'];
-  $numOfPeople = $_POST['numOfPeople'];
-  $background = $_POST['background'];
-  $paket = $_POST['paket'];
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Mengambil nilai dari form
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $phone = $_POST['phone'];
+    $instagram = $_POST['instagram'];
+    $numOfPeople = $_POST['numOfPeople'];
+    $background = $_POST['background'];
+    $paket = $_POST['paket'];
+ // Lakukan validasi data jika diperlukan
 
-  if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+    // Membuat query untuk menyimpan data
+    $sql = "INSERT INTO konfirmasi (name, email, phone, instagram, numOfPeople, background, paket)
+            VALUES ('$name', '$email', '$phone', '$instagram', '$numOfPeople', '$background', '$paket')";
+
+    if ($conn->query($sql) === TRUE) {
+        // Jika penyimpanan data berhasil
+        echo "<script>
+            alert('Booking berhasil dikonfirmasi');
+            window.location = 'payment.php';
+        </script>";
+    } else {
+        // Jika terjadi kesalahan saat menyimpan data
+        $errorMessage = "Kesalahan input pesanan. Error: " . $sql . "<br>" . $conn->error;
+        echo "<script>
+                alert('$errorMessage');
+                window.location = 'reservation.php';
+              </script>";
+    
+    }
 }
-  // Membuat query untuk menyimpan data
-  $sql = "INSERT INTO confirm (name, email, phone, instagram, numOfPeople, background, paket) VALUES ('$name', '$email', '$phone', '$instagram', '$numOfPeople', '$background', '$paket')";
-  mysqli_query($conn, $sql);
-
-  if ($conn->query($sql) === TRUE) {
-      // Jika penyimpanan data berhasil
-      echo "<script>
-          alert('Booking berhasil dikonfirmasi');
-          window.location = 'payment.php';
-      </script>";
-      exit;
-  } else {
-      // Jika terjadi kesalahan saat menyimpan data
-      echo "Error: " . $sql . "<br>" . $conn->error;
-  }
-}*/
 
 mysqli_close($conn);
+exit;
 
 ?>
