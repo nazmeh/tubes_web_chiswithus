@@ -1,46 +1,55 @@
-<?php 
-session_start();
-if(!isset($_SESSION ["login"])){
-    header("Location: login.php");
-    exit;
-}
-include "koneksi.php";
-?>
-
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+            crossorigin="anonymous" />
+        <link rel="stylesheet" href="css/style.css" />
+        <title>Payment</title>
+    </head>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
-    <link rel="stylesheet" href="css/style.css" />
-    <title>Payment</title>
-</head>
-
-<body>
-    <nav class="navbar navbar-expand-lg fixed-top bg-dark">
-        <div class="container">
-            <a class="navbar-brand fs-4 text-white" href="#"><img src="assets/logo.svg" alt=""></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <body>
+        <nav class="navbar navbar-expand-lg fixed-top bg-dark">
+            <div class="container">
+                <a class="navbar-brand fs-4 text-white" href="#"
+                    ><img src="assets/logo.svg" alt=""
+                /></a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-            <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarNav">
-                <ul class="navbar-nav flex-grow-1 justify-content-center">
-                    <li class="nav-item">
-                        <a class="nav-link text-white" aria-current="page" href="home.php">Home</a
+                <div
+                    class="collapse navbar-collapse d-flex justify-content-between"
+                    id="navbarNav">
+                    <ul class="navbar-nav flex-grow-1 justify-content-center">
+                        <li class="nav-item">
+                            <a
+                                class="nav-link text-white"
+                                aria-current="page"
+                                href="index.html"
+                                >Home</a
                             >
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="about.php"
+                            <a class="nav-link text-white" href="about.html"
                                 >About</a
                             >
                         </li>
                         <li class="nav-item">
                             <a
                                 class="nav-link active text-white"
-                                href="reservation.php"
+                                href="reservation.html"
                                 >Reservation</a
                             >
                         </li>
@@ -56,7 +65,7 @@ include "koneksi.php";
                             </button>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a class="dropdown-item" href="profile.php"
+                                    <a class="dropdown-item" href="profile.html"
                                         ><img
                                             class="me-3"
                                             src="assets/iconprofile.svg"
@@ -66,7 +75,7 @@ include "koneksi.php";
                                 <li>
                                     <a
                                         class="dropdown-item"
-                                        href="activity.php"
+                                        href="activity.html"
                                         ><img
                                             class="me-3"
                                             src="assets/iconactivity.svg"
@@ -74,7 +83,7 @@ include "koneksi.php";
                                     >
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="logout.php"
+                                    <a class="dropdown-item" href="index.html"
                                         ><img
                                             class="me-3"
                                             src="assets/iconlogout.svg"
@@ -110,107 +119,43 @@ include "koneksi.php";
                 <div class="row justify-content-between mt-5">
                     <div class="col-5">
                         <div class="py-3 border px-4 rounded-2">
-                            <p class="tetx text-center fw-semibold fs-4">
-                                Chooose Your Payment Method
+                            <p class="tetx text-center fs-4">
+                                Finish Your Payment
                             </p>
-                            <div class="row mx-auto row-gap-2">
+                            <div
+                                class="g-col-2 rounded-3 d justify-content-center text-center">
                                 <div
-                                    class="form-check align-items-center d-flex">
-                                    <input
-                                        class="form-check-input"
-                                        type="radio"
-                                        name="flexRadioDefault"
-                                        id="flexRadioDefault1" />
-                                    <label
-                                        class="form-check-label ms-2 mb-3"
-                                        for="flexRadioDefault1">
-                                        <img
-                                            src="assets/bca.svg"
-                                            alt=""
-                                            height="40px" />
-                                    </label>
+                                    class="border rounded-2"
+                                    style="background-color: #fec84b">
+                                    <p class="tetx text-center">
+                                        Pay Before 17th May 2023, 10.16 WITA
+                                    </p>
                                 </div>
-                                <div
-                                    class="form-check align-items-center d-flex">
-                                    <input
-                                        class="form-check-input"
-                                        type="radio"
-                                        name="flexRadioDefault"
-                                        id="flexRadioDefault1" />
-                                    <label
-                                        class="form-check-label ms-2 mb-3"
-                                        for="flexRadioDefault1">
+                                <div class="p-5">
+                                    <p style="font-weight: bold;"">Transfer to:</p>
+                                    <img
+                                        src="assets/bca.jpg"
+                                        alt=""
+                                        width="160px" />
+                                    <p class="mt-3">
+                                        3928285942916170
                                         <img
-                                            src="assets/bri.svg"
+                                            src="assets/salin.svg"
                                             alt=""
-                                            height="40px" />
-                                    </label>
-                                </div>
-                                <div
-                                    class="form-check align-items-center d-flex">
-                                    <input
-                                        class="form-check-input"
-                                        type="radio"
-                                        name="flexRadioDefault"
-                                        id="flexRadioDefault1" />
-                                    <label
-                                        class="form-check-label ms-2 mb-3"
-                                        for="flexRadioDefault1">
-                                        <img
-                                            src="assets/bni.svg"
-                                            alt=""
-                                            height="40px" />
-                                    </label>
-                                </div>
-                                <div
-                                    class="form-check align-items-center d-flex">
-                                    <input
-                                        class="form-check-input"
-                                        type="radio"
-                                        name="flexRadioDefault"
-                                        id="flexRadioDefault1" />
-                                    <label
-                                        class="form-check-label ms-2 mb-3"
-                                        for="flexRadioDefault1">
-                                        <img
-                                            src="assets/mandiri.svg"
-                                            alt=""
-                                            height="40px" />
-                                    </label>
-                                </div>
-                                <div
-                                    class="form-check align-items-center d-flex">
-                                    <input
-                                        class="form-check-input"
-                                        type="radio"
-                                        name="flexRadioDefault"
-                                        id="flexRadioDefault1" />
-                                    <label
-                                        class="form-check-label ms-2 mb-3"
-                                        for="flexRadioDefault1">
-                                        <img
-                                            src="assets/ovo.svg"
-                                            alt=""
-                                            height="40px" />
-                                    </label>
-                                </div>
-                                <div
-                                    class="form-check align-items-center d-flex">
-                                    <input
-                                        class="form-check-input"
-                                        type="radio"
-                                        name="flexRadioDefault"
-                                        id="flexRadioDefault1" />
-                                    <label
-                                        class="form-check-label ms-2 mb-3"
-                                        for="flexRadioDefault1">
-                                        <img
-                                            src="assets/gopay.svg"
-                                            alt=""
-                                            height="40px" />
-                                    </label>
+                                            height="16px" />
+                                    </p>
+                                    <p class="mt-5">AMOUNT TO BE PAID</p>
+                                    <p class="fw-bold">Rp 81.000,00</p>
                                 </div>
                             </div>
+                            <div class="container">
+                                <div class="upload">
+                                    <button type="button" class="btn-warning" >
+                                        <i class = "fa fa-upload"></i> Upload File
+                                        <input type="file">
+                                    </button>
+                                </div>
+                                </div>
                         </div>
                         <ul>
                             <li class="mt-3">
@@ -270,7 +215,7 @@ include "koneksi.php";
                                 border: none;
                                 color: white;
                             ">
-                            Checkout
+                            Confirm Payment
                         </button>
                     </div>
                 </div>
