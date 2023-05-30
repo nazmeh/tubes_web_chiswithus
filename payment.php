@@ -154,7 +154,7 @@ include "koneksi.php";
                             </div>
                             <div class="container text-center">
                                 <div class="upload">
-                                    <button type="button" class="btn-upload" >
+                                    <button type="button" class="btn-upload mb-3" style="font-size:12px" >
                                         <i class = "fa fa-upload"></i> Upload File
                                         <input type="file">
                                     </button>
@@ -163,33 +163,37 @@ include "koneksi.php";
                         </div>
                         <ul>
                             <li class="mt-3 mb-5">
-                                Please confirm your reservation and get a
-                                payment code after clicking the checkout button
+                            Please transfer to the account number above to process the 
+                            payment and upload proof of the transaction
                             </li>
                         </ul>
                     </div>
                     <div class="col-6 row">
                         <div
-                            class="col-12 shadow-sm py-3 border rounded-2 mb-3">
-                            <p class="m-0 fs-4">ORDER SUMMARY (1)</p>
+                            class="col-12 shadow-sm border rounded-2 mb-3">
+                            <p class="mb-0 fs-4 mt-4">ORDER SUMMARY (1)</p>
                         </div>
                         <div class="col-12 shadow-sm p-3 border rounded-2">
                             <div class="row mb-3">
                                 <div class="col-4">
                                     <img
-                                        src="assets/package.jpg"
+                                        src="assets/package.svg"
                                         alt=""
                                         width="160px" />
                                 </div>
                                 <div class="col-8">
-                                    <p>Package A</p>
+                                    <div class="d-flex justify-content-between">
+                                        <p>Package</p>
+                                        <p>Weekdays</p>
+                                    </div>
+                                    
                                     <div class="d-flex justify-content-between">
                                         <p>Background</p>
                                         <p>Blue</p>
                                     </div>
                                     <div class="d-flex justify-content-between">
                                         <p>Date</p>
-                                        <p>30/07/2022</p>
+                                        <p>20/05/2023</p>
                                     </div>
                                     <div class="d-flex justify-content-between">
                                         <p>Time</p>
@@ -202,12 +206,12 @@ include "koneksi.php";
                                 <p>Rp 80.000,00</p>
                             </div>
                             <div class="d-flex justify-content-between">
-                                <p>Biaya Layanan</p>
+                                <p>Service Fee</p>
                                 <p>Rp 1000,00</p>
                             </div>
                             <div
                                 class="d-flex justify-content-between pt-3 border-top">
-                                <p class="fs-4 m-0">Biaya Layanan</p>
+                                <p class="fs-4 m-0">TOTAL PAYMENT</p>
                                 <p class="fs-4 m-0">Rp 81.000,00</p>
                             </div>
                         </div>
