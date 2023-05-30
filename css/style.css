@@ -92,11 +92,19 @@
     border: solid 1px #FFC876;
     font-size: 16px;
     font-weight: 500;
+    width: 100%;
+
 }
 
-.timeReservation:hover {
+.timeReservation:hover, .timeReservationActive {
     background: #C37B52;
     text-decoration: none;
+    color: white;
+    transition: 150ms ease-in-out;
+}
+
+.form-check{
+    padding: 0 !important;
 }
 
 .bg-cream{
