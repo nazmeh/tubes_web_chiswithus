@@ -321,9 +321,9 @@ include "koneksi.php";
             </div>
         </section>
 
-        <div class="row d-flex justify-content-center" style="margin-top: 80px">
+        <div class="row d-flex justify-content-center" style="margin-top: 60px">
             <form class="w-80" action="tes.php" method="POST">
-                <p style="text-align: center">CONFIRM BOOKING</p>
+                <p class="fw-semibold" style="text-align: center; font-size:16px;">CONFIRM BOOKING</p>
                 <div class="mb-3">
                     <label for="exampleInputName" class="form-label opacity-75"
                         >Name</label
@@ -411,17 +411,33 @@ include "koneksi.php";
                 </div>
                 <button
                     type="submit"
-                    name="submit"
                     class="btn btn-warning w-30 rounded-5 mb-5 mt-3 border-0"
                     style="
                         background-color: #c37b52;
                         border: none;
                         color: white;
+                        font-size: 12px;
                     ">
                     Confirm Booking
                 </button>
             </form>
         </div>
+
+        <!-- footer -->
+        <section class="py-5 border-top border-1 border-dark">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6 d-flex my-auto">
+                        <p class="m-0">2023 © All Right Reserved</p>
+                    </div>
+                    <div class="col-6 d-flex justify-content-end gap-3">
+                        <img src="assets/Group 68.svg" alt="" />
+                        <img src="assets/Group 69.svg" alt="" />
+                        <img src="assets/Group 70.svg" alt="" />
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <script
             src="https://code.jquery.com/jquery-3.2.1.slim.min.js "

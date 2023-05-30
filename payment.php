@@ -125,9 +125,9 @@
                             <div
                                 class="g-col-2 rounded-3 d justify-content-center text-center">
                                 <div
-                                    class="border rounded-2"
+                                    class="border rounded-2 text-center"
                                     style="background-color: #fec84b">
-                                    <p class="tetx text-center">
+                                    <p class="mb-2 mt-2">
                                         Pay Before 17th May 2023, 10.16 WITA
                                     </p>
                                 </div>
@@ -150,7 +150,7 @@
                             </div>
                             <div class="container text-center">
                                 <div class="upload">
-                                    <button type="button" class="btn-warning" >
+                                    <button type="button" class="btn-upload" >
                                         <i class = "fa fa-upload"></i> Upload File
                                         <input type="file">
                                     </button>
@@ -158,7 +158,7 @@
                                 </div>
                         </div>
                         <ul>
-                            <li class="mt-3">
+                            <li class="mt-3 mb-5">
                                 Please confirm your reservation and get a
                                 payment code after clicking the checkout button
                             </li>
@@ -217,6 +217,22 @@
                             ">
                             Confirm Payment
                         </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- footer -->
+        <section class="py-5 border-top border-1 border-dark">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6 d-flex my-auto">
+                        <p class="m-0">2023 © All Right Reserved</p>
+                    </div>
+                    <div class="col-6 d-flex justify-content-end gap-3">
+                        <img src="assets/Group 68.svg" alt="" />
+                        <img src="assets/Group 69.svg" alt="" />
+                        <img src="assets/Group 70.svg" alt="" />
                     </div>
                 </div>
             </div>

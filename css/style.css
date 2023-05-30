@@ -144,7 +144,7 @@ body {
     margin-bottom: 16px;
 }
 
-.btn-warning{
+.btn-upload{
     position: relative;
     padding: 11px 16px;
     font-size: 15px;
@@ -157,7 +157,7 @@ body {
     transition: 0.2s;
 }
 
-.btn-warning input[type="file"]{
+.btn-upload input[type="file"]{
     cursor: pointer;
     position: absolute;
     left: 0%;
@@ -166,6 +166,6 @@ body {
     opacity: 0;
 }
 
-.btn-warning :hover {
+.btn-upload :hover {
     background: #d9a400;
 }
