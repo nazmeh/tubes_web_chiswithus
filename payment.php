@@ -1,27 +1,48 @@
-<?php include "koneksi.php";?>
+<?php 
+include "koneksi.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+            crossorigin="anonymous" />
+        <link rel="stylesheet" href="css/style.css" />
+        <title>Payment</title>
+    </head>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
-    <link rel="stylesheet" href="css/style.css" />
-    <title>Payment</title>
-</head>
-
-<body>
-    <nav class="navbar navbar-expand-lg fixed-top bg-dark">
-        <div class="container">
-            <a class="navbar-brand fs-4 text-white" href="#"><img src="assets/logo.svg" alt=""></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <body>
+        <nav class="navbar navbar-expand-lg fixed-top bg-dark">
+            <div class="container">
+                <a class="navbar-brand fs-4 text-white" href="#"
+                    ><img src="assets/logo.svg" alt=""
+                /></a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-            <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarNav">
-                <ul class="navbar-nav flex-grow-1 justify-content-center">
-                    <li class="nav-item">
-                        <a class="nav-link text-white" aria-current="page" href="index.html">Home</a
+                <div
+                    class="collapse navbar-collapse d-flex justify-content-between"
+                    id="navbarNav">
+                    <ul class="navbar-nav flex-grow-1 justify-content-center">
+                        <li class="nav-item">
+                            <a
+                                class="nav-link text-white"
+                                aria-current="page"
+                                href="index.html"
+                                >Home</a
                             >
                         </li>
                         <li class="nav-item">
@@ -91,148 +112,88 @@
                     <img
                         src="assets/choosepayment.svg"
                         alt=""
-                        width="12px" />CHOOSE PAYMENT >
+                        width="12px" />PAY NOW >
                     <img
                         class="ms-3"
                         src="assets/paynow.svg"
                         alt=""
-                        width="12px" />PAY NOW
+                        width="12px" />CONFIRM PAYMENT
                 </div>
 
                 <div class="row justify-content-between mt-5">
                     <div class="col-5">
                         <div class="py-3 border px-4 rounded-2">
-                            <p class="tetx text-center fw-semibold fs-4">
-                                Chooose Your Payment Method
+                            <p class="tetx text-center fs-4 fw-semibold">
+                                FINISH YOUR PAYMENT
                             </p>
-                            <div class="row mx-auto row-gap-2">
+                            <div
+                                class="g-col-2 rounded-3 d justify-content-center text-center">
                                 <div
-                                    class="form-check align-items-center d-flex">
-                                    <input
-                                        class="form-check-input"
-                                        type="radio"
-                                        name="flexRadioDefault"
-                                        id="flexRadioDefault1" />
-                                    <label
-                                        class="form-check-label ms-2 mb-3"
-                                        for="flexRadioDefault1">
-                                        <img
-                                            src="assets/bca.svg"
-                                            alt=""
-                                            height="40px" />
-                                    </label>
+                                    class="border rounded-2 text-center"
+                                    style="background-color: #fec84b">
+                                    <p class="mb-2 mt-2">
+                                        Pay Before 17th May 2023, 10.16 WITA
+                                    </p>
                                 </div>
-                                <div
-                                    class="form-check align-items-center d-flex">
-                                    <input
-                                        class="form-check-input"
-                                        type="radio"
-                                        name="flexRadioDefault"
-                                        id="flexRadioDefault1" />
-                                    <label
-                                        class="form-check-label ms-2 mb-3"
-                                        for="flexRadioDefault1">
+                                <div class="p-5">
+                                    <p style="font-weight: bold;"">Transfer to:</p>
+                                    <img
+                                        src="assets/bca.jpg"
+                                        alt=""
+                                        width="160px" />
+                                    <p class="mt-3">
+                                        3928285942916170
                                         <img
-                                            src="assets/bri.svg"
+                                            src="assets/salin.svg"
                                             alt=""
-                                            height="40px" />
-                                    </label>
-                                </div>
-                                <div
-                                    class="form-check align-items-center d-flex">
-                                    <input
-                                        class="form-check-input"
-                                        type="radio"
-                                        name="flexRadioDefault"
-                                        id="flexRadioDefault1" />
-                                    <label
-                                        class="form-check-label ms-2 mb-3"
-                                        for="flexRadioDefault1">
-                                        <img
-                                            src="assets/bni.svg"
-                                            alt=""
-                                            height="40px" />
-                                    </label>
-                                </div>
-                                <div
-                                    class="form-check align-items-center d-flex">
-                                    <input
-                                        class="form-check-input"
-                                        type="radio"
-                                        name="flexRadioDefault"
-                                        id="flexRadioDefault1" />
-                                    <label
-                                        class="form-check-label ms-2 mb-3"
-                                        for="flexRadioDefault1">
-                                        <img
-                                            src="assets/mandiri.svg"
-                                            alt=""
-                                            height="40px" />
-                                    </label>
-                                </div>
-                                <div
-                                    class="form-check align-items-center d-flex">
-                                    <input
-                                        class="form-check-input"
-                                        type="radio"
-                                        name="flexRadioDefault"
-                                        id="flexRadioDefault1" />
-                                    <label
-                                        class="form-check-label ms-2 mb-3"
-                                        for="flexRadioDefault1">
-                                        <img
-                                            src="assets/ovo.svg"
-                                            alt=""
-                                            height="40px" />
-                                    </label>
-                                </div>
-                                <div
-                                    class="form-check align-items-center d-flex">
-                                    <input
-                                        class="form-check-input"
-                                        type="radio"
-                                        name="flexRadioDefault"
-                                        id="flexRadioDefault1" />
-                                    <label
-                                        class="form-check-label ms-2 mb-3"
-                                        for="flexRadioDefault1">
-                                        <img
-                                            src="assets/gopay.svg"
-                                            alt=""
-                                            height="40px" />
-                                    </label>
+                                            height="16px" />
+                                    </p>
+                                    <p class="mt-5">AMOUNT TO BE PAID</p>
+                                    <p class="fw-bold">Rp 81.000,00</p>
                                 </div>
                             </div>
+                            <div class="container text-center">
+                                <div class="upload">
+                                    <button type="button" class="btn-upload mb-3" style="font-size:12px" >
+                                        <i class = "fa fa-upload"></i> Upload File
+                                        <input type="file">
+                                    </button>
+                                </div>
+                                </div>
                         </div>
                         <ul>
-                            <li class="mt-3">
-                                Please confirm your reservation and get a
-                                payment code after clicking the checkout button
+                            <li class="mt-3 mb-5">
+                            Please transfer to the account number above to process the 
+                            payment and upload proof of the transaction
                             </li>
                         </ul>
                     </div>
                     <div class="col-6 row">
                         <div
-                            class="col-12 shadow-sm py-3 border rounded-2 mb-3">
-                            <p class="m-0 fs-4">ORDER SUMMARY (1)</p>
+                            class="col-12 shadow-sm border rounded-2 mb-3">
+                            <p class="mb-0 fs-4 mt-4 fw-semibold">ORDER SUMMARY (1)</p>
                         </div>
                         <div class="col-12 shadow-sm p-3 border rounded-2">
                             <div class="row mb-3">
                                 <div class="col-4">
                                     <img
-                                        src="assets/package.jpg"
+                                        src="assets/package.svg"
                                         alt=""
                                         width="160px" />
                                 </div>
                                 <div class="col-8">
-                                    <p>Package A</p>
+                                    <div class="d-flex justify-content-between">
+                                        <p>Package</p>
+                                        <p>Weekdays</p>
+                                    </div>
+                                    
                                     <div class="d-flex justify-content-between">
                                         <p>Background</p>
                                         <p>Blue</p>
                                     </div>
                                     <div class="d-flex justify-content-between">
                                         <p>Date</p>
-                                        <p>30/07/2022</p>
+                                        <p>20/05/2023</p>
                                     </div>
                                     <div class="d-flex justify-content-between">
                                         <p>Time</p>
@@ -245,12 +206,12 @@
                                 <p>Rp 80.000,00</p>
                             </div>
                             <div class="d-flex justify-content-between">
-                                <p>Biaya Layanan</p>
+                                <p>Service Fee</p>
                                 <p>Rp 1000,00</p>
                             </div>
                             <div
                                 class="d-flex justify-content-between pt-3 border-top">
-                                <p class="fs-4 m-0">Biaya Layanan</p>
+                                <p class="fs-4 m-0 fw-semibold">TOTAL</p>
                                 <p class="fs-4 m-0">Rp 81.000,00</p>
                             </div>
                         </div>
@@ -262,8 +223,24 @@
                                 border: none;
                                 color: white;
                             ">
-                            Checkout
+                            Confirm Payment
                         </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- footer -->
+        <section class="py-5 border-top border-1 border-dark">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6 d-flex my-auto">
+                        <p class="m-0">2023 © All Right Reserved</p>
+                    </div>
+                    <div class="col-6 d-flex justify-content-end gap-3">
+                        <img src="assets/Group 68.svg" alt="" />
+                        <img src="assets/Group 69.svg" alt="" />
+                        <img src="assets/Group 70.svg" alt="" />
                     </div>
                 </div>
             </div>

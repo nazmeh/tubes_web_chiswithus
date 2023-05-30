@@ -92,6 +92,19 @@
     border: solid 1px #FFC876;
     font-size: 16px;
     font-weight: 500;
+    width: 100%;
+
+}
+
+.timeReservation:hover, .timeReservationActive {
+    background: #C37B52;
+    text-decoration: none;
+    color: white;
+    transition: 150ms ease-in-out;
+}
+
+.form-check{
+    padding: 0 !important;
 }
 
 .bg-cream{
@@ -139,20 +152,20 @@ body {
     margin-bottom: 16px;
 }
 
-.btn-warning{
+.btn-upload{
     position: relative;
     padding: 11px 16px;
     font-size: 15px;
     line-height: 1.5;
     border-radius: 3px;
     color: #fff;
-    background-color: #ffc100;
+    background-color: #C37B52;
     border: 0;
     overflow: hidden;
     transition: 0.2s;
 }
 
-.btn-warning input[type="file"]{
+.btn-upload input[type="file"]{
     cursor: pointer;
     position: absolute;
     left: 0%;
@@ -161,6 +174,10 @@ body {
     opacity: 0;
 }
 
-.btn-warning :hover {
+.btn-upload :hover {
     background: #d9a400;
+}
+
+input[name='radioReservation']  {
+    visibility: hidden;
 }

@@ -17,7 +17,7 @@ include "koneksi.php";
         <title>About</title>
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg fixed-top bg-dark">
+    <nav class="navbar navbar-expand-lg fixed-top bg-dark">
             <div class="container">
                 <a class="navbar-brand fs-4 text-white" href="#"
                     ><img src="assets/logo.svg" alt=""
@@ -40,7 +40,7 @@ include "koneksi.php";
                             <a
                                 class="nav-link text-white"
                                 aria-current="page"
-                                href="home.php"
+                                href="index.php"
                                 >Home</a
                             >
                         </li>
@@ -58,43 +58,20 @@ include "koneksi.php";
                         </li>
                     </ul>
                     <div class="d-flex">
-                        <div class="dropdown">
-                            <button
-                                class="dropdown bg-transparent border-0"
-                                data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                <img src="assets/profile.svg" alt="" />
-                                <img src="assets/panahprofile.svg" alt="" />
+                        <a href="login.php"
+                            ><button
+                                type="button"
+                                class="btn btn-primary bg-transparent border-0 text-white">
+                                Login
                             </button>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a class="dropdown-item" href="profile.php"
-                                        ><img
-                                            class="me-3"
-                                            src="assets/iconprofile.svg"
-                                            alt="" />Profile</a
-                                    >
-                                </li>
-                                <li>
-                                    <a
-                                        class="dropdown-item"
-                                        href="activity.php"
-                                        ><img
-                                            class="me-3"
-                                            src="assets/iconactivity.svg"
-                                            alt="" />Activy</a
-                                    >
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" action href="logout.php"
-                                        ><img
-                                            class="me-3"
-                                            src="assets/iconlogout.svg"
-                                            alt="" />Logout</a
-                                    >
-                                </li>
-                            </ul>
-                        </div>
+                        </a>
+                        <a href="register.php"
+                            ><button
+                                type="button"
+                                class="btn btn-primary rounded-0 border-0 bg-white bg-opacity-10 ms-4 text-white">
+                                Register
+                            </button>
+                        </a>
                     </div>
                 </div>
             </div>

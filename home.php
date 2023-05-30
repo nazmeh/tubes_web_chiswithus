@@ -1,4 +1,9 @@
 <?php 
+session_start();
+if(!isset($_SESSION ["login"])){
+    header("Location: login.php");
+    exit;
+}
 include "koneksi.php";
 ?>
 
@@ -18,7 +23,7 @@ include "koneksi.php";
         <title>Home</title>
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg fixed-top bg-dark">
+    <nav class="navbar navbar-expand-lg fixed-top bg-dark">
             <div class="container">
                 <a class="navbar-brand fs-4 text-white" href="#"
                     ><img src="assets/logo.svg" alt=""
@@ -46,7 +51,7 @@ include "koneksi.php";
                             >
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="about_index.php"
+                            <a class="nav-link text-white" href="about.php"
                                 >About</a
                             >
                         </li>
@@ -59,20 +64,43 @@ include "koneksi.php";
                         </li>
                     </ul>
                     <div class="d-flex">
-                        <a href="login.php"
-                            ><button
-                                type="button"
-                                class="btn btn-primary bg-transparent border-0 text-white">
-                                Login
+                        <div class="dropdown">
+                            <button
+                                class="dropdown bg-transparent border-0"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <img src="assets/profile.svg" alt="" />
+                                <img src="assets/panahprofile.svg" alt="" />
                             </button>
-                        </a>
-                        <a href="register.php"
-                            ><button
-                                type="button"
-                                class="btn btn-primary rounded-0 border-0 bg-white bg-opacity-10 ms-4 text-white">
-                                Register
-                            </button>
-                        </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="profile.php"
+                                        ><img
+                                            class="me-3"
+                                            src="assets/iconprofile.svg"
+                                            alt="" />Profile</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        class="dropdown-item"
+                                        href="activity.php"
+                                        ><img
+                                            class="me-3"
+                                            src="assets/iconactivity.svg"
+                                            alt="" />Activy</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="logout.php"
+                                        ><img
+                                            class="me-3"
+                                            src="assets/iconlogout.svg"
+                                            alt="" />Logout</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -344,9 +372,6 @@ include "koneksi.php";
                         </div>
                     </div>
                 </div>
-                <p class="pt-4">
-                    *Addition 20K/Person in 1 Session
-                </p>
             </div>
         </section>
 
