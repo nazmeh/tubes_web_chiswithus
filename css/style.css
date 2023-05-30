@@ -169,3 +169,7 @@ body {
 .btn-upload :hover {
     background: #d9a400;
 }
+
+input[name='radioReservation']  {
+    visibility: hidden;
+}
