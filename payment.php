@@ -112,19 +112,19 @@ include "koneksi.php";
                     <img
                         src="assets/choosepayment.svg"
                         alt=""
-                        width="12px" />CHOOSE PAYMENT >
+                        width="12px" />PAY NOW >
                     <img
                         class="ms-3"
                         src="assets/paynow.svg"
                         alt=""
-                        width="12px" />PAY NOW
+                        width="12px" />CONFIRM PAYMENT
                 </div>
 
                 <div class="row justify-content-between mt-5">
                     <div class="col-5">
                         <div class="py-3 border px-4 rounded-2">
-                            <p class="tetx text-center fs-4">
-                                Finish Your Payment
+                            <p class="tetx text-center fs-4 fw-semibold">
+                                FINISH YOUR PAYMENT
                             </p>
                             <div
                                 class="g-col-2 rounded-3 d justify-content-center text-center">
@@ -171,7 +171,7 @@ include "koneksi.php";
                     <div class="col-6 row">
                         <div
                             class="col-12 shadow-sm border rounded-2 mb-3">
-                            <p class="mb-0 fs-4 mt-4">ORDER SUMMARY (1)</p>
+                            <p class="mb-0 fs-4 mt-4 fw-semibold">ORDER SUMMARY (1)</p>
                         </div>
                         <div class="col-12 shadow-sm p-3 border rounded-2">
                             <div class="row mb-3">
@@ -211,7 +211,7 @@ include "koneksi.php";
                             </div>
                             <div
                                 class="d-flex justify-content-between pt-3 border-top">
-                                <p class="fs-4 m-0">TOTAL PAYMENT</p>
+                                <p class="fs-4 m-0 fw-semibold">TOTAL</p>
                                 <p class="fs-4 m-0">Rp 81.000,00</p>
                             </div>
                         </div>
