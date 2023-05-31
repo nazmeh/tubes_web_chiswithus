@@ -130,17 +130,19 @@ include "koneksi.php";
                     <div
                         class="row d-flex justify-content-center"
                         style="margin-top: 80px">
-                        <form class="w-80">
+                        <form action="update_profile.php" method="POST" class="w-80">
                             <div class="mb-3">
                                 <label
                                     for="exampleInputName"
                                     class="form-label opacity-75"
-                                    >Full Name</label
+                                    >username</label
                                 >
                                 <input
                                     type="text"
                                     class="form-control border-dark-subtle"
-                                    id="exampleInputName" />
+                                    name="username"
+                                    id="exampleInputName"
+                                    value="<?php echo isset($_SESSION["username"]) ? $_SESSION["username"] : ""; ?>">
                             </div>
                             <div class="mb-3">
                                 <label
@@ -151,7 +153,9 @@ include "koneksi.php";
                                 <input
                                     type="email"
                                     class="form-control border-dark-subtle"
-                                    id="exampleInputEmail1" />
+                                    name="email"
+                                    id="exampleInputEmail1" 
+                                    value="<?php echo isset($_SESSION["email"]) ? $_SESSION["email"] : ""; ?>">
                             </div>
                             <div class="mb-3">
                                 <label
@@ -162,7 +166,9 @@ include "koneksi.php";
                                 <input
                                     type="text"
                                     class="form-control border-dark-subtle"
-                                    id="exampleInputNumber" />
+                                    name="number"
+                                    id="exampleInputNumber"
+                                    value="<?php echo isset($_SESSION["number"]) ? $_SESSION["number"] : ""; ?>">
                             </div>
                             <div class="mb-3">
                                 <label
@@ -173,10 +179,13 @@ include "koneksi.php";
                                 <input
                                     type="password"
                                     class="form-control border-dark-subtle"
-                                    id="exampleInputPassword" />
+                                    name="password"
+                                    id="exampleInputPassword"
+                                    value="<?php echo isset($_SESSION["password"]) ? $_SESSION["password"] : ""; ?>">
                             </div>
                             <button
                                 type="submit"
+                                name ="update_profile"
                                 class="btn btn-warning w-30 rounded-5 mb-5 mt-3 border-0"
                                 style="
                                     background-color: #c37b52;

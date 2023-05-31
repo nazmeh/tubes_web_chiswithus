@@ -82,6 +82,15 @@
                                     placeholder="Email" />
                             </div>
                             <div class="form-group">
+                                <label for="inputEmail">Phone number</label>
+                                <input
+                                    type="text"
+                                    name="number"
+                                    class="form-control border-radius-none h-40 fs-14px"
+                                    id="inputNumber"
+                                    placeholder="Phone number" />
+                            </div>
+                            <div class="form-group">
                                 <label for="inputPassword">Password</label>
                                 <input
                                     type="password"

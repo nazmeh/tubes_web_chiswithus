@@ -5,6 +5,7 @@ require_once "koneksi.php";
 if (isset($_POST['register'])) {
     $username = $_POST['username'];
     $email = $_POST['email'];
+    $number = $_POST['number'];
     $password = $_POST['password'];
     $confirmPassword = $_POST['confirmPassword'];
 
@@ -29,7 +30,7 @@ if (isset($_POST['register'])) {
         exit;
     } else {
         // Username belum terdaftar, lakukan penyimpanan data
-        $sql = "INSERT INTO pelanggan (username, email, password) VALUES ('$username', '$email', '$password')";
+        $sql = "INSERT INTO pelanggan (username, email, number, password) VALUES ('$username', '$email', '$number','$password')";
         mysqli_query($conn, $sql);
 
         echo "<script>
@@ -48,8 +49,17 @@ if (isset($_POST['login'])) {
   $result = mysqli_query($conn, $sql);
   
   if (mysqli_num_rows($result) == 1) {
+    // Login berhasil
+    // Mendapatkan data pengguna dari hasil quer
+    $row = mysqli_fetch_assoc($result);
+
   // set session
     $_SESSION["login"] = true;
+    $_SESSION["id_pelanggan"] = $row['id_pelanggan'];
+    $_SESSION["username"] = $row['username'];
+    $_SESSION["email"] = $row['email'];
+    $_SESSION["number"] = $row['number'];
+    $_SESSION["password"] = $row['password'];
     echo "<script>
     window.location = 'home.php';
     </script>";
