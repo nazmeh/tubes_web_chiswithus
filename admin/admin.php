@@ -1,4 +1,4 @@
-<?php include "koneksi.php";?>
+<?php include "../koneksi.php";?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -21,9 +21,9 @@
      <div class="page-title-box">
                         <div class="container-fluid">
                             <div class="row align-items-center">
-                                <div class="col-md-12">
+                                <div class="col-md-12" >
                                     <h4 class="page-title mb-1">Daftar Invoice Menunggu Diverifikasi</h4>
-                                    <ol class="breadcrumb m-0">
+                                    <ol class="breadcrumb m-10">
                                         <li class="breadcrumb-item"><a href="">Admin</a></li>
                                     <li class="breadcrumb-item active">Pesanan</li>
                                     </ol>
@@ -69,7 +69,9 @@
                                     </div>
                                 </div> <!-- end col -->
                             </div> <!-- end row -->
-
+                            <?php if (!isset($_SESSION['user_is_logged_in']) || $_SESSION['user_is_logged_in'] !== true) { ?>
+                                <a href="login_admin.php" role="button" class="btn btn-primary">Logout</a>
+                                <?php } ?>
                         </div>
                         <!-- end container-fluid -->
                     </div> 
