@@ -41,19 +41,19 @@ include "koneksi.php";
                             <a
                                 class="nav-link text-white"
                                 aria-current="page"
-                                href="index.html"
+                                href="home.php"
                                 >Home</a
                             >
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="about.html"
+                            <a class="nav-link text-white" href="about.php"
                                 >About</a
                             >
                         </li>
                         <li class="nav-item">
                             <a
                                 class="nav-link active text-white"
-                                href="reservation.html"
+                                href="reservation.php"
                                 >Reservation</a
                             >
                         </li>
@@ -69,7 +69,7 @@ include "koneksi.php";
                             </button>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a class="dropdown-item" href="profile.html"
+                                    <a class="dropdown-item" href="profile.php"
                                         ><img
                                             class="me-3"
                                             src="assets/iconprofile.svg"
@@ -79,7 +79,7 @@ include "koneksi.php";
                                 <li>
                                     <a
                                         class="dropdown-item"
-                                        href="activity.html"
+                                        href="activity.php"
                                         ><img
                                             class="me-3"
                                             src="assets/iconactivity.svg"
@@ -87,7 +87,7 @@ include "koneksi.php";
                                     >
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="index.html"
+                                    <a class="dropdown-item" href="index.php"
                                         ><img
                                             class="me-3"
                                             src="assets/iconlogout.svg"
