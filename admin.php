@@ -44,29 +44,23 @@
                                                     <th>ID</th>
                                                     <th>Nama</th>
                                                     <th>Email</th>
-                                                    <th>Total</th>
+                                                    <th>Phone</th>
                                                     <th>Bukti Bayar</th>
                                                     <th>Status</th>
                                                     <th>Aksi</th>
-                                                    <th>Update</th>
-                                                    <th>Tanggal</th>
                                                 </tr>
                                                 </thead>
-            
-            
                                                 <tbody>
-                                                <?php $no = 1; ?>
+                                                                 
                                                 <tr>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
+                                                    <td> 1.</td>
+                                                    <td> 1</td>
+                                                    <td>Fairuz</td>
+                                                    <td>fairuz@gmail.com</td>
+                                                    <td> </td>
+                                                    <td> </td>
+                                                    <td> valid </td>
+                                                    <td> edit hpus</td>
                                                 </tr>
                                                    
                                                 </tbody>
@@ -81,4 +75,4 @@
                     </div> 
                     <!-- end page-content-wrapper -->
                 </div>
-                <!-- End Page-content -->
+                <!-- End Page-content --> 
