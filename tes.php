@@ -72,7 +72,21 @@ if (isset($_POST['login'])) {
   }
 }
 
+$enumPaket = ['1' => 'WEEKDAYS', '2' => 'WEEKEND', '3' => 'PROMO'];
+$enumBackground = ['1' => 'BLUE', '2' => 'BROWN', '3' => 'WHITE'];
+
+$hargaPaket = [
+    '1' => 80000, // Harga untuk WEEKDAYS
+    '2' => 100000, // Harga untuk WEEKEND
+    '3' => 60000 // Harga untuk PROMO
+];
+
+// Mendefinisikan harga tambahan per orang
+$hargaTambahanPerOrang = 20000;
+$serviceFee = 1000;
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
     // Mengambil nilai dari form
     $name = $_POST['name'];
     $email = $_POST['email'];
@@ -81,13 +95,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $numOfPeople = $_POST['numOfPeople'];
     $background = $_POST['background'];
     $paket = $_POST['paket'];
- // Lakukan validasi data jika diperlukan
+    // Lakukan validasi data jika diperlukan
+
+    $hargaPaketPilihan = $hargaPaket[$paket];
+    $hargaTambahanOrang = ($numOfPeople > 2) ? ($numOfPeople - 2) * $hargaTambahanPerOrang : 0;
+
+    $subtotal = $hargaPaketPilihan + $hargaTambahanOrang;
+    $total = $subtotal + $serviceFee;
 
     // Membuat query untuk menyimpan data
     $sql = "INSERT INTO konfirmasi (name, email, phone, instagram, numOfPeople, background, paket)
             VALUES ('$name', '$email', '$phone', '$instagram', '$numOfPeople', '$background', '$paket')";
 
     if ($conn->query($sql) === TRUE) {
+        $_SESSION['paket'] = $paket;
+        $_SESSION['background'] = $background;
+        $_SESSION['subtotal'] = $subtotal;
+        $_SESSION['total'] = $total;
+
         // Jika penyimpanan data berhasil
         echo "<script>
             alert('Booking berhasil dikonfirmasi');
@@ -103,4 +128,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
     }
 }
+
 ?>
