@@ -164,17 +164,9 @@ $total = $subtotal + 1000;
                                             height="16px" />
                                     </p>
                                     <p class="mt-5">AMOUNT TO BE PAID</p>
-                                    <p class="fw-bold">Rp 81.000,00</p>
+                                    <p class="fw-bold">Rp <?php echo number_format($total, 2, ',', '.'); ?></p>
                                 </div>
                             </div>
-                            <div class="container text-center">
-                                <div class="upload">
-                                    <button type="button" class="btn-upload mb-3" style="font-size:12px" >
-                                        <i class = "fa fa-upload"></i> Upload File
-                                        <input type="file">
-                                    </button>
-                                </div>
-                                </div>
                         </div>
                         <ul>
                             <li class="mt-3 mb-5">
@@ -231,16 +223,15 @@ $total = $subtotal + 1000;
                                 <p class="fs-4 m-0">Rp <?php echo number_format($total, 2, ',', '.'); ?></p>
                             </div>
                         </div>
-                        <button
-                            type="submit"
-                            class="btn rounded mb-5 mt-3 border-0"
-                            style="
-                                background-color: #c37b52;
-                                border: none;
-                                color: white;
-                            ">
+                        <form action="upload.php" method="POST" enctype="multipart/form-data">
+                            <div class="upload">
+                                <label for="bukti_bayar">Upload File</label>
+                                <input type="file" name="bukti_bayar" id="bukti_bayar" required>
+                            </div>
+                            <button type="submit" class="btn rounded mb-5 mt-3 border-0" style="background-color: #c37b52; border: none; color: white;">
                             Confirm Payment
                         </button>
+                    </form>
                     </div>
                 </div>
             </div>
