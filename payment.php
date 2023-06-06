@@ -1,5 +1,20 @@
 <?php 
-include "koneksi.php";
+require_once "koneksi.php";
+require_once 'tes.php';
+if(!isset($_SESSION ["login"])){
+    header("Location: login.php");
+    exit;
+}
+
+if (isset($_SESSION['subtotal'])) {
+    $subtotal = $_SESSION['subtotal'];
+} else {
+    $subtotal = 0;
+}
+
+// Menghitung total (subtotal + service fee)
+$total = $subtotal + 1000;
+
 ?>
 
 <!DOCTYPE html>
@@ -168,6 +183,7 @@ include "koneksi.php";
                             </li>
                         </ul>
                     </div>
+
                     <div class="col-6 row">
                         <div
                             class="col-12 shadow-sm border rounded-2 mb-3">
@@ -184,12 +200,12 @@ include "koneksi.php";
                                 <div class="col-8">
                                     <div class="d-flex justify-content-between">
                                         <p>Package</p>
-                                        <p>Weekdays</p>
+                                        <p><?php echo $enumPaket[$_SESSION['paket']]; ?></p>
                                     </div>
                                     
                                     <div class="d-flex justify-content-between">
                                         <p>Background</p>
-                                        <p>Blue</p>
+                                        <p><?php echo $enumBackground[$_SESSION['background']]; ?></p>
                                     </div>
                                     <div class="d-flex justify-content-between">
                                         <p>Date</p>
@@ -203,7 +219,7 @@ include "koneksi.php";
                             </div>
                             <div class="d-flex justify-content-between">
                                 <p>Subtotal</p>
-                                <p>Rp 80.000,00</p>
+                                <p>Rp <?php echo number_format($subtotal, 2, ',', '.'); ?></p>
                             </div>
                             <div class="d-flex justify-content-between">
                                 <p>Service Fee</p>
@@ -212,7 +228,7 @@ include "koneksi.php";
                             <div
                                 class="d-flex justify-content-between pt-3 border-top">
                                 <p class="fs-4 m-0 fw-semibold">TOTAL</p>
-                                <p class="fs-4 m-0">Rp 81.000,00</p>
+                                <p class="fs-4 m-0">Rp <?php echo number_format($total, 2, ',', '.'); ?></p>
                             </div>
                         </div>
                         <button
