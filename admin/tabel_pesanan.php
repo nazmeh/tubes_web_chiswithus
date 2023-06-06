@@ -1,19 +1,39 @@
 <?php include "../koneksi.php";?>
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title> Admin</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  </head>
-  <body>
+
+    <script src="../fontawesome/css/all.min.css"></script>
+    <link rel="stylesheet" href="style_admin.css">
+</head>
+<body>
+    <main>
+        <input type="checkbox" id="check">
+        <label for="check">
+            <i class="fa fa-burger fa-lg"></i>
+            <!-- <i class="fas fa-bars" id="btn"></i> -->
+            <i class="fa fa-arrow-right" id="open"></i>
+        </label>
+        <div class="sidebar">
+            <div class="top">
+                <img src="assets/logo.svg" alt="">
+            </div>  
+            <ul>
+                <li><a class="#" href="#"><i class="fa fa-home"></i> Dashboard</a></li>
+                <li><a class="#" href="#"><i class="fa fa-shopping-basket"></i> Table Pesanan</a></li>
+                <li><a class="#" href="#"><i class="fa fa-shopping-bag"></i> Table Pelanggan</a></li>
+            </ul>
+        </div>
+    </main>
     <nav class="">
         <div class="container">
-            <a class="navbar-brand fs-4 text-white" href="#"><img src="assets/logo.svg" alt=""></a>
+          
             <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
                 aria-expanded="false" aria-label="Toggle navigation"></button>
         </div>
@@ -78,3 +98,4 @@
                     <!-- end page-content-wrapper -->
                 </div>
                 <!-- End Page-content --> 
+                </html>
