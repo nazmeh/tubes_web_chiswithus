@@ -1,3 +1,6 @@
+<?php
+include "../koneksi.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -60,8 +63,8 @@
                         <div class="col-md-12">
                             <h4 class="page-title mb-4 mt-4" style="">Daftar Invoice Menunggu Diverifikasi</h4>
                             <ol class="breadcrumb m-10 mb-5">
-                                <li class="breadcrumb-item"><a href="">Admin</a></li>
-                                <li class="breadcrumb-item active">Pesanan</li>
+                                <li class="breadcrumb-item"><a href="dashboard.php" style= "color:brown">Dashboard</a></li>
+                                <li class="breadcrumb-item active">Tabel Pesanan</li>
                             </ol>
                         </div>
                     </div>
@@ -79,11 +82,45 @@
                         <th>aksi</th>
                     </tr>
                 </thead>
-                <tbody>
+                <?php 
+                  if(isset($_GET['konfirm'])){
+                    $konfirm = $_GET['konfirm'];
+                    $sql = "SELECT *FROM konfirmasi when id like '%".$konfirm."%'";
+                    $query = mysqli_querry($conn,$sql);
+                  } else{
+                    $sql = "SELECT * FROM konfirmasi";
+                    $query = mysqli_query($conn, $sql);
+
+                  }
+                  while($data=mysqli_fetch_array($query)){
+                    echo"
+                    <tbody>
                     <tr>
-                        <td>RES123</td>
-                        <td>Nazmi</td>
-                        <td>nazmi@gmail.com</td>
+                        <td>$data[id]</td>
+                        <td>$data[name]</td>
+                        <td>$data[email]</td>
+                        <td>$data[bukti]</td>
+                        <td>$data[status]</td>
+                        <td>
+                        <form action=\"#\">
+                        <label for=\"lang\">
+                          <img style=\"width:16px;\" src=\"../assets/pen-solid.svg\"> 
+                        </label>
+                        <select name=\"languages\" id=\"lang\">
+                          <option selected>Choose</option>
+                          <option value=\"Valid\">Valid</option>
+                          <option value=\"Invalid\">Invalid</option>
+                        </select>
+                      </form>
+                        </td>
+                    </tr>
+                    </tbody>";
+                  }
+                  ?>
+                <tr>
+                        <td>RES456</td>
+                        <td>Fairuz</td>
+                        <td>fairuz@gmail.com</td>
                         <td>file.jpg</td>
                         <td>valid</td>
                         <td>
