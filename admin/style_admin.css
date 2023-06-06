@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*{
+    font-family: "Poppins";
+}
+
 body {
     margin: 0;
     font-family: 'Times New Roman' , Times, serif;
@@ -45,18 +51,18 @@ main {
     height: 100%;
     width: 100%;
     line-height: 65px;
-    font-size: 20px;
+    font-size: 16px;
     color: #fff;
-    padding-left: 40px;
     box-sizing: border-box;
-    border-top: 1px solid rgba(6, 255, 251, 0.1);
-    border-bottom: 1px solid rgba(125, 134, 146, 0.302);
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
     transition: all 0.5s ease;
+    font-weight: bold;
+    text-align: center;
 }
 
 ul li:hover a {
-    padding-left: 100px;
-    background: #efe7bc;
+    background: #f1eccf;
     color: rgb(0, 0, 0);
 }
 
