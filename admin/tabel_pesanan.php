@@ -82,6 +82,7 @@ include "../koneksi.php";
                         <th>aksi</th>
                     </tr>
                 </thead>
+                <tbody>
                 <?php 
                   if(isset($_GET['konfirm'])){
                     $konfirm = $_GET['konfirm'];
@@ -94,7 +95,7 @@ include "../koneksi.php";
                   }
                   while($data=mysqli_fetch_array($query)){
                     echo"
-                    <tbody>
+                   
                     <tr>
                         <td>$data[id]</td>
                         <td>$data[name]</td>
@@ -114,9 +115,10 @@ include "../koneksi.php";
                       </form>
                         </td>
                     </tr>
-                    </tbody>";
+                    ";
                   }
                   ?>
+                  </tbody>
                 <tr>
                         <td>RES456</td>
                         <td>Fairuz</td>
