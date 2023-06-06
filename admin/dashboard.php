@@ -18,7 +18,9 @@
         </label>
         <div class="sidebar">
             <div class="top">
-                CHIS WITH US
+                <a>
+                    <img src="assets/logo.svg" alt=""/>
+                </a>
             </div>  
             <ul>
                 <li><a class="#" href="#"><i class="fa fa-home"></i> Dashboard</a></li>
