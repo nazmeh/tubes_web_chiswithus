@@ -169,7 +169,7 @@ $total = $subtotal + 1000;
                             </div>
                         </div>
                         <ul>
-                            <li class="mt-3 mb-5">
+                            <li class="mt-5 mb-5">
                             Please transfer to the account number above to process the 
                             payment and upload proof of the transaction
                             </li>
@@ -179,7 +179,7 @@ $total = $subtotal + 1000;
                     <div class="col-6 row">
                         <div
                             class="col-12 shadow-sm border rounded-2 mb-3">
-                            <p class="mb-0 fs-4 mt-4 fw-semibold">ORDER SUMMARY (1)</p>
+                            <p class="mb-0 fs-4 mt-3 mb-3 fw-semibold">ORDER SUMMARY (1)</p>
                         </div>
                         <div class="col-12 shadow-sm p-3 border rounded-2">
                             <div class="row mb-3">
@@ -223,12 +223,13 @@ $total = $subtotal + 1000;
                                 <p class="fs-4 m-0">Rp <?php echo number_format($total, 2, ',', '.'); ?></p>
                             </div>
                         </div>
+
                         <form action="upload.php" method="POST" enctype="multipart/form-data">
-                            <div class="upload">
-                                <label for="bukti_bayar">Upload File</label>
+                            <div class="upload mt-4">
+                                <label for="bukti_bayar"></label>
                                 <input type="file" name="bukti_bayar" id="bukti_bayar" required>
                             </div>
-                            <button type="submit" class="btn rounded mb-5 mt-3 border-0" style="background-color: #c37b52; border: none; color: white;">
+                            <button type="submit" class="btn rounded mb-5 mt-3 border-0 w-100" style="background-color: #c37b52; border: none; color: white;">
                             Confirm Payment
                         </button>
                     </form>
