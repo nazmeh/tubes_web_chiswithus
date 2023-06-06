@@ -33,23 +33,17 @@
     </style>
 </head>
 <body>
-    <main>
-        <input type="checkbox" id="check">
-        <label for="check">
-            <i class="fa fa-burger fa-lg"></i>
-            <i class="fa fa-arrow-right" id="open"></i>
-        </label>
         <div class="sidebar">
             <div class="top">
                 <img src="../assets/logo.svg" alt="">
             </div>  
             <ul>
-                <li><a class="#" href="#"><i class="fa fa-home"></i> Dashboard</a></li>
-                <li><a class="#" href="#"><i class="fa fa-shopping-basket"></i> Table Pesanan</a></li>
-                <li><a class="#" href="#"><i class="fa fa-shopping-bag"></i> Table Pelanggan</a></li>
+                <li><a class="#" href="dashboard.php">Dashboard</a></li>
+                <li><a class="#" href="#">Tabel Pesanan</a></li>
+                <li><a class="#" href="#">Tabel Pelanggan</a></li>
                 
                 <?php if (!isset($_SESSION['user_is_logged_in']) || $_SESSION['user_is_logged_in'] !== true) { ?>
-                    <li><a class="#" href="login_admin.php"><i class="fa fa-shopping-bag"></i> Logout</a></li>
+                    <li><a class="#" href="login_admin.php">Logout</a></li>
                     <?php } ?>
             </ul>
         </div>
@@ -64,8 +58,8 @@
                 <div class="container-fluid">
                     <div class="row align-items-center">
                         <div class="col-md-12">
-                            <h4 class="page-title mb-2 mt-4" style="">Daftar Invoice Menunggu Diverifikasi</h4>
-                            <ol class="breadcrumb m-10">
+                            <h4 class="page-title mb-4 mt-4" style="">Daftar Invoice Menunggu Diverifikasi</h4>
+                            <ol class="breadcrumb m-10 mb-5">
                                 <li class="breadcrumb-item"><a href="">Admin</a></li>
                                 <li class="breadcrumb-item active">Pesanan</li>
                             </ol>
@@ -93,15 +87,16 @@
                         <td>file.jpg</td>
                         <td>valid</td>
                         <td>
-                            <div class="dropdown">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <img style="width:16px;" src="../assets/pen-solid.svg">
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                    <a class="dropdown-item" href="#">Valid</a>
-                                    <a class="dropdown-item" href="#">Tidak Valid</a>
-                                </div>
-                            </div>
+                        <form action="#">
+                            <label for="lang">
+                                <img style="width:16px;" src="../assets/pen-solid.svg"> 
+                            </label>
+                            <select name="languages" id="lang">
+                                <option selected>Choose</option>
+                                <option value="Valid">Valid</option>
+                                <option value="Invalid">Invalid</option>
+                            </select>
+                        </form>
                         </td>
                     </tr>
                     <tr>
@@ -111,22 +106,22 @@
                         <td>file.jpg</td>
                         <td>valid</td>
                         <td>
-                            <div class="dropdown">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <img style="width:16px;" src="../assets/pen-solid.svg">
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
-                                    <a class="dropdown-item" href="#">Valid</a>
-                                    <a class="dropdown-item" href="#">Tidak Valid</a>
-                                </div>
-                            </div>
+                        <form action="#">
+                            <label for="lang">
+                                <img style="width:16px;" src="../assets/pen-solid.svg"> 
+                            </label>
+                            <select name="languages" id="lang">
+                                <option selected>Choose</option>
+                                <option value="Valid">Valid</option>
+                                <option value="Invalid">Invalid</option>
+                            </select>
+                        </form>
                         </td>
                     </tr>
                 </tbody>
             </table>
         </div>
         <!-- end content -->
-    </main>
     <!-- JavaScript -->
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIyTWPoqL+o3EhF6HA6tu4gU2tYn2Aiz+dJZI2B2" crossorigin="anonymous"></script>

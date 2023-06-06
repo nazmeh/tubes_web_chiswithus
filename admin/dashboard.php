@@ -10,27 +10,29 @@
     <link rel="stylesheet" href="style_admin.css">
 </head>
 <body>
-    <main>
-        <input type="checkbox" id="check">
-        <label for="check">
-            <i class="fas fa-bars" id="btn"></i>
-            <i class="fa fa-arrow-right" id="open"></i>
-        </label>
-        <div class="sidebar">
+    <div class="sidebar">
             <div class="top">
-                <a>
-                    <img src="assets/logo.svg" alt=""/>
-                </a>
+                <img src="../assets/logo.svg" alt="">
             </div>  
             <ul>
-                <li><a class="#" href="#"><i class="fa fa-home"></i> Dashboard</a></li>
-                <li><a class="#" href="#"><i class="fa fa-shopping-basket"></i> Table Pesanan</a></li>
-                <li><a class="#" href="#"><i class="fa fa-shopping-bag"></i> Table Pelanggan</a></li>
+                <li><a class="#" href="#">Dashboard</a></li>
+                <li><a class="#" href="tabel_pesanan.php">Tabel Pesanan</a></li>
+                <li><a class="#" href="#">Tabel Pelanggan</a></li>
+                
+                <?php if (!isset($_SESSION['user_is_logged_in']) || $_SESSION['user_is_logged_in'] !== true) { ?>
+                    <li><a class="#" href="login_admin.php">Logout</a></li>
+                    <?php } ?>
             </ul>
         </div>
+        <div class="content">
+            <nav class="">
+                <div class="container">
+                    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                        aria-expanded="false" aria-label="Toggle navigation"></button>
+                </div>
+            </nav>
         <section>
-            <h1>Selamat Datang Admin Chis With Us</h1>
+            <h1 style="padding:none">Welcome to Chis With Us!</h1>
         </section>
-    </main>
 </body>
 </html>
