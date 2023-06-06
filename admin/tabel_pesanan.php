@@ -1,6 +1,7 @@
 <?php
 include "../koneksi.php";
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -83,7 +84,7 @@ include "../koneksi.php";
                     </tr>
                 </thead>
                 <tbody>
-                <?php 
+                <!-- <?php 
                   if(isset($_GET['konfirm'])){
                     $konfirm = $_GET['konfirm'];
                     $sql = "SELECT *FROM konfirmasi when id like '%".$konfirm."%'";
@@ -117,7 +118,7 @@ include "../koneksi.php";
                     </tr>
                     ";
                   }
-                  ?>
+                  ?> -->
                   </tbody>
                 <tr>
                         <td>RES456</td>
