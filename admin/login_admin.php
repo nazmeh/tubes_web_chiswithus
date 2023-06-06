@@ -1,6 +1,5 @@
 <?php
 session_start();
-$errorMessage = '';
 if (isset($_POST['username']) && isset($_POST['password'])){
     $user = $_POST['username'];
     $password = $_POST['password'];
@@ -8,10 +7,14 @@ if (isset($_POST['username']) && isset($_POST['password'])){
 
     if ($user == 'admin' && $password == 'admin123') {
         $_SESSION['user_is_logged_in'] = true;
-        header('Location: admin.php');
+        header('Location: dashboard.php');
         exit;
     }else {
-        $errorMessage = 'Maaf, username atau password tidak sesuai!!!';
+       $errorMessage = "Maaf, username atau password tidak sesuai!!!" ;
+       echo "<script>
+               alert('$errorMessage');
+               window.location = 'login_admin.php';
+             </script>";
     }
 }
 include "../koneksi.php";
@@ -74,7 +77,7 @@ include "../koneksi.php";
         <label for="exampleInputPassword1">Password</label>
         <input type="password" class="form-control border-radius-none h-40 btn-border-2px fs-14px" id="exampleInputPassword1" name="password" placeholder="Password" />
     </div>
-    <button type="submit" class="btn btn-primary btn-block border-radius-none border-none h-48 mt-5" name="login" style="background-color: #c37b52" href="admin.php">
+    <button type="submit" class="btn btn-primary btn-block border-radius-none border-none h-48 mt-5" name="login" style="background-color: #c37b52">
         Login
     </button>
 </form>               
