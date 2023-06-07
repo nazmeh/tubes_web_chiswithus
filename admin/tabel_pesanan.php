@@ -107,10 +107,10 @@ include "../koneksi.php";
                         <label for=\"lang\">
                           <img style=\"width:16px;\" src=\"../assets/pen-solid.svg\"> 
                         </label>
-                        <select name=\"languages\" id=\"lang\">
+                        <select name=\"languages\" id=\"lang\" onchange=\"updateStatus(this.value, $data[id])\">>
                           <option selected>Choose</option>
                           <option value=\"Valid\">Valid</option>
-                          <option value=\"Invalid\">Invalid</option>
+                          <option value=\"Invalid\">Invalid</option> 
                         </select>
                       </form>
                         </td>
