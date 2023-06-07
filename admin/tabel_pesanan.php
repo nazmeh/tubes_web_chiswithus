@@ -87,55 +87,32 @@ include "../koneksi.php";
                     </tr>
                 </thead>
                 <tbody>
-                <?php 
-                  if(isset($_GET['konfirm'])){
-                    $konfirm = $_GET['konfirm'];
-                    $sql = "SELECT *FROM konfirmasi when id like '%".$konfirm."%'";
-                    $query = mysqli_querry($conn,$sql);
-                  } else{
-                    $sql = "SELECT * FROM konfirmasi";
-                    $query = mysqli_query($conn, $sql);
-
-                  }
-                  while($data=mysqli_fetch_array($query)){
-                    echo"
-                   
-                    <tr>
-                        <td>$data[id]</td>
-                        <td>$data[name]</td>
-                        <td>$data[email]</td>
-                        <td>$data[bukti]</td>
-                        <td>$data[status]</td>
-                        <td>
-                        <form action=\"#\">
-                        <label for=\"lang\">
-                          <img style=\"width:16px;\" src=\"../assets/pen-solid.svg\"> 
-                        </label>
-                        <select name=\"languages\" id=\"lang\">
-                          <option selected>Choose</option>
-                          <option value=\"Valid\">Valid</option>
-                          <option value=\"Invalid\">Invalid</option>
-                        </select>
-                      </form>
-                        </td>
-                    </tr>
-                    ";
-                  }
-                  ?>
-                  </tbody>
-                <tr>
-                        <td>RES456</td>
-                        <td>Fairuz</td>
-                        <td>fairuz@gmail.com</td>
-                        <td>file.jpg</td>
-                        <td>valid</td>
-                        <td>
-                        <form action="#">
-                            <label for="lang">
-                                <img style="width:16px;" src="../assets/pen-solid.svg"> 
-                            </label>
-                            <select name="languages" id="lang">
-                                <option selected>Choose</option>
+                    <?php 
+                    if(isset($_GET['konfirm'])){
+                        $konfirm = $_GET['konfirm'];
+                        $sql = "SELECT * FROM konfirmasi WHERE id_confirm LIKE '%".$konfirm."%'";
+                        $query = mysqli_query($conn,$sql);
+                    } else {
+                        $sql = "SELECT * FROM konfirmasi";
+                        $query = mysqli_query($conn, $sql);
+                    }
+                    while($data=mysqli_fetch_array($query)){
+                        ?>
+                        <tr>
+                            <td><?php echo $data['id_confirm']; ?></td>
+                            <td><?php echo $data['name']; ?></td>
+                            <td><?php echo $data['email']; ?></td>
+                            <td><?php echo $data['numOfPeople']; ?></td>
+                            <td><?php echo $data['background']; ?></td>
+                            <td><?php echo $data['paket']; ?></td>
+                            <td><a href="upload/<?php echo $data['bukti_bayar']; ?>"><?php echo $data['bukti_bayar']; ?></a></td>
+                            <td id="status-<?php echo $data['id_confirm']; ?>"><?php echo $data['status']; ?></td>
+                            <td>
+                                <form action="#" method="post">
+                                    <select name="languages" id="lang" onchange="getValue(this, <?php echo $data['id_confirm']; ?>)">
+                                <option selected disabled hidden value="">
+                                    &#9998;
+                                </option>
                                 <option value="Valid">Valid</option>
                                 <option value="Invalid">Invalid</option>
                                     </select>

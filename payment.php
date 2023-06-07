@@ -201,11 +201,11 @@ $total = $subtotal + 1000;
                                     </div>
                                     <div class="d-flex justify-content-between">
                                         <p>Date</p>
-                                        <p>20/05/2023</p>
+                                        <p >20/05/2023</p>
                                     </div>
                                     <div class="d-flex justify-content-between">
                                         <p>Time</p>
-                                        <p>10.30</p>
+                                        <p id="selectedTime"></p>
                                     </div>
                                 </div>
                             </div>
@@ -274,6 +274,10 @@ $total = $subtotal + 1000;
             $(window).scroll(function () {
                 $(".btn").toggleClass("scrolled", $(this).scrollTop() > 200);
             });
+        </script>
+        <script>
+            var selectedTime = sessionStorage.getItem('selectedTime');
+            document.getElementById('selectedTime').textContent = selectedTime;
         </script>
         <script src="main.js"></script>
     </body>

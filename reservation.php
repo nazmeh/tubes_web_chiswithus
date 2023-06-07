@@ -129,12 +129,13 @@ include "koneksi.php";
                                         type="radio"
                                         name="radioReservation"
                                         id="flexRadioDefault1"
-                                        value="S"
+                                        value="11:00 PM"
+                                        onclick="saveSelectedTime(this)"
                                         onchange="toggleLabelClass(this)" />
                                     <label
                                         class="form-check-label timeReservation d-flex align-items-center justify-content-center"
                                         for="flexRadioDefault1">
-                                        11.00 PM
+                                        11:00 PM
                                     </label>
                                 </div>
                                 <div class="form-check">
@@ -143,7 +144,8 @@ include "koneksi.php";
                                         type="radio"
                                         name="radioReservation"
                                         id="flexRadioDefault2"
-                                        value="M"
+                                        value="11:30 PM"
+                                        onclick="saveSelectedTime(this)"
                                         onchange="toggleLabelClass(this)" />
                                     <label
                                         class="form-check-label timeReservation d-flex align-items-center justify-content-center"
@@ -157,12 +159,13 @@ include "koneksi.php";
                                         type="radio"
                                         name="radioReservation"
                                         id="flexRadioDefault3"
-                                        value="M"
+                                        value="12:30 PM"
+                                        onclick="saveSelectedTime(this)"
                                         onchange="toggleLabelClass(this)" />
                                     <label
                                         class="form-check-label timeReservation d-flex align-items-center justify-content-center"
                                         for="flexRadioDefault3">
-                                        12.30 PM
+                                        12:30 PM
                                     </label>
                                 </div>
                                 <div class="form-check">
@@ -171,12 +174,13 @@ include "koneksi.php";
                                         type="radio"
                                         name="radioReservation"
                                         id="flexRadioDefault4"
-                                        value="M"
+                                        value="13:00 PM"
+                                        onclick="saveSelectedTime(this)"
                                         onchange="toggleLabelClass(this)" />
                                     <label
                                         class="form-check-label timeReservation d-flex align-items-center justify-content-center"
                                         for="flexRadioDefault4">
-                                        13.00 PM
+                                        13:00 PM
                                     </label>
                                 </div>
                                 <div class="form-check">
@@ -185,7 +189,8 @@ include "koneksi.php";
                                         type="radio"
                                         name="radioReservation"
                                         id="flexRadioDefault5"
-                                        value="M"
+                                        value="13:30 PM"
+                                        onclick="saveSelectedTime(this)"
                                         onchange="toggleLabelClass(this)" />
                                     <label
                                         class="form-check-label timeReservation d-flex align-items-center justify-content-center"
@@ -213,12 +218,13 @@ include "koneksi.php";
                                         type="radio"
                                         name="radioReservation"
                                         id="flexRadioDefault6"
-                                        value="S"
+                                        value="11:00 PM"
+                                        onclick="saveSelectedTime(this)"
                                         onchange="toggleLabelClass(this)" />
                                     <label
                                         class="form-check-label timeReservation d-flex align-items-center justify-content-center"
                                         for="flexRadioDefault6">
-                                        11.00 PM
+                                        11:00 PM
                                     </label>
                                 </div>
                                 <div class="form-check">
@@ -227,7 +233,8 @@ include "koneksi.php";
                                         type="radio"
                                         name="radioReservation"
                                         id="flexRadioDefault7"
-                                        value="M"
+                                        value="11:30 PM"
+                                        onclick="saveSelectedTime(this)"
                                         onchange="toggleLabelClass(this)" />
                                     <label
                                         class="form-check-label timeReservation d-flex align-items-center justify-content-center"
@@ -241,7 +248,8 @@ include "koneksi.php";
                                         type="radio"
                                         name="radioReservation"
                                         id="flexRadioDefault8"
-                                        value="M"
+                                        value="12:30 PM"
+                                        onclick="saveSelectedTime(this)"
                                         onchange="toggleLabelClass(this)" />
                                     <label
                                         class="form-check-label timeReservation d-flex align-items-center justify-content-center"
@@ -255,7 +263,8 @@ include "koneksi.php";
                                         type="radio"
                                         name="radioReservation"
                                         id="flexRadioDefault9"
-                                        value="M"
+                                        value="13:00 PM"
+                                        onclick="saveSelectedTime(this)"
                                         onchange="toggleLabelClass(this)" />
                                     <label
                                         class="form-check-label timeReservation d-flex align-items-center justify-content-center"
@@ -269,7 +278,8 @@ include "koneksi.php";
                                         type="radio"
                                         name="radioReservation"
                                         id="flexRadioDefault10"
-                                        value="M"
+                                        value="13:30 PM"
+                                        onclick="saveSelectedTime(this)"
                                         onchange="toggleLabelClass(this)" />
                                     <label
                                         class="form-check-label timeReservation d-flex align-items-center justify-content-center"
@@ -297,7 +307,8 @@ include "koneksi.php";
                                         type="radio"
                                         name="radioReservation"
                                         id="flexRadioDefault11"
-                                        value="S"
+                                        value="11:00 PM"
+                                        onclick="saveSelectedTime(this)"
                                         onchange="toggleLabelClass(this)" />
                                     <label
                                         class="form-check-label timeReservation d-flex align-items-center justify-content-center"
@@ -311,7 +322,8 @@ include "koneksi.php";
                                         type="radio"
                                         name="radioReservation"
                                         id="flexRadioDefault12"
-                                        value="M"
+                                        value="11:30 PM"
+                                        onclick="saveSelectedTime(this)"
                                         onchange="toggleLabelClass(this)" />
                                     <label
                                         class="form-check-label timeReservation d-flex align-items-center justify-content-center"
@@ -325,7 +337,8 @@ include "koneksi.php";
                                         type="radio"
                                         name="radioReservation"
                                         id="flexRadioDefault13"
-                                        value="M"
+                                        value="12:30 PM"
+                                        onclick="saveSelectedTime(this)"
                                         onchange="toggleLabelClass(this)" />
                                     <label
                                         class="form-check-label timeReservation d-flex align-items-center justify-content-center"
@@ -339,7 +352,8 @@ include "koneksi.php";
                                         type="radio"
                                         name="radioReservation"
                                         id="flexRadioDefault14"
-                                        value="M"
+                                        value="13:00 PM"
+                                        onclick="saveSelectedTime(this)"
                                         onchange="toggleLabelClass(this)" />
                                     <label
                                         class="form-check-label timeReservation d-flex align-items-center justify-content-center"
@@ -353,7 +367,8 @@ include "koneksi.php";
                                         type="radio"
                                         name="radioReservation"
                                         id="flexRadioDefault15"
-                                        value="M"
+                                        value="13:30 PM"
+                                        onclick="saveSelectedTime(this)"
                                         onchange="toggleLabelClass(this)" />
                                     <label
                                         class="form-check-label timeReservation d-flex align-items-center justify-content-center"
@@ -381,12 +396,13 @@ include "koneksi.php";
                                         type="radio"
                                         name="radioReservation"
                                         id="flexRadioDefault16"
-                                        value="S"
+                                        value="11:00 PM"
+                                        onclick="saveSelectedTime(this)"
                                         onchange="toggleLabelClass(this)" />
                                     <label
                                         class="form-check-label timeReservation d-flex align-items-center justify-content-center"
                                         for="flexRadioDefault16">
-                                        11.00 PM
+                                        11:00 PM
                                     </label>
                                 </div>
                                 <div class="form-check">
@@ -395,7 +411,8 @@ include "koneksi.php";
                                         type="radio"
                                         name="radioReservation"
                                         id="flexRadioDefault17"
-                                        value="M"
+                                        value="11:30 PM"
+                                        onclick="saveSelectedTime(this)"
                                         onchange="toggleLabelClass(this)" />
                                     <label
                                         class="form-check-label timeReservation d-flex align-items-center justify-content-center"
@@ -409,7 +426,8 @@ include "koneksi.php";
                                         type="radio"
                                         name="radioReservation"
                                         id="flexRadioDefault18"
-                                        value="M"
+                                        value="12:30 PM"
+                                        onclick="saveSelectedTime(this)"
                                         onchange="toggleLabelClass(this)" />
                                     <label
                                         class="form-check-label timeReservation d-flex align-items-center justify-content-center"
@@ -423,7 +441,8 @@ include "koneksi.php";
                                         type="radio"
                                         name="radioReservation"
                                         id="flexRadioDefault19"
-                                        value="M"
+                                        value="13:00 PM"
+                                        onclick="saveSelectedTime(this)"
                                         onchange="toggleLabelClass(this)" />
                                     <label
                                         class="form-check-label timeReservation d-flex align-items-center justify-content-center"
@@ -437,7 +456,8 @@ include "koneksi.php";
                                         type="radio"
                                         name="radioReservation"
                                         id="flexRadioDefault20"
-                                        value="M"
+                                        value="13:30 PM"
+                                        onclick="saveSelectedTime(this)"
                                         onchange="toggleLabelClass(this)" />
                                     <label
                                         class="form-check-label timeReservation d-flex align-items-center justify-content-center"
@@ -465,12 +485,13 @@ include "koneksi.php";
                                         type="radio"
                                         name="radioReservation"
                                         id="flexRadioDefault21"
-                                        value="S"
+                                        value="11:00 PM"
+                                        onclick="saveSelectedTime(this)"
                                         onchange="toggleLabelClass(this)" />
                                     <label
                                         class="form-check-label timeReservation d-flex align-items-center justify-content-center"
                                         for="flexRadioDefault21">
-                                        11.00 PM
+                                        11:00 PM
                                     </label>
                                 </div>
                                 <div class="form-check">
@@ -479,7 +500,8 @@ include "koneksi.php";
                                         type="radio"
                                         name="radioReservation"
                                         id="flexRadioDefault22"
-                                        value="M"
+                                        value="11:30 PM"
+                                        onclick="saveSelectedTime(this)"
                                         onchange="toggleLabelClass(this)" />
                                     <label
                                         class="form-check-label timeReservation d-flex align-items-center justify-content-center"
@@ -493,7 +515,8 @@ include "koneksi.php";
                                         type="radio"
                                         name="radioReservation"
                                         id="flexRadioDefault23"
-                                        value="M"
+                                        value="12:30 PM"
+                                        onclick="saveSelectedTime(this)"
                                         onchange="toggleLabelClass(this)" />
                                     <label
                                         class="form-check-label timeReservation d-flex align-items-center justify-content-center"
@@ -507,7 +530,8 @@ include "koneksi.php";
                                         type="radio"
                                         name="radioReservation"
                                         id="flexRadioDefault24"
-                                        value="M"
+                                        value="13:00"
+                                        onclick="saveSelectedTime(this)"
                                         onchange="toggleLabelClass(this)" />
                                     <label
                                         class="form-check-label timeReservation d-flex align-items-center justify-content-center"
@@ -521,7 +545,8 @@ include "koneksi.php";
                                         type="radio"
                                         name="radioReservation"
                                         id="flexRadioDefault25"
-                                        value="M"
+                                        value="13:30 PM"
+                                        onclick="saveSelectedTime(this)"
                                         onchange="toggleLabelClass(this)" />
                                     <label
                                         class="form-check-label timeReservation d-flex align-items-center justify-content-center"
@@ -549,12 +574,13 @@ include "koneksi.php";
                                         type="radio"
                                         name="radioReservation"
                                         id="flexRadioDefault26"
-                                        value="S"
+                                        value="11:00 PM"
+                                        onclick="saveSelectedTime(this)"
                                         onchange="toggleLabelClass(this)" />
                                     <label
                                         class="form-check-label timeReservation d-flex align-items-center justify-content-center"
                                         for="flexRadioDefault26">
-                                        11.00 PM
+                                        11:00 PM
                                     </label>
                                 </div>
                                 <div class="form-check">
@@ -563,7 +589,8 @@ include "koneksi.php";
                                         type="radio"
                                         name="radioReservation"
                                         id="flexRadioDefault27"
-                                        value="M"
+                                        value="11:30 PM"
+                                        onclick="saveSelectedTime(this)"
                                         onchange="toggleLabelClass(this)" />
                                     <label
                                         class="form-check-label timeReservation d-flex align-items-center justify-content-center"
@@ -577,7 +604,8 @@ include "koneksi.php";
                                         type="radio"
                                         name="radioReservation"
                                         id="flexRadioDefault28"
-                                        value="M"
+                                        value="12:30 PM"
+                                        onclick="saveSelectedTime(this)"
                                         onchange="toggleLabelClass(this)" />
                                     <label
                                         class="form-check-label timeReservation d-flex align-items-center justify-content-center"
@@ -591,7 +619,8 @@ include "koneksi.php";
                                         type="radio"
                                         name="radioReservation"
                                         id="flexRadioDefault29"
-                                        value="M"
+                                        value="13:00 PM"
+                                        onclick="saveSelectedTime(this)"
                                         onchange="toggleLabelClass(this)" />
                                     <label
                                         class="form-check-label timeReservation d-flex align-items-center justify-content-center"
@@ -605,7 +634,8 @@ include "koneksi.php";
                                         type="radio"
                                         name="radioReservation"
                                         id="flexRadioDefault30"
-                                        value="M"
+                                        value="13:30 PM"
+                                        onclick="saveSelectedTime(this)"
                                         onchange="toggleLabelClass(this)" />
                                     <label
                                         class="form-check-label timeReservation d-flex align-items-center justify-content-center"
@@ -758,6 +788,13 @@ include "koneksi.php";
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
             crossorigin="anonymous"></script>
+            <script>
+                function saveSelectedTime(element) {
+                    var selectedTime = element.value;
+                    sessionStorage.setItem('selectedTime', selectedTime);
+                }
+            </script>
+
         <script>
             $(window).scroll(function () {
                 $("nav").toggleClass("scrolled", $(this).scrollTop() > 200);
