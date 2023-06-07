@@ -2,11 +2,9 @@
 session_start();
 require_once "koneksi.php"; // File koneksi ke database
 
-if (isset($_FILES['bukti_bayar'])) {
-    $namaFile = $_FILES['bukti_bayar']['name'];
-    $tipeFile = $_FILES['bukti_bayar']['type'];
-    $ukuranFile = $_FILES['bukti_bayar']['size'];
-    $tmpFile = $_FILES['bukti_bayar']['tmp_name'];
+if (isset($_FILES['konfirmasi'])) {
+    $namaFile = $_FILES['konfirmasi']['name'];
+    $tmpFile = $_FILES['konfirmasi']['tmp_name'];
 
     // Tentukan lokasi penyimpanan file
     $direktori = "upload/";
@@ -15,7 +13,7 @@ if (isset($_FILES['bukti_bayar'])) {
     // Pindahkan file ke direktori penyimpanan
     if (move_uploaded_file($tmpFile, $pathFile)) {
         // Simpan informasi file ke dalam database
-        $query = "INSERT INTO bukti_bayar (nama_file, tipe_file, ukuran_file) VALUES ('$namaFile', '$tipeFile', '$ukuranFile')";
+        $query = "INSERT INTO konfirmasi (bukti_bayar) VALUES ('$namaFile')";
         $result = mysqli_query($conn, $query);
 
         if ($result) {

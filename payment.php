@@ -226,8 +226,8 @@ $total = $subtotal + 1000;
 
                         <form action="upload.php" method="POST" enctype="multipart/form-data">
                             <div class="upload mt-4">
-                                <label for="bukti_bayar"></label>
-                                <input type="file" name="bukti_bayar" id="bukti_bayar" required>
+                                <label for="konfirmasi"></label>
+                                <input type="file" name="konfirmasi" id="konfirmasi" required>
                             </div>
                             <button type="submit" class="btn rounded mb-5 mt-3 border-0 w-100" style="background-color: #c37b52; border: none; color: white;">
                             Confirm Payment
