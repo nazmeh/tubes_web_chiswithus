@@ -64,8 +64,7 @@ include "../koneksi.php";
                         <div class="col-md-12">
                             <h4 class="page-title mb-4 mt-4" style="">Daftar Invoice Menunggu Diverifikasi</h4>
                             <ol class="breadcrumb m-10 mb-5">
-                                <li class="breadcrumb-item"><a href="dashboard.php" style= "color:brown">Dashboard</a></li>
-                                <li class="breadcrumb-item"><a href="tabel_pelanggan.php" style= "color:brown">Dashboard</a></li>
+                                <li class="breadcrumb-item"><a href="dashboard.php" style= "color:brown">Admin</a></li>
                                 <li class="breadcrumb-item active">Tabel Pesanan</li>
                             </ol>
                         </div>

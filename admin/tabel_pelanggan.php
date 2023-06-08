@@ -64,7 +64,7 @@ include "../koneksi.php";
                         <div class="col-md-12">
                             <h4 class="page-title mb-4 mt-4" style="">Daftar pengguna Chis With Us</h4>
                             <ol class="breadcrumb m-10 mb-5">
-                                <li class="breadcrumb-item"><a href="dashboard.php" style= "color:brown">Dashboard</a></li>
+                                <li class="breadcrumb-item"><a href="dashboard.php" style= "color:brown">Admin</a></li>
                                 <li class="breadcrumb-item active">Tabel Pengguna</li>
                             </ol>
                         </div>
