@@ -105,7 +105,7 @@ include "../koneksi.php";
                             <td><?php echo $data['numOfPeople']; ?></td>
                             <td><?php echo $data['background']; ?></td>
                             <td><?php echo $data['paket']; ?></td>
-                            <td><a href="upload/<?php echo $data['bukti_bayar']; ?>"><?php echo $data['bukti_bayar']; ?></a></td>
+                            <td><a href="http://localhost/tubes_web_chiswithus/upload/<?php echo $data['bukti_bayar']; ?>"><?php echo $data['bukti_bayar']; ?></a></td>
                             <td id="status-<?php echo $data['id_confirm']; ?>"><?php echo $data['status']; ?></td>
                             <td>
                                 <form action="#" method="post">
