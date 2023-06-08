@@ -472,7 +472,7 @@ include "koneksi.php";
 	        	</button>
             </div>
 	      	<div class="modal-body">
-                  <form action="POST" action="submit_rating.php">
+                  <form method="POST" action="submit_rating.php">
                       <h4 class="text-center mt-2 mb-4">
                           <i class="fas fa-star star-light submit_star mr-1" id="submit_star_1" data-rating="1"></i>
                           <i class="fas fa-star star-light submit_star mr-1" id="submit_star_2" data-rating="2"></i>
@@ -487,7 +487,18 @@ include "koneksi.php";
                         <textarea name="user_review" id="user_review" class="form-control" placeholder="Type Review Here"></textarea>
                     </div>
                     <div class="form-group text-center mt-4">
-                        <button type="button" class="btn btn-primary" id="save_review">Submit</button>
+                    <button
+                    type="submit"
+                    name="submit"
+                    class="btn btn-warning w-30 rounded-5 mb-5 mt-3 border-0"
+                    style="
+                        background-color: #c37b52;
+                        border: none;
+                        color: white;
+                        font-size: 12px;
+                    ">
+                    Submit
+                </button>
                     </div>
                 </form>
             </div>

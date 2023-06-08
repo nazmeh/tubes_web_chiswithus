@@ -163,9 +163,10 @@ if (isset($_SESSION['paket']) && isset($_SESSION['background']) && isset($_SESSI
                         <div class="row mb-3">
                             <div class="col-4">
                                 <img
-                                    src="assets/couple.jpg"
+                                    src="assets/login.jpg"
                                     alt=""
-                                    width="160px" />
+                                    width="160px" 
+                                    />
                             </div>
                             <div class="col-8">
                                 <div class="d-flex justify-content-between">
