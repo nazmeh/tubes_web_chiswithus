@@ -43,8 +43,8 @@ include "../koneksi.php";
             </div>  
             <ul>
                 <li><a class="#" href="dashboard.php">Dashboard</a></li>
-                <li><a class="#" href="#">Tabel Pesanan</a></li>
-                <li><a class="#" href="tabel_pelanggan.php">Tabel Pelanggan</a></li>
+                <li><a class="#" href="tabel_pesanan.php">Tabel Pesanan</a></li>
+                <li><a class="#" href="#">Tabel Pelanggan</a></li>
                 
                 <?php if (!isset($_SESSION['user_is_logged_in']) || $_SESSION['user_is_logged_in'] !== true) { ?>
                     <li><a class="#" href="login_admin.php">Logout</a></li>
@@ -62,11 +62,10 @@ include "../koneksi.php";
                 <div class="container-fluid">
                     <div class="row align-items-center">
                         <div class="col-md-12">
-                            <h4 class="page-title mb-4 mt-4" style="">Daftar Invoice Menunggu Diverifikasi</h4>
+                            <h4 class="page-title mb-4 mt-4" style="">Daftar pengguna Chis With Us</h4>
                             <ol class="breadcrumb m-10 mb-5">
                                 <li class="breadcrumb-item"><a href="dashboard.php" style= "color:brown">Dashboard</a></li>
-                                <li class="breadcrumb-item"><a href="tabel_pelanggan.php" style= "color:brown">Dashboard</a></li>
-                                <li class="breadcrumb-item active">Tabel Pesanan</li>
+                                <li class="breadcrumb-item active">Tabel Pengguna</li>
                             </ol>
                         </div>
                     </div>
@@ -76,49 +75,31 @@ include "../koneksi.php";
             <table id="example" class="display" style="width:100%">
                 <thead>
                     <tr>
-                        <th>id_confirm</th>
-                        <th>nama</th>
+                        <th>id_pelanggan</th>
+                        <th>username</th>
                         <th>email</th>
-                        <th>num of people</th>
-                        <th>background</th>
-                        <th>paket</th>
-                        <th>bukti bayar</th>
-                        <th>status</th>
-                        <th>aksi</th>
+                        <th>nomor hp</th>
+
                     </tr>
                 </thead>
                 <tbody>
                     <?php 
-                    if(isset($_GET['konfirm'])){
-                        $konfirm = $_GET['konfirm'];
-                        $sql = "SELECT * FROM konfirmasi WHERE id_confirm LIKE '%".$konfirm."%'";
+                    if(isset($_GET['pelanggan'])){
+                        $konfirm = $_GET['pelanggan'];
+                        $sql = "SELECT * FROM pelanggan WHERE id_pelanggan LIKE '%".$pelanggan."%'";
                         $query = mysqli_query($conn,$sql);
                     } else {
-                        $sql = "SELECT * FROM konfirmasi";
+                        $sql = "SELECT * FROM pelanggan";
                         $query = mysqli_query($conn, $sql);
                     }
                     while($data=mysqli_fetch_array($query)){
                         ?>
                         <tr>
-                            <td><?php echo $data['id_confirm']; ?></td>
-                            <td><?php echo $data['name']; ?></td>
+                            <td><?php echo $data['id_pelanggan']; ?></td>
+                            <td><?php echo $data['username']; ?></td>
                             <td><?php echo $data['email']; ?></td>
-                            <td><?php echo $data['numOfPeople']; ?></td>
-                            <td><?php echo $data['background']; ?></td>
-                            <td><?php echo $data['paket']; ?></td>
-                            <td><a href="upload/<?php echo $data['bukti_bayar']; ?>"><?php echo $data['bukti_bayar']; ?></a></td>
-                            <td id="status-<?php echo $data['id_confirm']; ?>"><?php echo $data['status']; ?></td>
-                            <td>
-                                <form action="#" method="post">
-                                    <select name="languages" id="lang" onchange="getValue(this, <?php echo $data['id_confirm']; ?>)">
-                                <option selected disabled hidden value="">
-                                    &#9998;
-                                </option>
-                                <option value="Valid">Valid</option>
-                                <option value="Invalid">Invalid</option>
-                                    </select>
-                                </form>
-                            </td>
+                            <td><?php echo $data['number']; ?></td>
+                            
                         </tr>
                         <?php
                     }

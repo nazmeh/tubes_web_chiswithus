@@ -67,7 +67,7 @@ include "../koneksi.php";
                             " />
                     </div>
                     <div class="col-md-6 px-182 my-auto">
-                        <h3 class="mb-5 display-6 fw-600 font-sora">Login</h3>
+                        <h3 class="mb-5 display-6 fw-600 font-sora">Login Admin</h3>
                         <form action="" method="post">
     <div class="form-group">
         <label for="user">Username</label>

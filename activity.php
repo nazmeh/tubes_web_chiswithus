@@ -1,10 +1,24 @@
-<?php 
+<?php
 session_start();
-if(!isset($_SESSION ["login"])){
+
+if (!isset($_SESSION["login"])) {
     header("Location: login.php");
     exit;
 }
+
 include "koneksi.php";
+
+$enumPaket = ['1' => 'WEEKDAYS', '2' => 'WEEKEND', '3' => 'PROMO'];
+$enumBackground = ['1' => 'BLUE', '2' => 'BROWN', '3' => 'WHITE'];
+
+if (isset($_SESSION['paket']) && isset($_SESSION['background']) && isset($_SESSION['numOfPeople'])) {
+    $paket = $_SESSION['paket'];
+    $background = $_SESSION['background'];
+    $numOfPeople = $_SESSION['numOfPeople'];
+
+    $paketValue = isset($enumPaket[$paket]) ? $enumPaket[$paket] : "Unknown Package";
+    $backgroundValue = isset($enumBackground[$background]) ? $enumBackground[$background] : "Unknown Background";
+}
 ?>
 
 <!DOCTYPE html>
@@ -132,7 +146,6 @@ include "koneksi.php";
                         </button>
                     </div>
                 </div>
-
                 <div
                     class="row position-relative text-center overflow-hidden"
                     style="min-height: 100px">
@@ -161,13 +174,15 @@ include "koneksi.php";
                                             font-weight: 800;
                                             font-size: 16px;
                                         ">
-                                        WEEKDAYS PACKAGE
+                                        <?php echo $paketValue ?? "No Package"; ?> PACKAGE
                                     </p>
                                 </div>
                                 <div class="d-flex justify-content-between">
-                                    <p>Reservation id : rsv01253</p>
+                                    <p>Background : <?php echo $backgroundValue ?? "No Background"; ?></p>
                                 </div>
-
+                                <div class="d-flex justify-content-between">
+                                    <p>Number Of People : <?php echo $numOfPeople ?? "No Number of People"; ?></p>
+                                </div>
                                 <div class="d-flex justify-content-between">
                                     <img
                                         src="assets/centangupcoming.svg"
@@ -179,23 +194,26 @@ include "koneksi.php";
                             <button
                                 type="submit"
                                 class="btn btn-warning active w-30 rounded-5 mb-3 mt-3 border-0"
+                                onclick="window.location.href='reservation.html';"
                                 style="
                                     background-color: #c37b52;
                                     border: none;
                                     color: white;
                                 ">
-                                Reschedule
+                                Complete
                             </button>
                         </div>
                     </div>
                     <div class="col-md-12 position-relative" id="complete">
-                        <img class="py-5"" src="assets/vectoractivity.svg"
+                        <img class="py-5" src="assets/vectoractivity.svg"
                         alt="">
                         <p style="font-weight: 500; font-size: 16px">
-                            Sorry, you haven't made any reservation yet
+                            Sorry, you don't have any completed activities yet
                         </p>
+                        <form action="reservation.php" method="post">
                         <button
                             type="submit"
+                            formaction="reservation.php"
                             class="btn btn-warning active w-30 rounded-5 mb-5 mt-3 border-0"
                             style="
                                 background-color: #c37b52;
