@@ -147,11 +147,11 @@ $total = $subtotal + 1000;
                                     class="border rounded-2 text-center"
                                     style="background-color: #fec84b">
                                     <p class="mb-2 mt-2">
-                                        Pay Before 17th May 2023, 10.16 WITA
+                                        Pay Before 01th June 2023, 11.00 WITA
                                     </p>
                                 </div>
                                 <div class="p-5">
-                                    <p style="font-weight: bold;"">Transfer to:</p>
+                                    <p style="font-weight: bold;">Transfer to:</p>
                                     <img
                                         src="assets/bca.jpg"
                                         alt=""

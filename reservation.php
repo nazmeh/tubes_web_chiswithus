@@ -116,11 +116,11 @@ include "koneksi.php";
                             <button class="position-absolute today">
                                 TODAY
                             </button>
-                            <p class="mb-2" style="font-size: 24px">Sun</p>
+                            <p class="mb-2" style="font-size: 24px">Mon</p>
                             <h3
                                 class="mb-3"
                                 style="font-weight: bold; font-size: 24px">
-                                23
+                                05
                             </h3>
                             <div class="row mx-auto gy-3">
                                 <div class="form-check">
@@ -205,11 +205,11 @@ include "koneksi.php";
                         <div
                             class="border px-3 py-4 rounded-3 position-relative"
                             style="background-color: #e8d0bd">
-                            <p class="mb-2" style="font-size: 24px">Mon</p>
+                            <p class="mb-2" style="font-size: 24px">Tue</p>
                             <h3
                                 class="mb-3"
                                 style="font-weight: bold; font-size: 24px">
-                                24
+                                06
                             </h3>
                             <div class="row mx-auto gy-3">
                                 <div class="form-check">
@@ -294,11 +294,11 @@ include "koneksi.php";
                         <div
                             class="border px-3 py-4 rounded-3 position-relative"
                             style="background-color: #e8d0bd">
-                            <p class="mb-2" style="font-size: 24px">Tue</p>
+                            <p class="mb-2" style="font-size: 24px">Wed</p>
                             <h3
                                 class="mb-3"
                                 style="font-weight: bold; font-size: 24px">
-                                25
+                                07
                             </h3>
                             <div class="row mx-auto gy-3">
                                 <div class="form-check">
@@ -383,11 +383,11 @@ include "koneksi.php";
                         <div
                             class="border px-3 py-4 rounded-3 position-relative"
                             style="background-color: #e8d0bd">
-                            <p class="mb-2" style="font-size: 24px">Wed</p>
+                            <p class="mb-2" style="font-size: 24px">Thu</p>
                             <h3
                                 class="mb-3"
                                 style="font-weight: bold; font-size: 24px">
-                                26
+                                07
                             </h3>
                             <div class="row mx-auto gy-3">
                                 <div class="form-check">
@@ -472,11 +472,11 @@ include "koneksi.php";
                         <div
                             class="border px-3 py-4 rounded-3 position-relative"
                             style="background-color: #e8d0bd">
-                            <p class="mb-2" style="font-size: 24px">Thu</p>
+                            <p class="mb-2" style="font-size: 24px">Fri</p>
                             <h3
                                 class="mb-3"
                                 style="font-weight: bold; font-size: 24px">
-                                27
+                                09
                             </h3>
                             <div class="row mx-auto gy-3">
                                 <div class="form-check">
@@ -561,11 +561,11 @@ include "koneksi.php";
                         <div
                             class="border px-3 py-4 rounded-3 position-relative"
                             style="background-color: #e8d0bd">
-                            <p class="mb-2" style="font-size: 24px">Fri</p>
+                            <p class="mb-2" style="font-size: 24px">Sat</p>
                             <h3
                                 class="mb-3"
                                 style="font-weight: bold; font-size: 24px">
-                                28
+                                10
                             </h3>
                             <div class="row mx-auto gy-3">
                                 <div class="form-check">

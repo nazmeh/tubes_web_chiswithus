@@ -110,6 +110,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($conn->query($sql) === TRUE) {
         $_SESSION['paket'] = $paket;
         $_SESSION['background'] = $background;
+        $_SESSION['numOfPeople'] = $numOfPeople;
         $_SESSION['subtotal'] = $subtotal;
         $_SESSION['total'] = $total;
 
