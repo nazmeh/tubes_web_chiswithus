@@ -117,7 +117,9 @@ include "../koneksi.php";
                                 <option value="Valid">Valid</option>
                                 <option value="Invalid">Invalid</option>
                                     </select>
+                                    <a href="hapus_pesanan.php?id_confirm=<?php echo $data['id_confirm']; ?>" data-tip="delete"> <img src="../assets/trash-solid.svg" alt="" width= 16px; >Hapus</a>
                                 </form>
+
                             </td>
                         </tr>
                         <?php
@@ -159,6 +161,5 @@ include "../koneksi.php";
         });
     }
 </script>
-
 </body>
 </html>
