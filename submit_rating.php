@@ -5,12 +5,13 @@
 $connect = new PDO("mysql:host=localhost;dbname=cws", "root", "");
 
 
+
 if(isset($_POST["rating_data"]))
 {
     $data = array(
         ':user_name'    =>  $_POST["user_name"],
         ':user_rating'  =>  $_POST["rating_data"],
-        ':user_review'  =>  $_POST["user_review"]
+        ':user_review'  =>  $_POST["user_review"],
     );
 
     $query = "INSERT INTO review (user_name, user_rating, user_review) 
@@ -52,6 +53,7 @@ if(isset($_POST["action"]))
             'user_review'   =>  $row["user_review"],
             'rating'        =>  $row["user_rating"]
         );
+        
 
         if($row["user_rating"] == '5')
         {
