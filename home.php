@@ -384,8 +384,8 @@ include "koneksi.php";
         </section>
 
         <section id="Feedback">
-            <div class="container py-5">
-                <div class="row">
+        <div class="container">
+        <div class="row">
                     <div class="col-6">
                         <p class="fw-medium" style="font-size: 16px">03</p>
                         <h1 class="fw-semibold" style="font-size: 56px">
@@ -492,3 +492,52 @@ include "koneksi.php";
         <script src="feedback.js"></script>
     </body>
 </html>
+
+<div id="review_modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="review_modal_label" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+	      	<div class="modal-header">
+                  <h5 class="modal-title" id="review_modal_label">Submit Review</h5>
+	        	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+	        	</button>
+            </div>
+	      	<div class="modal-body">
+                  <form id="review_form" method="POST" action="submit_rating.php">
+                      <h4 class="text-center mt-2 mb-4">
+                          <i class="fas fa-star star-light submit_star mr-1" id="submit_star_1" data-rating="1"></i>
+                          <i class="fas fa-star star-light submit_star mr-1" id="submit_star_2" data-rating="2"></i>
+                          <i class="fas fa-star star-light submit_star mr-1" id="submit_star_3" data-rating="3"></i>
+                        <i class="fas fa-star star-light submit_star mr-1" id="submit_star_4" data-rating="4"></i>
+                        <i class="fas fa-star star-light submit_star mr-1" id="submit_star_5" data-rating="5"></i>
+                    </h4>
+                    <div class="form-group">
+                        <label for="user_name">Nama:</label>
+                        <input type="text" name="user_name" id="user_name" class="form-control" placeholder="Enter Your Name" />
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="user_review">Ulasan:</label>
+                        <textarea name="user_review" id="user_review" class="form-control" placeholder="Type Review Here"></textarea>
+                    </div>
+                    <div class="form-group text-center mt-4">
+                    <button
+                    type="submit"
+                    id="save_review"
+                    name="submit"
+                    class="btn btn-warning w-30 rounded-5 mb-5 mt-3 border-0"
+                    style="
+                        background-color: #c37b52;
+                        border: none;
+                        color: white;
+                        font-size: 12px;
+                    ">
+                    Submit
+                </button>
+                    </div>
+                </form>
+            </div>
+    	</div>
+    </div>
+</div>
+</section>

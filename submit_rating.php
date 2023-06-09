@@ -41,7 +41,14 @@ if(isset($_POST["action"]))
     $total_user_rating = 0;
     $review_content = array();
 
+<<<<<<< HEAD
     $query = " SELECT * FROM review ORDER BY kd_review DESC";
+=======
+    $query = "
+    SELECT * FROM review 
+    ORDER BY review_id DESC
+    ";
+>>>>>>> b6fd8a1cf21f3ea517c804ec7d5048a59494dc31
 
     $result = $connect->query($query, PDO::FETCH_ASSOC);
 
