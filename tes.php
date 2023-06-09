@@ -85,7 +85,7 @@ $hargaPaket = [
 $hargaTambahanPerOrang = 20000;
 $serviceFee = 1000;
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['konfirm'])) {
 
     // Mengambil nilai dari form
     $name = $_POST['name'];
@@ -119,6 +119,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             alert('Booking berhasil dikonfirmasi');
             window.location = 'payment.php';
         </script>";
+        exit();
     } else {
         // Jika terjadi kesalahan saat menyimpan data
         $errorMessage = "Kesalahan input pesanan. Error: " . $sql . "<br>" . $conn->error;
@@ -126,7 +127,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 alert('$errorMessage');
                 window.location = 'reservation.php';
               </script>";
-    
+        exit();
     }
 }
 

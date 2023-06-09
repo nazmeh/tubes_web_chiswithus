@@ -9,14 +9,11 @@ if(isset($_POST["rating_data"]))
     $data = array(
         ':user_name'    =>  $_POST["user_name"],
         ':user_rating'  =>  $_POST["rating_data"],
-        ':user_review'  =>  $_POST["user_review"],
-        ':datetime'     =>  time()
+        ':user_review'  =>  $_POST["user_review"]
     );
 
-    $query = "
-    INSERT INTO review_table 
-    (user_name, user_rating, user_review, datetime) 
-    VALUES (:user_name, :user_rating, :user_review, :datetime)
+    $query = "INSERT INTO review (user_name, user_rating, user_review) 
+    VALUES (:user_name, :user_rating, :user_review)
     ";
 
     $statement = $connect->prepare($query);
@@ -44,7 +41,7 @@ if(isset($_POST["action"]))
     $review_content = array();
 
     $query = "
-    SELECT * FROM review_table 
+    SELECT * FROM review 
     ORDER BY review_id DESC
     ";
 
@@ -55,8 +52,7 @@ if(isset($_POST["action"]))
         $review_content[] = array(
             'user_name'     =>  $row["user_name"],
             'user_review'   =>  $row["user_review"],
-            'rating'        =>  $row["user_rating"],
-            'datetime'      =>  date('l jS, F Y h:i:s A', $row["datetime"])
+            'rating'        =>  $row["user_rating"]
         );
 
         if($row["user_rating"] == '5')
