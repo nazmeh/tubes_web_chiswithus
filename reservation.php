@@ -106,22 +106,17 @@ include "koneksi.php";
 
         <section
             id="Home"
-            style="background-image: url(assets/bgreservasi.png)">
-            <div class="container" style="padding-top: 10rem">
-                <div class="row py-5 flex-nowrap overflow-auto">
+            style="background-color : #E8D0BD">
+            <div class="container" style="padding-top: 6rem;">
+            <p
+                    class="fw-semibold pt-5"
+                    style="text-align: center; font-size: 16px">
+                    CHOOSE YOUR TIME
+                </p>
+                <div class="row py-5 pt-0 flex-nowrap overflow-auto justify-content-center">
                     <div class="col-2 px-3">
                         <div
-                            class="border px-3 py-4 rounded-3 position-relative"
-                            style="background-color: #e8d0bd">
-                            <button class="position-absolute today">
-                                TODAY
-                            </button>
-                            <p class="mb-2" style="font-size: 24px">Mon</p>
-                            <h3
-                                class="mb-3"
-                                style="font-weight: bold; font-size: 24px">
-                                05
-                            </h3>
+                            class="px-3 py-4 rounded-3 position-relative">
                             <div class="row mx-auto gy-3">
                                 <div class="form-check">
                                     <input
@@ -165,7 +160,7 @@ include "koneksi.php";
                                     <label
                                         class="form-check-label timeReservation d-flex align-items-center justify-content-center"
                                         for="flexRadioDefault3">
-                                        12:30 PM
+                                        12:00 PM
                                     </label>
                                 </div>
                                 <div class="form-check">
@@ -180,7 +175,7 @@ include "koneksi.php";
                                     <label
                                         class="form-check-label timeReservation d-flex align-items-center justify-content-center"
                                         for="flexRadioDefault4">
-                                        13:00 PM
+                                        12:30 PM
                                     </label>
                                 </div>
                                 <div class="form-check">
@@ -195,7 +190,7 @@ include "koneksi.php";
                                     <label
                                         class="form-check-label timeReservation d-flex align-items-center justify-content-center"
                                         for="flexRadioDefault5">
-                                        13:30 PM
+                                        13:00 PM
                                     </label>
                                 </div>
                             </div>
@@ -203,14 +198,7 @@ include "koneksi.php";
                     </div>
                     <div class="col-2 px-3">
                         <div
-                            class="border px-3 py-4 rounded-3 position-relative"
-                            style="background-color: #e8d0bd">
-                            <p class="mb-2" style="font-size: 24px">Tue</p>
-                            <h3
-                                class="mb-3"
-                                style="font-weight: bold; font-size: 24px">
-                                06
-                            </h3>
+                            class="px-3 py-4 rounded-3 position-relative">
                             <div class="row mx-auto gy-3">
                                 <div class="form-check">
                                     <input
@@ -224,7 +212,7 @@ include "koneksi.php";
                                     <label
                                         class="form-check-label timeReservation d-flex align-items-center justify-content-center"
                                         for="flexRadioDefault6">
-                                        11:00 PM
+                                        13:30 PM
                                     </label>
                                 </div>
                                 <div class="form-check">
@@ -239,7 +227,7 @@ include "koneksi.php";
                                     <label
                                         class="form-check-label timeReservation d-flex align-items-center justify-content-center"
                                         for="flexRadioDefault7">
-                                        11:30 PM
+                                        14:00 PM
                                     </label>
                                 </div>
                                 <div class="form-check">
@@ -254,7 +242,7 @@ include "koneksi.php";
                                     <label
                                         class="form-check-label timeReservation d-flex align-items-center justify-content-center"
                                         for="flexRadioDefault8">
-                                        12:30 PM
+                                        14:30 PM
                                     </label>
                                 </div>
                                 <div class="form-check">
@@ -269,7 +257,7 @@ include "koneksi.php";
                                     <label
                                         class="form-check-label timeReservation d-flex align-items-center justify-content-center"
                                         for="flexRadioDefault9">
-                                        13:00 PM
+                                        15:00 PM
                                     </label>
                                 </div>
                                 <div class="form-check">
@@ -284,7 +272,7 @@ include "koneksi.php";
                                     <label
                                         class="form-check-label timeReservation d-flex align-items-center justify-content-center"
                                         for="flexRadioDefault10">
-                                        13:30 PM
+                                        15:30 PM
                                     </label>
                                 </div>
                             </div>
@@ -292,14 +280,7 @@ include "koneksi.php";
                     </div>
                     <div class="col-2 px-3">
                         <div
-                            class="border px-3 py-4 rounded-3 position-relative"
-                            style="background-color: #e8d0bd">
-                            <p class="mb-2" style="font-size: 24px">Wed</p>
-                            <h3
-                                class="mb-3"
-                                style="font-weight: bold; font-size: 24px">
-                                07
-                            </h3>
+                            class="px-3 py-4 rounded-3 position-relative">
                             <div class="row mx-auto gy-3">
                                 <div class="form-check">
                                     <input
@@ -313,7 +294,7 @@ include "koneksi.php";
                                     <label
                                         class="form-check-label timeReservation d-flex align-items-center justify-content-center"
                                         for="flexRadioDefault11">
-                                        11.00 PM
+                                        16.00 PM
                                     </label>
                                 </div>
                                 <div class="form-check">
@@ -328,7 +309,7 @@ include "koneksi.php";
                                     <label
                                         class="form-check-label timeReservation d-flex align-items-center justify-content-center"
                                         for="flexRadioDefault12">
-                                        11:30 PM
+                                        16:30 PM
                                     </label>
                                 </div>
                                 <div class="form-check">
@@ -343,7 +324,7 @@ include "koneksi.php";
                                     <label
                                         class="form-check-label timeReservation d-flex align-items-center justify-content-center"
                                         for="flexRadioDefault13">
-                                        12:30 PM
+                                        17:00 PM
                                     </label>
                                 </div>
                                 <div class="form-check">
@@ -358,7 +339,7 @@ include "koneksi.php";
                                     <label
                                         class="form-check-label timeReservation d-flex align-items-center justify-content-center"
                                         for="flexRadioDefault14">
-                                        13:00 PM
+                                        17:30 PM
                                     </label>
                                 </div>
                                 <div class="form-check">
@@ -373,7 +354,7 @@ include "koneksi.php";
                                     <label
                                         class="form-check-label timeReservation d-flex align-items-center justify-content-center"
                                         for="flexRadioDefault15">
-                                        13:30 PM
+                                        18:00 PM
                                     </label>
                                 </div>
                             </div>
@@ -381,14 +362,7 @@ include "koneksi.php";
                     </div>
                     <div class="col-2 px-3">
                         <div
-                            class="border px-3 py-4 rounded-3 position-relative"
-                            style="background-color: #e8d0bd">
-                            <p class="mb-2" style="font-size: 24px">Thu</p>
-                            <h3
-                                class="mb-3"
-                                style="font-weight: bold; font-size: 24px">
-                                07
-                            </h3>
+                            class="px-3 py-4 rounded-3 position-relative">
                             <div class="row mx-auto gy-3">
                                 <div class="form-check">
                                     <input
@@ -402,7 +376,7 @@ include "koneksi.php";
                                     <label
                                         class="form-check-label timeReservation d-flex align-items-center justify-content-center"
                                         for="flexRadioDefault16">
-                                        11:00 PM
+                                        18:30 PM
                                     </label>
                                 </div>
                                 <div class="form-check">
@@ -417,7 +391,7 @@ include "koneksi.php";
                                     <label
                                         class="form-check-label timeReservation d-flex align-items-center justify-content-center"
                                         for="flexRadioDefault17">
-                                        11:30 PM
+                                        19:00 PM
                                     </label>
                                 </div>
                                 <div class="form-check">
@@ -432,7 +406,7 @@ include "koneksi.php";
                                     <label
                                         class="form-check-label timeReservation d-flex align-items-center justify-content-center"
                                         for="flexRadioDefault18">
-                                        12:30 PM
+                                        19:30 PM
                                     </label>
                                 </div>
                                 <div class="form-check">
@@ -447,7 +421,7 @@ include "koneksi.php";
                                     <label
                                         class="form-check-label timeReservation d-flex align-items-center justify-content-center"
                                         for="flexRadioDefault19">
-                                        13:00 PM
+                                        20:00 PM
                                     </label>
                                 </div>
                                 <div class="form-check">
@@ -462,190 +436,11 @@ include "koneksi.php";
                                     <label
                                         class="form-check-label timeReservation d-flex align-items-center justify-content-center"
                                         for="flexRadioDefault20">
-                                        13:30 PM
+                                        20:30 PM
                                     </label>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-2 px-3">
-                        <div
-                            class="border px-3 py-4 rounded-3 position-relative"
-                            style="background-color: #e8d0bd">
-                            <p class="mb-2" style="font-size: 24px">Fri</p>
-                            <h3
-                                class="mb-3"
-                                style="font-weight: bold; font-size: 24px">
-                                09
-                            </h3>
-                            <div class="row mx-auto gy-3">
-                                <div class="form-check">
-                                    <input
-                                        class="form-check-input"
-                                        type="radio"
-                                        name="radioReservation"
-                                        id="flexRadioDefault21"
-                                        value="11:00 PM"
-                                        onclick="saveSelectedTime(this)"
-                                        onchange="toggleLabelClass(this)" />
-                                    <label
-                                        class="form-check-label timeReservation d-flex align-items-center justify-content-center"
-                                        for="flexRadioDefault21">
-                                        11:00 PM
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input
-                                        class="form-check-input"
-                                        type="radio"
-                                        name="radioReservation"
-                                        id="flexRadioDefault22"
-                                        value="11:30 PM"
-                                        onclick="saveSelectedTime(this)"
-                                        onchange="toggleLabelClass(this)" />
-                                    <label
-                                        class="form-check-label timeReservation d-flex align-items-center justify-content-center"
-                                        for="flexRadioDefault22">
-                                        11:30 PM
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input
-                                        class="form-check-input"
-                                        type="radio"
-                                        name="radioReservation"
-                                        id="flexRadioDefault23"
-                                        value="12:30 PM"
-                                        onclick="saveSelectedTime(this)"
-                                        onchange="toggleLabelClass(this)" />
-                                    <label
-                                        class="form-check-label timeReservation d-flex align-items-center justify-content-center"
-                                        for="flexRadioDefault23">
-                                        12:30 PM
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input
-                                        class="form-check-input"
-                                        type="radio"
-                                        name="radioReservation"
-                                        id="flexRadioDefault24"
-                                        value="13:00"
-                                        onclick="saveSelectedTime(this)"
-                                        onchange="toggleLabelClass(this)" />
-                                    <label
-                                        class="form-check-label timeReservation d-flex align-items-center justify-content-center"
-                                        for="flexRadioDefault24">
-                                        13:00 PM
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input
-                                        class="form-check-input"
-                                        type="radio"
-                                        name="radioReservation"
-                                        id="flexRadioDefault25"
-                                        value="13:30 PM"
-                                        onclick="saveSelectedTime(this)"
-                                        onchange="toggleLabelClass(this)" />
-                                    <label
-                                        class="form-check-label timeReservation d-flex align-items-center justify-content-center"
-                                        for="flexRadioDefault25">
-                                        13:30 PM
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-2 px-3">
-                        <div
-                            class="border px-3 py-4 rounded-3 position-relative"
-                            style="background-color: #e8d0bd">
-                            <p class="mb-2" style="font-size: 24px">Sat</p>
-                            <h3
-                                class="mb-3"
-                                style="font-weight: bold; font-size: 24px">
-                                10
-                            </h3>
-                            <div class="row mx-auto gy-3">
-                                <div class="form-check">
-                                    <input
-                                        class="form-check-input"
-                                        type="radio"
-                                        name="radioReservation"
-                                        id="flexRadioDefault26"
-                                        value="11:00 PM"
-                                        onclick="saveSelectedTime(this)"
-                                        onchange="toggleLabelClass(this)" />
-                                    <label
-                                        class="form-check-label timeReservation d-flex align-items-center justify-content-center"
-                                        for="flexRadioDefault26">
-                                        11:00 PM
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input
-                                        class="form-check-input"
-                                        type="radio"
-                                        name="radioReservation"
-                                        id="flexRadioDefault27"
-                                        value="11:30 PM"
-                                        onclick="saveSelectedTime(this)"
-                                        onchange="toggleLabelClass(this)" />
-                                    <label
-                                        class="form-check-label timeReservation d-flex align-items-center justify-content-center"
-                                        for="flexRadioDefault27">
-                                        11:30 PM
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input
-                                        class="form-check-input"
-                                        type="radio"
-                                        name="radioReservation"
-                                        id="flexRadioDefault28"
-                                        value="12:30 PM"
-                                        onclick="saveSelectedTime(this)"
-                                        onchange="toggleLabelClass(this)" />
-                                    <label
-                                        class="form-check-label timeReservation d-flex align-items-center justify-content-center"
-                                        for="flexRadioDefault28">
-                                        12:30 PM
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input
-                                        class="form-check-input"
-                                        type="radio"
-                                        name="radioReservation"
-                                        id="flexRadioDefault29"
-                                        value="13:00 PM"
-                                        onclick="saveSelectedTime(this)"
-                                        onchange="toggleLabelClass(this)" />
-                                    <label
-                                        class="form-check-label timeReservation d-flex align-items-center justify-content-center"
-                                        for="flexRadioDefault29">
-                                        13:00 PM
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input
-                                        class="form-check-input"
-                                        type="radio"
-                                        name="radioReservation"
-                                        id="flexRadioDefault30"
-                                        value="13:30 PM"
-                                        onclick="saveSelectedTime(this)"
-                                        onchange="toggleLabelClass(this)" />
-                                    <label
-                                        class="form-check-label timeReservation d-flex align-items-center justify-content-center"
-                                        for="flexRadioDefault30">
-                                        13:30 PM
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
@@ -716,6 +511,18 @@ include "koneksi.php";
                         name="numOfPeople"
                         class="form-control border-dark-subtle"
                         id="exampleInputNumber" />
+                </div>
+                <div class="mb-3">
+                    <label
+                        for="exampleInputDate"
+                        class="form-label opacity-75"
+                        >Tanggal Booking</label
+                    >
+                    <input
+                        type="date"
+                        name="date"
+                        class="form-control border-dark-subtle"
+                        id="exampleInputDate" />
                 </div>
                 <div class="mb-3">
                     <label

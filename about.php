@@ -249,7 +249,7 @@ include "koneksi.php";
                         <div class="py-3 d-flex" style="font-size: 16px">
                             <img src="assets/time.svg" alt="" />
                             <p class="ms-2 align-items-center my-auto">
-                                Open 11.00 AM
+                                Open 11.00 AM - 20.30 PM
                             </p>
                         </div>
                     </div>

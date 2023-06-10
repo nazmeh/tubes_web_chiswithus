@@ -89,7 +89,7 @@
     text-align: center;
     background-color: #fff;
     border-radius: 10px;
-    border: solid 1px #FFC876;
+    border: solid 1px #C37B52;
     font-size: 16px;
     font-weight: 500;
     width: 100%;
@@ -109,16 +109,6 @@
 
 .bg-cream{
     background-color: #F5F3EB;
-}
-
-.today {
-    border-radius: 20px;
-    background-color: #C37B52;
-    color: white;
-    border: 0px;
-    padding: 8px 16px;
-    top: -24px;
-    font-weight: 600;
 }
 
 
