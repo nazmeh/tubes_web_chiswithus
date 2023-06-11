@@ -520,7 +520,7 @@ include "koneksi.php";
                     >
                     <input
                         type="date"
-                        name="date"
+                        name="tanggal_booking"
                         class="form-control border-dark-subtle"
                         id="exampleInputDate" />
                 </div>
