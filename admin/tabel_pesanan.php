@@ -82,6 +82,7 @@ include "../koneksi.php";
                         <th>phone</th>
                         <th>instagram</th>
                         <th>num of people</th>
+                        <th>tanggal booking</th>
                         <th>background</th>
                         <th>paket</th>
                         <th>aksi</th>
@@ -106,6 +107,7 @@ include "../koneksi.php";
                             <td><?php echo $data['phone']; ?></td>
                             <td><?php echo $data['instagram']; ?></td>
                             <td><?php echo $data['numOfPeople']; ?></td>
+                            <td><?php echo $data['tanggal_booking']; ?></td>
                             <td><?php echo $data['background']; ?></td>
                             <td><?php echo $data['paket']; ?></td>
                             <td>

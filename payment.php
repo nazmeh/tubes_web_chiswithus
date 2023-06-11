@@ -201,8 +201,9 @@ $total = $subtotal + 1000;
                                     </div>
                                     <div class="d-flex justify-content-between">
                                         <p>Tanggal Booking</p>
-                                        <p >20/05/2023</p>
+                                        <p><?php echo $_SESSION['tanggal_booking']; ?></p>
                                     </div>
+                                    
                                     <div class="d-flex justify-content-between">
                                         <p>Time</p>
                                         <p id="selectedTime"></p>

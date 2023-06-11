@@ -93,6 +93,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['konfirm'])) {
     $phone = $_POST['phone'];
     $instagram = $_POST['instagram'];
     $numOfPeople = $_POST['numOfPeople'];
+    $tanggal_booking = $_POST['tanggal_booking'];
     $background = $_POST['background'];
     $paket = $_POST['paket'];
     // Lakukan validasi data jika diperlukan
@@ -104,13 +105,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['konfirm'])) {
     $total = $subtotal + $serviceFee;
 
     // Membuat query untuk menyimpan data
-    $sql = "INSERT INTO konfirmasi (name, email, phone, instagram, numOfPeople, background, paket)
-            VALUES ('$name', '$email', '$phone', '$instagram', '$numOfPeople', '$background', '$paket')";
+    $sql = "INSERT INTO konfirmasi (name, email, phone, instagram, numOfPeople, tanggal_booking, background, paket)
+            VALUES ('$name', '$email', '$phone', '$instagram', '$numOfPeople', '$tanggal_booking', '$background', '$paket')";
 
     if ($conn->query($sql) === TRUE) {
         $_SESSION['paket'] = $paket;
         $_SESSION['background'] = $background;
         $_SESSION['numOfPeople'] = $numOfPeople;
+        $_SESSION['tanggal_booking'] = $tanggal_booking;
         $_SESSION['subtotal'] = $subtotal;
         $_SESSION['total'] = $total;
 
