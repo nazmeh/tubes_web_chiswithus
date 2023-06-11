@@ -201,7 +201,6 @@ $total = $subtotal + 1000;
                                     </div>
                                     <div class="d-flex justify-content-between">
                                         <p>Date</p>
-                                        <p >05/05/2023</p>
                                     </div>
                                     <div class="d-flex justify-content-between">
                                         <p>Time</p>
@@ -279,6 +278,4 @@ $total = $subtotal + 1000;
             var selectedTime = sessionStorage.getItem('selectedTime');
             document.getElementById('selectedTime').textContent = selectedTime;
         </script>
-        <script src="main.js"></script>
-    </body>
 </html>
