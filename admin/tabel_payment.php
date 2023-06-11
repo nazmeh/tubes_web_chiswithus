@@ -43,8 +43,8 @@ include "../koneksi.php";
             </div>  
             <ul>
                 <li><a class="#" href="dashboard.php">Dashboard</a></li>
-                <li><a class="#" href="#">Tabel Pesanan</a></li>
-                <li><a class="#" href="tabel_payment.php">Tabel Pembayaran</a></li>
+                <li><a class="#" href="tabel_pesanan.php">Tabel Pesanan</a></li>
+                <li><a class="#" href="#">Tabel Pembayaran</a></li>
                 <li><a class="#" href="tabel_pelanggan.php">Tabel Pelanggan</a></li>
                 
                 <?php if (!isset($_SESSION['user_is_logged_in']) || $_SESSION['user_is_logged_in'] !== true) { ?>
@@ -63,10 +63,10 @@ include "../koneksi.php";
                 <div class="container-fluid">
                     <div class="row align-items-center">
                         <div class="col-md-12">
-                            <h4 class="page-title mb-4 mt-4" style="">Daftar konfirmasi Booking Pelanggan</h4>
+                            <h4 class="page-title mb-4 mt-4" style="">Daftar Pembayaran Pelanggan</h4>
                             <ol class="breadcrumb m-10 mb-5">
                                 <li class="breadcrumb-item"><a href="dashboard.php" style= "color:brown">Admin</a></li>
-                                <li class="breadcrumb-item active">Tabel Konfirmasi Booking</li>
+                                <li class="breadcrumb-item active">Tabel Pembayaran</li>
                             </ol>
                         </div>
                     </div>
@@ -76,41 +76,42 @@ include "../koneksi.php";
             <table id="example" class="display" style="width:100%">
                 <thead>
                     <tr>
-                        <th>id_confirm</th>
-                        <th>nama</th>
-                        <th>email</th>
-                        <th>phone</th>
-                        <th>instagram</th>
-                        <th>num of people</th>
-                        <th>background</th>
-                        <th>paket</th>
+                        <th>id_payment</th>
+                        <th>bukti bayar</th>
+                        <th>ukuran file</th>
+                        <th>tanggal upload</th>
+                        <th>status</th>
                         <th>aksi</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php 
-                    if(isset($_GET['konfirm'])){
-                        $konfirm = $_GET['konfirm'];
-                        $sql = "SELECT * FROM konfirmasi WHERE id_confirm LIKE '%".$konfirm."%'";
+                    if(isset($_GET['payment'])){
+                        $konfirm = $_GET['payment'];
+                        $sql = "SELECT * FROM payment WHERE id_payment LIKE '%".$payment."%'";
                         $query = mysqli_query($conn,$sql);
                     } else {
-                        $sql = "SELECT * FROM konfirmasi";
+                        $sql = "SELECT * FROM payment";
                         $query = mysqli_query($conn, $sql);
                     }
                     while($data=mysqli_fetch_array($query)){
                         ?>
                         <tr>
-                            <td><?php echo $data['id_confirm']; ?></td>
-                            <td><?php echo $data['name']; ?></td>
-                            <td><?php echo $data['email']; ?></td>
-                            <td><?php echo $data['phone']; ?></td>
-                            <td><?php echo $data['instagram']; ?></td>
-                            <td><?php echo $data['numOfPeople']; ?></td>
-                            <td><?php echo $data['background']; ?></td>
-                            <td><?php echo $data['paket']; ?></td>
+                            <td><?php echo $data['id_payment']; ?></td>
+                            <td><a href="upload/<?php echo $data['nama_file']; ?>"><?php echo $data['nama_file']; ?></a></td>
+                            <td><?php echo $data['ukuran_file']; ?></td>
+                            <td><?php echo $data['tanggal_upload']; ?></td>
+                            <td id="status-<?php echo $data['id_payment']; ?>"><?php echo $data['status']; ?></td>
                             <td>
                                 <form action="#" method="post">
-                                    <a href="hapus_pesanan.php?id_confirm=<?php echo $data['id_confirm']; ?>" data-tip="delete"> <img src="../assets/trash-solid.svg" alt="" width= 16px; >Hapus</a>
+                                    <select name="languages" id="lang" onchange="getValue(this, <?php echo $data['id_payment']; ?>)">
+                                <option selected disabled hidden value="">
+                                    &#9998;
+                                </option>
+                                <option value="Valid">Valid</option>
+                                <option value="Invalid">Invalid</option>
+                                    </select>
+                                    <a href="hapus_pesanan.php?id_confirm=<?php echo $data['id_payment']; ?>" data-tip="delete"> <img src="../assets/trash-solid.svg" alt="" width= 16px; >Hapus</a>
                                 </form>
 
                             </td>
@@ -134,7 +135,7 @@ include "../koneksi.php";
         });
     </script>
     <script>
-    function getValue(select, id_confirm) {
+    function getValue(select, id_payment) {
         // Mengambil nilai yang dipilih
         var selectedOption = select.value;
 
@@ -142,13 +143,13 @@ include "../koneksi.php";
         $.ajax({
             type: "POST",
             url: "update_status.php",
-            data: { id: id_confirm, status: selectedOption },
+            data: { id: id_payment, status: selectedOption },
             success: function (response) {
                 // Menampilkan pesan atau melakukan tindakan setelah berhasil memperbarui status
                 alert("Status berhasil diperbarui");
 
                 // Mengubah nilai pada elemen <td> dengan id_confirm yang sesuai
-                var statusCell = document.getElementById("status-" + id_confirm);
+                var statusCell = document.getElementById("status-" + id_payment);
                 statusCell.innerHTML = selectedOption;
             }
         });

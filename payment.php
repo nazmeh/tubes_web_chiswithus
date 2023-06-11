@@ -200,7 +200,8 @@ $total = $subtotal + 1000;
                                         <p><?php echo $enumBackground[$_SESSION['background']]; ?></p>
                                     </div>
                                     <div class="d-flex justify-content-between">
-                                        <p>Date</p>
+                                        <p>Tanggal Booking</p>
+                                        <p >20/05/2023</p>
                                     </div>
                                     <div class="d-flex justify-content-between">
                                         <p>Time</p>
@@ -226,7 +227,7 @@ $total = $subtotal + 1000;
                         <form action="upload.php" method="POST" enctype="multipart/form-data">
                             <div class="upload mt-4">
                                 <label for="konfirmasi"></label>
-                                <input type="file" name="konfirmasi" id="konfirmasi" required>
+                                <input type="file" name="bukti_bayar" id="bukti_bayar" required>
                             </div>
                             <button type="submit" class="btn rounded mb-5 mt-3 border-0 w-100" style="background-color: #c37b52; border: none; color: white;">
                             Confirm Payment

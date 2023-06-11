@@ -44,6 +44,7 @@ include "../koneksi.php";
             <ul>
                 <li><a class="#" href="dashboard.php">Dashboard</a></li>
                 <li><a class="#" href="tabel_pesanan.php">Tabel Pesanan</a></li>
+                <li><a class="#" href="tabel_payment.php">Tabel Pembayaran</a></li>
                 <li><a class="#" href="#">Tabel Pelanggan</a></li>
                 
                 <?php if (!isset($_SESSION['user_is_logged_in']) || $_SESSION['user_is_logged_in'] !== true) { ?>
