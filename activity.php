@@ -162,13 +162,15 @@ if (isset($_SESSION['paket']) && isset($_SESSION['background']) && isset($_SESSI
                         style="border-color:#c37b52; border-style: solid;">
                         <div class="row mb-3">
                             <div class="col-4">
-                                <img
-                                    src="assets/login.jpg"
+                                <img class = "ratio ratio-1x1"
+                                    src="assets/imgcomplete.jpg"
                                     alt=""
-                                    width="160px" 
+                                    width="200px" 
+                                    height="200px"
                                     />
                             </div>
-                            <div class="col-8">
+                            <div class="row col-8">
+                                <div class="col-6">
                                 <div class="d-flex justify-content-between">
                                     <p
                                         style="
@@ -184,11 +186,28 @@ if (isset($_SESSION['paket']) && isset($_SESSION['background']) && isset($_SESSI
                                 <div class="d-flex justify-content-between">
                                     <p>Number Of People : <?php echo $numOfPeople ?? "No Number of People"; ?></p>
                                 </div>
-                                <div class="d-flex justify-content-between">
+                                <div class="d-flex justify-content-start">
                                     <img
                                         src="assets/centangupcoming.svg"
                                         alt="" />
+                                        Reservation Success
                                 </div>
+                                </div>
+                                <div class="col-6">
+                                <div class="d-flex justify-content-end">
+                                    <p
+                                        style="
+                                            font-weight: 800;
+                                            font-size: 16px;
+                                        ">
+                                        DATE
+                                    </p>
+                                </div>
+                                <div class="d-flex justify-content-end">
+                                    <p><?php echo $_SESSION['tanggal_booking']; ?></p>
+                                </div>
+                                </div>
+                               
                             </div>
                         </div>
                         <div class="d-flex justify-content-end pt-3 border-top">

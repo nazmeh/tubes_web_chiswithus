@@ -200,7 +200,7 @@ $total = $subtotal + 1000;
                                         <p><?php echo $enumBackground[$_SESSION['background']]; ?></p>
                                     </div>
                                     <div class="d-flex justify-content-between">
-                                        <p>Tanggal Booking</p>
+                                        <p>Date</p>
                                         <p><?php echo $_SESSION['tanggal_booking']; ?></p>
                                     </div>
                                     
