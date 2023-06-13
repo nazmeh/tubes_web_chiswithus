@@ -95,17 +95,17 @@ if (isset($_SESSION['id_confirm'])) {
             </p>
             <ul class="nav nav-pills nav-fill mb-3 w-100" id="pills-tab" role="tablist">
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link <?= mysqli_num_rows($get_upcoming_booking) > 0 ? 'active' : '' ?>" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Upcoming</button>
+                    <button class="nav-link <?= mysqli_num_rows($get_upcoming_booking) > 0 ? 'active' : '' ?>" id="pills-upcoming-tab" data-bs-toggle="pill" data-bs-target="#pills-upcoming" type="button" role="tab" aria-controls="pills-upcoming" aria-selected="true">Upcoming</button>
                 </li>
 
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link <?= mysqli_num_rows($get_completed_booking) > 0 ? 'active' : '' ?>" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Complete</button>
+                    <button class="nav-link <?= mysqli_num_rows($get_completed_booking) > 0 ? 'active' : '' ?>" id="pills-complete-tab" data-bs-toggle="pill" data-bs-target="#pills-complete" type="button" role="tab" aria-controls="pills-complete" aria-selected="false">Complete</button>
                 </li>
             </ul>
-            <div class="tab-content" id="pills-tabContent">
 
+            <div class="tab-content" id="pills-tabContent">
                 <?php if (mysqli_num_rows($get_upcoming_booking) > 0) : ?>
-                    <div class="col-md-6 tab-pane fade show rounded-3 border-1" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" id="upcoming">
+                    <div class="col-md-6 tab-pane fade <?= mysqli_num_rows($get_upcoming_booking) > 0 ? 'show active' : '' ?> rounded-3 border-1" id="pills-upcoming" role="tabpanel" aria-labelledby="pills-upcoming-tab" style="border-color:#c37b52; border-style: solid;">
 
                         <?php while ($upBook = mysqli_fetch_array($get_upcoming_booking)) : ?>
                             <div class="mt-3 p-3 ">
@@ -114,7 +114,7 @@ if (isset($_SESSION['id_confirm'])) {
                                         <img class="ratio ratio-1x1" src="assets/imgcomplete.jpg" alt="" width="200px" height="200px" />
                                     </div>
                                     <div class="row col-8">
-                                        <div class="col-6">
+                                        <div class="col-7">
                                             <div class="d-flex justify-content-between">
                                                 <p style="
                                                     font-weight: 800;
@@ -123,18 +123,18 @@ if (isset($_SESSION['id_confirm'])) {
                                                     <?= $upBook['paket'] ?> PACKAGE
                                                 </p>
                                             </div>
-                                            <div class="d-flex justify-content-between">
+                                            <div class="d-flex justify-content-between" style="font-weight: 400;">
                                                 <p>Background : <?php echo $upBook['background'] ?></p>
                                             </div>
-                                            <div class="d-flex justify-content-between">
+                                            <div class="d-flex justify-content-between" style="font-weight: 400;">
                                                 <p>Number Of People : <?php echo $upBook['numOfPeople'] ?></p>
                                             </div>
-                                            <div class="d-flex justify-content-start">
+                                            <div class="d-flex justify-content-start" style="font-weight: 400;">
                                                 <img src="assets/centangupcoming.svg" alt="" />
                                                 Reservation Success
                                             </div>
                                         </div>
-                                        <div class="col-6">
+                                        <div class="col-5">
                                             <div class="d-flex justify-content-end">
                                                 <p style="
                                                     font-weight: 800;
@@ -143,7 +143,7 @@ if (isset($_SESSION['id_confirm'])) {
                                                     DATE
                                                 </p>
                                             </div>
-                                            <div class="d-flex justify-content-end">
+                                            <div class="d-flex justify-content-end" style="font-weight: 400;">
                                                 <p><?php echo $upBook['tanggal_booking']; ?></p>
                                             </div>
                                         </div>
@@ -164,11 +164,10 @@ if (isset($_SESSION['id_confirm'])) {
                                 </div>
                             </div>
                         <?php endwhile; ?>
-
                     </div>
                 <?php else : ?>
-                    <div class="col-md-12 tab-pane fade show <?= mysqli_num_rows($get_upcoming_booking) > 0 ? 'active' : '' ?> rounded-3 border-1" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" id="upcoming">
-                        <img class="py-5 w-100" src="assets/vectoractivity.svg" alt="">
+                    <div class="col-md-6 mx-auto text-center tab-pane fade show rounded-3 border-1" id="pills-upcoming" role="tabpanel" aria-labelledby="pills-upcoming-tab">
+                        <img class="py-5" src="assets/vectoractivity.svg" alt="">
                         <p style="font-weight: 500; font-size: 16px">
                             Sorry, you don't have any completed activities yet
                         </p>
@@ -185,9 +184,10 @@ if (isset($_SESSION['id_confirm'])) {
                 <?php endif; ?>
 
                 <?php if (mysqli_num_rows($get_completed_booking) > 0) : ?>
-                    <div class="col-md-6 tab-pane fade show <?= mysqli_num_rows($get_completed_booking) > 0 ? 'active' : '' ?> rounded-3 border-1" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                    <div class="col-md-6 tab-pane fade <?= mysqli_num_rows($get_completed_booking) > 0 ? 'show active' : '' ?> rounded-3 border-1" id="pills-complete" role="tabpanel" aria-labelledby="pills-complete-tab" style="border-color:#c37b52; border-style: solid;">
+
                         <?php while ($upBook = mysqli_fetch_array($get_completed_booking)) : ?>
-                            <div class="mt-3 p-3 rounded-3" style="border: 1px solid #c37b52;">
+                            <div class="mt-3 p-3 rounded-3">
                                 <div class="row mb-3">
                                     <div class="col-4">
                                         <img class="ratio ratio-1x1" src="assets/imgcomplete.jpg" alt="" width="200px" height="200px" />
@@ -236,8 +236,8 @@ if (isset($_SESSION['id_confirm'])) {
                         <?php endwhile; ?>
                     </div>
                 <?php else : ?>
-                    <div class="col-md-12 tab-pane fade show rounded-3 border-1" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" id="upcoming">
-                        <img class="py-5 w-100" src="assets/vectoractivity.svg" alt="">
+                    <div class="col-md-6 mx-auto text-center tab-pane fade show rounded-3 border-1" id="pills-complete" role="tabpanel" aria-labelledby="pills-complete-tab">
+                        <img class="py-5" src="assets/vectoractivity.svg" alt="">
                         <p style="font-weight: 500; font-size: 16px">
                             Sorry, you don't have any completed activities yet
                         </p>
@@ -273,22 +273,6 @@ if (isset($_SESSION['id_confirm'])) {
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js " integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN " crossorigin="anonymous "></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-
-    <script>
-        function showUpcoming() {
-            document.getElementById('upcoming').style.display = 'block';
-            document.getElementById('complete').style.display = 'none';
-            document.getElementById('btnupc').classList.add('activity-active');
-            document.getElementById('btncmple').classList.remove('activity-active');
-        }
-
-        function showComplete() {
-            document.getElementById('upcoming').style.display = 'none';
-            document.getElementById('complete').style.display = 'block';
-            document.getElementById('btnupc').classList.remove('activity-active');
-            document.getElementById('btncmple').classList.add('activity-active');
-        }
-    </script>
     <script src="main.js"></script>
     <script src="tes.js"></script>
 
