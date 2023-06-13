@@ -82,7 +82,7 @@ include "../koneksi.php";
                         <th>phone</th>
                         <th>instagram</th>
                         <th>num of people</th>
-                        <th>tanggal booking</th>
+                        <th>date</th>
                         <th>background</th>
                         <th>paket</th>
                         <th>aksi</th>

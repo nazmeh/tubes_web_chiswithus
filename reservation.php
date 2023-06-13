@@ -516,7 +516,7 @@ include "koneksi.php";
                     <label
                         for="exampleInputDate"
                         class="form-label opacity-75"
-                        >Tanggal Booking</label
+                        >Date</label
                     >
                     <input
                         type="date"

@@ -42,34 +42,34 @@ if (isset($_POST['register'])) {
 }
 
 if (isset($_POST['login'])) {
-  $username = $_POST['username'];
-  $password = $_POST['password'];
-  
-  $sql = "SELECT * FROM pelanggan WHERE username = '$username' AND password = '$password'";
-  $result = mysqli_query($conn, $sql);
-  
-  if (mysqli_num_rows($result) == 1) {
-    // Login berhasil
-    // Mendapatkan data pengguna dari hasil quer
-    $row = mysqli_fetch_assoc($result);
+    $username = $_POST['username'];
+    $password = $_POST['password'];
 
-  // set session
-    $_SESSION["login"] = true;
-    $_SESSION["id_pelanggan"] = $row['id_pelanggan'];
-    $_SESSION["username"] = $row['username'];
-    $_SESSION["email"] = $row['email'];
-    $_SESSION["number"] = $row['number'];
-    $_SESSION["password"] = $row['password'];
-    echo "<script>
+    $sql = "SELECT * FROM pelanggan WHERE username = '$username' AND password = '$password'";
+    $result = mysqli_query($conn, $sql);
+
+    if (mysqli_num_rows($result) == 1) {
+        // Login berhasil
+        // Mendapatkan data pengguna dari hasil quer
+        $row = mysqli_fetch_assoc($result);
+
+        // set session
+        $_SESSION["login"] = true;
+        $_SESSION["id_pelanggan"] = $row['id_pelanggan'];
+        $_SESSION["username"] = $row['username'];
+        $_SESSION["email"] = $row['email'];
+        $_SESSION["number"] = $row['number'];
+        $_SESSION["password"] = $row['password'];
+        echo "<script>
     window.location = 'home.php';
     </script>";
-  } else {
-    // Login gagal
-    echo "<script>
+    } else {
+        // Login gagal
+        echo "<script>
     alert('Login gagal. Periksa kembali username dan password Anda.');
     window.location = 'login.php';
     </script>";
-  }
+    }
 }
 
 $enumPaket = ['1' => 'WEEKDAYS', '2' => 'WEEKEND', '3' => 'PROMO'];
@@ -94,27 +94,31 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['konfirm'])) {
     $instagram = $_POST['instagram'];
     $numOfPeople = $_POST['numOfPeople'];
     $tanggal_booking = $_POST['tanggal_booking'];
-    $background = $_POST['background'];
-    $paket = $_POST['paket'];
+    $background = $enumBackground[$_POST['background']];
+    $paket = $enumPaket[$_POST['paket']];
     // Lakukan validasi data jika diperlukan
 
-    $hargaPaketPilihan = $hargaPaket[$paket];
+    $hargaPaketPilihan = $hargaPaket[$_POST['paket']];
     $hargaTambahanOrang = ($numOfPeople > 2) ? ($numOfPeople - 2) * $hargaTambahanPerOrang : 0;
 
     $subtotal = $hargaPaketPilihan + $hargaTambahanOrang;
     $total = $subtotal + $serviceFee;
 
+    // Mengamil user id dari login
+    $user_id = $_SESSION['id_pelanggan'];
+
     // Membuat query untuk menyimpan data
-    $sql = "INSERT INTO konfirmasi (name, email, phone, instagram, numOfPeople, tanggal_booking, background, paket)
-            VALUES ('$name', '$email', '$phone', '$instagram', '$numOfPeople', '$tanggal_booking', '$background', '$paket')";
+    $sql = "INSERT INTO konfirmasi (name, email, phone, instagram, numOfPeople, tanggal_booking, background, paket, status, user_id)
+            VALUES ('$name', '$email', '$phone', '$instagram', '$numOfPeople', '$tanggal_booking', '$background', '$paket', 'UPCOMING', '$user_id')";
 
     if ($conn->query($sql) === TRUE) {
-        $_SESSION['paket'] = $paket;
-        $_SESSION['background'] = $background;
-        $_SESSION['numOfPeople'] = $numOfPeople;
-        $_SESSION['tanggal_booking'] = $tanggal_booking;
+        // $_SESSION['paket'] = $paket;
+        // $_SESSION['background'] = $background;
+        // $_SESSION['numOfPeople'] = $numOfPeople;
+        // $_SESSION['tanggal_booking'] = $tanggal_booking;
         $_SESSION['subtotal'] = $subtotal;
         $_SESSION['total'] = $total;
+        $_SESSION['id_confirm'] = $conn->insert_id;
 
         // Jika penyimpanan data berhasil
         echo "<script>
@@ -132,5 +136,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['konfirm'])) {
         exit();
     }
 }
-
-?>
