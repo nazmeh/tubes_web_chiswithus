@@ -22,7 +22,7 @@ if (isset($_FILES['bukti_bayar'])) {
             echo "<script>
             alert('Data berhasil dikirim');
             window.location = 'home.php';
-        </script>";;
+        </script>";
         } else {
             echo "Terjadi kesalahan saat menyimpan file ke database.";
         }
@@ -30,5 +30,3 @@ if (isset($_FILES['bukti_bayar'])) {
         echo "Terjadi kesalahan saat mengunggah file.";
     }
 }
-
-?>

@@ -19,258 +19,280 @@ if (isset($_SESSION['paket']) && isset($_SESSION['background']) && isset($_SESSI
     $paketValue = isset($enumPaket[$paket]) ? $enumPaket[$paket] : "Unknown Package";
     $backgroundValue = isset($enumBackground[$background]) ? $enumBackground[$background] : "Unknown Background";
 }
+
+// User id login
+$user_id = $_SESSION['id_pelanggan'];
+
+if (isset($_SESSION['id_confirm'])) {
+    $id_confirm = $_SESSION['id_confirm'];
+
+    $get_upcoming_booking = mysqli_query($conn, "SELECT * FROM konfirmasi WHERE id_confirm='$id_confirm' AND status='UPCOMING'");
+
+    $get_completed_booking = mysqli_query($conn, "SELECT * FROM konfirmasi WHERE id_confirm='$id_confirm' AND status='COMPLETED'");
+}
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
-            crossorigin="anonymous" />
-        <link rel="stylesheet" href="css/style.css" />
-        <title>Activity</title>
-    </head>
-    <body>
-        <nav class="navbar navbar-expand-lg fixed-top bg-dark">
-            <div class="container">
-                <a class="navbar-brand fs-4 text-white" href="#"
-                    ><img src="assets/logo.svg" alt=""
-                /></a>
-                <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarNav"
-                    aria-controls="navbarNav"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div
-                    class="collapse navbar-collapse d-flex justify-content-between"
-                    id="navbarNav">
-                    <ul class="navbar-nav flex-grow-1 justify-content-center">
-                        <li class="nav-item">
-                            <a
-                                class="nav-link text-white"
-                                aria-current="page"
-                                href="home.php"
-                                >Home</a
-                            >
-                        </li>
-                        <li class="nav-item">
-                            <a
-                                class="nav-link text-white"
-                                href="about.php"
-                                >About</a
-                            >
-                        </li>
-                        <li class="nav-item">
-                            <a
-                                class="nav-link text-white"
-                                href="reservation.php"
-                                >Reservation</a
-                            >
-                        </li>
-                    </ul>
-                    <div class="d-flex">
-                        <div class="dropdown">
-                            <button
-                                class="dropdown bg-transparent border-0"
-                                data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                <img src="assets/profile.svg" alt="" />
-                                <img src="assets/panahprofile.svg" alt="" />
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a class="dropdown-item" href="profile.php"
-                                        ><img
-                                            class="me-3"
-                                            src="assets/iconprofile.svg"
-                                            alt="" />Profile</a
-                                    >
-                                </li>
-                                <li>
-                                    <a
-                                        class="dropdown-item"
-                                        href="activity.php"
-                                        ><img
-                                            class="me-3"
-                                            src="assets/iconactivity.svg"
-                                            alt="" />Activy</a
-                                    >
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="logout.php"
-                                        ><img
-                                            class="me-3"
-                                            src="assets/iconlogout.svg"
-                                            alt="" />Logout</a
-                                    >
-                                </li>
-                            </ul>
-                        </div>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Activity</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top bg-dark">
+        <div class="container">
+            <a class="navbar-brand fs-4 text-white" href="#"><img src="assets/logo.svg" alt="" /></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarNav">
+                <ul class="navbar-nav flex-grow-1 justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" aria-current="page" href="home.php">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="about.php">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="reservation.php">Reservation</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <div class="dropdown">
+                        <button class="dropdown bg-transparent border-0" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="assets/profile.svg" alt="" />
+                            <img src="assets/panahprofile.svg" alt="" />
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="profile.php"><img class="me-3" src="assets/iconprofile.svg" alt="" />Profile</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="activity.php"><img class="me-3" src="assets/iconactivity.svg" alt="" />Activy</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="logout.php"><img class="me-3" src="assets/iconlogout.svg" alt="" />Logout</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </nav>
+        </div>
+    </nav>
 
-        <section class="mt-5 flex-grow-1">
-            <div class="container h-100">
-                <p class="fw-bold d-flex justify-content-center mt-5 fs-4 mb-5">
-                    ACTIVITY
-                </p>
-                <div class="row">
-                    <div class="col-md-6 p-0">
-                        <button
-                            type="button"
-                            id="btnupc"
-                            class="w-100 button-activity activity-active"
-                            onclick="upcoming()">
-                            Upcoming
-                        </button>
-                    </div>
-                    <div class="col-md-6 p-0">
-                        <button
-                            type="button"
-                            id="btncmple"
-                            class="w-100 button-activity"
-                            onclick="complete()">
-                            Complete
-                        </button>
-                    </div>
-                </div>
-                <div
-                    class="row position-relative text-center overflow-hidden"
-                    style="min-height: 100px">
-                    <!-- <div class="col-md-12 position-absolute" id="upcoming">
-                        <div
-                            class="col-6 border-1"
-                            style="border-color: #c37b52">
-                            <p>ini page upcoming</p>
-                        </div>
-                    </div> -->
-                    <div
-                        class="col-md-6 p-3 position-absolute border-1 rounded-3"
-                        id="upcoming"
-                        style="border-color:#c37b52; border-style: solid;">
-                        <div class="row mb-3">
-                            <div class="col-4">
-                                <img class = "ratio ratio-1x1"
-                                    src="assets/imgcomplete.jpg"
-                                    alt=""
-                                    width="200px" 
-                                    height="200px"
-                                    />
+
+    <section class="my-5 flex-grow-1 mytab">
+        <div class="container h-100">
+            <p class="fw-bold d-flex justify-content-center mt-5 fs-4 mb-5">
+                ACTIVITY
+            </p>
+            <ul class="nav nav-pills nav-fill mb-3 w-100" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link <?= mysqli_num_rows($get_upcoming_booking) > 0 ? 'active' : '' ?>" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Upcoming</button>
+                </li>
+
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link <?= mysqli_num_rows($get_completed_booking) > 0 ? 'active' : '' ?>" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Complete</button>
+                </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+
+                <?php if (mysqli_num_rows($get_upcoming_booking) > 0) : ?>
+                    <div class="col-md-6 tab-pane fade show rounded-3 border-1" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" id="upcoming">
+
+                        <?php while ($upBook = mysqli_fetch_array($get_upcoming_booking)) : ?>
+                            <div class="mt-3 p-3 ">
+                                <div class="row mb-3">
+                                    <div class="col-4">
+                                        <img class="ratio ratio-1x1" src="assets/imgcomplete.jpg" alt="" width="200px" height="200px" />
+                                    </div>
+                                    <div class="row col-8">
+                                        <div class="col-6">
+                                            <div class="d-flex justify-content-between">
+                                                <p style="
+                                                    font-weight: 800;
+                                                    font-size: 16px;
+                                                ">
+                                                    <?= $upBook['paket'] ?> PACKAGE
+                                                </p>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <p>Background : <?php echo $upBook['background'] ?></p>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <p>Number Of People : <?php echo $upBook['numOfPeople'] ?></p>
+                                            </div>
+                                            <div class="d-flex justify-content-start">
+                                                <img src="assets/centangupcoming.svg" alt="" />
+                                                Reservation Success
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="d-flex justify-content-end">
+                                                <p style="
+                                                    font-weight: 800;
+                                                    font-size: 16px;
+                                                ">
+                                                    DATE
+                                                </p>
+                                            </div>
+                                            <div class="d-flex justify-content-end">
+                                                <p><?php echo $upBook['tanggal_booking']; ?></p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-end pt-3 border-top">
+                                    <form action="complete_booking.php" method="POST">
+                                        <input type="hidden" name="id_confirm" value="<?= $upBook['id_confirm'] ?>">
+                                        <button type="submit" class="btn btn-warning active w-30 rounded-5 mb-3 mt-3 border-0" onclick="window.location.href='reservation.html';" style="
+                                                background-color: #c37b52;
+                                                border: none;
+                                                color: white;
+                                            ">
+                                            Complete
+                                        </button>
+                                    </form>
+                                </div>
                             </div>
-                            <div class="row col-8">
-                                <div class="col-6">
-                                <div class="d-flex justify-content-between">
-                                    <p
-                                        style="
-                                            font-weight: 800;
-                                            font-size: 16px;
-                                        ">
-                                        <?php echo $paketValue ?? "No Package"; ?> PACKAGE
-                                    </p>
-                                </div>
-                                <div class="d-flex justify-content-between">
-                                    <p>Background : <?php echo $backgroundValue ?? "No Background"; ?></p>
-                                </div>
-                                <div class="d-flex justify-content-between">
-                                    <p>Number Of People : <?php echo $numOfPeople ?? "No Number of People"; ?></p>
-                                </div>
-                                <div class="d-flex justify-content-start">
-                                    <img
-                                        src="assets/centangupcoming.svg"
-                                        alt="" />
-                                        Reservation Success
-                                </div>
-                                </div>
-                                <div class="col-6">
-                                <div class="d-flex justify-content-end">
-                                    <p
-                                        style="
-                                            font-weight: 800;
-                                            font-size: 16px;
-                                        ">
-                                        DATE
-                                    </p>
-                                </div>
-                                <div class="d-flex justify-content-end">
-                                    <p><?php echo $_SESSION['tanggal_booking']; ?></p>
-                                </div>
-                                </div>
-                               
-                            </div>
-                        </div>
-                        <div class="d-flex justify-content-end pt-3 border-top">
-                            <button
-                                type="submit"
-                                class="btn btn-warning active w-30 rounded-5 mb-3 mt-3 border-0"
-                                onclick="window.location.href='reservation.html';"
-                                style="
-                                    background-color: #c37b52;
-                                    border: none;
-                                    color: white;
-                                ">
-                                Complete
-                            </button>
-                        </div>
+                        <?php endwhile; ?>
+
                     </div>
-                    <div class="col-md-12 position-relative" id="complete">
-                        <img class="py-5" src="assets/vectoractivity.svg"
-                        alt="">
+                <?php else : ?>
+                    <div class="col-md-12 tab-pane fade show <?= mysqli_num_rows($get_upcoming_booking) > 0 ? 'active' : '' ?> rounded-3 border-1" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" id="upcoming">
+                        <img class="py-5 w-100" src="assets/vectoractivity.svg" alt="">
                         <p style="font-weight: 500; font-size: 16px">
                             Sorry, you don't have any completed activities yet
                         </p>
                         <form action="reservation.php" method="post">
-                        <button
-                            type="submit"
-                            formaction="reservation.php"
-                            class="btn btn-warning active w-30 rounded-5 mb-5 mt-3 border-0"
-                            style="
-                                background-color: #c37b52;
-                                border: none;
-                                color: white;
-                            ">
-                            Reservation Now
-                        </button>
+                            <button type="submit" formaction="reservation.php" class="btn btn-warning active w-30 rounded-5 mb-5 mt-3 border-0" style="
+                                    background-color: #c37b52;
+                                    border: none;
+                                    color: white;
+                                ">
+                                Reservation Now
+                            </button>
+                        </form>
                     </div>
+                <?php endif; ?>
+
+                <?php if (mysqli_num_rows($get_completed_booking) > 0) : ?>
+                    <div class="col-md-6 tab-pane fade show <?= mysqli_num_rows($get_completed_booking) > 0 ? 'active' : '' ?> rounded-3 border-1" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                        <?php while ($upBook = mysqli_fetch_array($get_completed_booking)) : ?>
+                            <div class="mt-3 p-3 rounded-3" style="border: 1px solid #c37b52;">
+                                <div class="row mb-3">
+                                    <div class="col-4">
+                                        <img class="ratio ratio-1x1" src="assets/imgcomplete.jpg" alt="" width="200px" height="200px" />
+                                    </div>
+                                    <div class="row col-8">
+                                        <div class="col-7">
+                                            <div class="d-flex justify-content-between">
+                                                <p style="
+                                                    font-weight: 800;
+                                                    font-size: 16px;
+                                                ">
+                                                    <?= $upBook['paket'] ?> PACKAGE
+                                                </p>
+                                            </div>
+                                            <div class="d-flex justify-content-between" style="font-weight: 400">
+                                                <p>Background : <?php echo $upBook['background'] ?></p>
+                                            </div>
+                                            <div class="d-flex justify-content-between" style="font-weight: 400">
+                                                <p>Number Of People : <?php echo $upBook['numOfPeople'] ?></p>
+                                            </div>
+                                            <div class="d-flex justify-content-start" style="font-weight: 400">
+                                                <img src="assets/centangupcoming.svg" alt="" />
+                                                Reservation Success
+                                            </div>
+                                        </div>
+                                        <div class="col-5">
+                                            <div class="d-flex justify-content-end">
+                                                <p style="
+                                                    font-weight: 800;
+                                                    font-size: 16px;
+                                                ">
+                                                    DATE
+                                                </p>
+                                            </div>
+                                            <div class="d-flex justify-content-end" style="font-weight: 400">
+                                                <p><?php echo $upBook['tanggal_booking']; ?></p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-end py-3 mb-3 mt-3 border-top">
+
+                                </div>
+                            </div>
+                        <?php endwhile; ?>
+                    </div>
+                <?php else : ?>
+                    <div class="col-md-12 tab-pane fade show rounded-3 border-1" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" id="upcoming">
+                        <img class="py-5 w-100" src="assets/vectoractivity.svg" alt="">
+                        <p style="font-weight: 500; font-size: 16px">
+                            Sorry, you don't have any completed activities yet
+                        </p>
+                        <form action="reservation.php" method="post">
+                            <button type="submit" formaction="reservation.php" class="btn btn-warning active w-30 rounded-5 mb-5 mt-3 border-0" style="
+                                    background-color: #c37b52;
+                                    border: none;
+                                    color: white;
+                                ">
+                                Reservation Now
+                            </button>
+                        </form>
+                    </div>
+                <?php endif; ?>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 border-top border-1 border-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 d-flex my-auto">
+                    <p class="m-0">2023 © All Right Reserved</p>
+                </div>
+                <div class="col-6 d-flex justify-content-end gap-3">
+                    <img src="assets/Group 68.svg" alt="" />
+                    <img src="assets/Group 69.svg" alt="" />
+                    <img src="assets/Group 70.svg" alt="" />
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="py-5 border-top border-1 border-dark">
-            <div class="container">
-                <div class="row">
-                    <div class="col-6 d-flex my-auto">
-                        <p class="m-0">2023 © All Right Reserved</p>
-                    </div>
-                    <div class="col-6 d-flex justify-content-end gap-3">
-                        <img src="assets/Group 68.svg" alt="" />
-                        <img src="assets/Group 69.svg" alt="" />
-                        <img src="assets/Group 70.svg" alt="" />
-                    </div>
-                </div>
-            </div>
-        </section>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js " integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 
-        <script
-            src="https://code.jquery.com/jquery-3.2.1.slim.min.js "
-            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN "
-            crossorigin="anonymous "></script>
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-            crossorigin="anonymous"></script>
-        <script src="main.js"></script>
-        <script src="tes.js"></script>
-    </body>
+    <script>
+        function showUpcoming() {
+            document.getElementById('upcoming').style.display = 'block';
+            document.getElementById('complete').style.display = 'none';
+            document.getElementById('btnupc').classList.add('activity-active');
+            document.getElementById('btncmple').classList.remove('activity-active');
+        }
+
+        function showComplete() {
+            document.getElementById('upcoming').style.display = 'none';
+            document.getElementById('complete').style.display = 'block';
+            document.getElementById('btnupc').classList.remove('activity-active');
+            document.getElementById('btncmple').classList.add('activity-active');
+        }
+    </script>
+    <script src="main.js"></script>
+    <script src="tes.js"></script>
+
+
+</body>
+
 </html>

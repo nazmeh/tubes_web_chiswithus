@@ -188,3 +188,22 @@ input[name='radioReservation']  {
 {
 	color:#e9ecef;
 }  
+
+.mytab .nav .nav-link {
+    color: #5F6C70;
+    /* transition: 0.5s; */
+    border: none;
+    background-color: #fff;
+    font-weight: 600;
+    font-size: 1.25rem;
+    padding-bottom: 6px;
+}
+
+.mytab .nav .active {
+    color: #C37B52;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    border-bottom: 2px #C37B52 solid;
+    border-radius: 0;
+}
