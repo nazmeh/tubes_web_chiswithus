@@ -99,7 +99,7 @@ include "../koneksi.php";
                         ?>
                         <tr>
                             <td><?php echo $data['id_payment']; ?></td>
-                            <td><a href="upload/<?php echo $data['nama_file']; ?>"><?php echo $data['nama_file']; ?></a></td>
+                            <td><a href="path_ke_folder_upload/<?php echo $data['nama_file']; ?>"><?php echo $data['nama_file']; ?></a></td>
                             <td><?php echo $data['ukuran_file']; ?></td>
                             <td><?php echo $data['tanggal_upload']; ?></td>
                             <td id="status-<?php echo $data['id_payment']; ?>"><?php echo $data['status']; ?></td>

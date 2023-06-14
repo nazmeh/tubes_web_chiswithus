@@ -64,10 +64,10 @@ include "../koneksi.php";
                 <div class="container-fluid">
                     <div class="row align-items-center">
                         <div class="col-md-12">
-                            <h4 class="page-title mb-4 mt-4" style="">Daftar konfirmasi Booking Pelanggan</h4>
+                            <h4 class="page-title mb-4 mt-4" style="">Daftar Feedback Pelanggan</h4>
                             <ol class="breadcrumb m-10 mb-5">
                                 <li class="breadcrumb-item"><a href="dashboard.php" style= "color:brown">Admin</a></li>
-                                <li class="breadcrumb-item active">Tabel Konfirmasi Booking</li>
+                                <li class="breadcrumb-item active">Tabel Feedback</li>
                             </ol>
                         </div>
                     </div>
