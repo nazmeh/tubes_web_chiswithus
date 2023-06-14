@@ -46,7 +46,6 @@ include "../koneksi.php";
                 <li><a class="#" href="tabel_pesanan.php">Tabel Pesanan</a></li>
                 <li><a class="#" href="#">Tabel Pembayaran</a></li>
                 <li><a class="#" href="tabel_pelanggan.php">Tabel Pelanggan</a></li>
-                <li><a class="#" href="tabel_feedback.php">Tabel Feedback</a></li>
                 
                 <?php if (!isset($_SESSION['user_is_logged_in']) || $_SESSION['user_is_logged_in'] !== true) { ?>
                     <li><a class="#" href="login_admin.php">Logout</a></li>
@@ -99,7 +98,16 @@ include "../koneksi.php";
                         ?>
                         <tr>
                             <td><?php echo $data['id_payment']; ?></td>
-                            <td><a href="path_ke_folder_upload/<?php echo $data['nama_file']; ?>"><?php echo $data['nama_file']; ?></a></td>
+                            <td>
+                                <?php
+                                $file_path = '../upload/' . $data['nama_file'];
+                                if (file_exists($file_path)) {
+                                    echo '<a href="' . $file_path . '" target="_blank">' . $data['nama_file'] . '</a>';
+                                } else {
+                                    echo 'File tidak ditemukan';
+                                }
+                                ?>
+                            </td>
                             <td><?php echo $data['ukuran_file']; ?></td>
                             <td><?php echo $data['tanggal_upload']; ?></td>
                             <td id="status-<?php echo $data['id_payment']; ?>"><?php echo $data['status']; ?></td>
