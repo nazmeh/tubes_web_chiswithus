@@ -19,6 +19,7 @@
                 <li><a class="#" href="tabel_pesanan.php">Tabel Pesanan</a></li>
                 <li><a class="#" href="tabel_payment.php">Tabel payment</a></li>
                 <li><a class="#" href="tabel_pelanggan.php">Tabel Pelanggan</a></li>
+                <li><a class="#" href="tabel_feedback.php">Tabel Feedback</a></li>
                 
                 <?php if (!isset($_SESSION['user_is_logged_in']) || $_SESSION['user_is_logged_in'] !== true) { ?>
                     <li><a class="#" href="login_admin.php">Logout</a></li>

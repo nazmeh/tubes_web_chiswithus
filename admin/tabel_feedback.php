@@ -44,9 +44,9 @@ include "../koneksi.php";
             <ul>
                 <li><a class="#" href="dashboard.php">Dashboard</a></li>
                 <li><a class="#" href="tabel_pesanan.php">Tabel Pesanan</a></li>
-                <li><a class="#" href="#">Tabel Pembayaran</a></li>
+                <li><a class="#" href="tabel_payment.php">Tabel Pembayaran</a></li>
                 <li><a class="#" href="tabel_pelanggan.php">Tabel Pelanggan</a></li>
-                <li><a class="#" href="tabel_feedback.php">Tabel Feedback</a></li>
+                <li><a class="#" href="#">Tabel Feedback</a></li>
                 
                 <?php if (!isset($_SESSION['user_is_logged_in']) || $_SESSION['user_is_logged_in'] !== true) { ?>
                     <li><a class="#" href="login_admin.php">Logout</a></li>
@@ -64,10 +64,10 @@ include "../koneksi.php";
                 <div class="container-fluid">
                     <div class="row align-items-center">
                         <div class="col-md-12">
-                            <h4 class="page-title mb-4 mt-4" style="">Daftar Pembayaran Pelanggan</h4>
+                            <h4 class="page-title mb-4 mt-4" style="">Daftar konfirmasi Booking Pelanggan</h4>
                             <ol class="breadcrumb m-10 mb-5">
                                 <li class="breadcrumb-item"><a href="dashboard.php" style= "color:brown">Admin</a></li>
-                                <li class="breadcrumb-item active">Tabel Pembayaran</li>
+                                <li class="breadcrumb-item active">Tabel Konfirmasi Booking</li>
                             </ol>
                         </div>
                     </div>
@@ -77,42 +77,34 @@ include "../koneksi.php";
             <table id="example" class="display" style="width:100%">
                 <thead>
                     <tr>
-                        <th>id_payment</th>
-                        <th>bukti bayar</th>
-                        <th>ukuran file</th>
-                        <th>tanggal upload</th>
-                        <th>status</th>
+                        <th>kd_review</th>
+                        <th>usernama</th>
+                        <th>rating</th>
+                        <th>review</th>
                         <th>aksi</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php 
-                    if(isset($_GET['payment'])){
-                        $konfirm = $_GET['payment'];
-                        $sql = "SELECT * FROM payment WHERE id_payment LIKE '%".$payment."%'";
+                    if(isset($_GET['add_review'])){
+                        $review = $_GET['add_review'];
+                        $sql = "SELECT * FROM review WHERE kd_review LIKE '%".$review."%'";
                         $query = mysqli_query($conn,$sql);
                     } else {
-                        $sql = "SELECT * FROM payment";
+                        $sql = "SELECT * FROM review";
                         $query = mysqli_query($conn, $sql);
                     }
                     while($data=mysqli_fetch_array($query)){
                         ?>
                         <tr>
-                            <td><?php echo $data['id_payment']; ?></td>
-                            <td><a href="upload/<?php echo $data['nama_file']; ?>"><?php echo $data['nama_file']; ?></a></td>
-                            <td><?php echo $data['ukuran_file']; ?></td>
-                            <td><?php echo $data['tanggal_upload']; ?></td>
-                            <td id="status-<?php echo $data['id_payment']; ?>"><?php echo $data['status']; ?></td>
+                            <td><?php echo $data['kd_review']; ?></td>
+                            <td><?php echo $data['user_name']; ?></td>
+                            <td><?php echo $data['user_rating']; ?></td>
+                            <td><?php echo $data['user_review']; ?></td>
+                           
                             <td>
                                 <form action="#" method="post">
-                                    <select name="languages" id="lang" onchange="getValue(this, <?php echo $data['id_payment']; ?>)">
-                                <option selected disabled hidden value="">
-                                    &#9998;
-                                </option>
-                                <option value="Valid">Valid</option>
-                                <option value="Invalid">Invalid</option>
-                                    </select>
-                                    <a href="hapus_pesanan.php?id_confirm=<?php echo $data['id_payment']; ?>" data-tip="delete"> <img src="../assets/trash-solid.svg" alt="" width= 16px; >Hapus</a>
+                                    <a href="hapus_feedback.php?kd_review=<?php echo $data['kd_review']; ?>" data-tip="delete"> <img src="../assets/trash-solid.svg" alt="" width= 16px; >Hapus</a>
                                 </form>
 
                             </td>
@@ -135,8 +127,8 @@ include "../koneksi.php";
             $('#example').DataTable();
         });
     </script>
-    <script>
-    function getValue(select, id_payment) {
+    <!-- <script>
+    function getValue(select, id_confirm) {
         // Mengambil nilai yang dipilih
         var selectedOption = select.value;
 
@@ -144,17 +136,17 @@ include "../koneksi.php";
         $.ajax({
             type: "POST",
             url: "update_status.php",
-            data: { id: id_payment, status: selectedOption },
+            data: { id: id_confirm, status: selectedOption },
             success: function (response) {
                 // Menampilkan pesan atau melakukan tindakan setelah berhasil memperbarui status
                 alert("Status berhasil diperbarui");
 
                 // Mengubah nilai pada elemen <td> dengan id_confirm yang sesuai
-                var statusCell = document.getElementById("status-" + id_payment);
+                var statusCell = document.getElementById("status-" + id_confirm);
                 statusCell.innerHTML = selectedOption;
             }
         });
     }
-</script>
+</script> -->
 </body>
 </html>
