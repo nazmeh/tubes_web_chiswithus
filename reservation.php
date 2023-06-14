@@ -113,7 +113,7 @@ include "koneksi.php";
                     style="text-align: center; font-size: 16px">
                     CHOOSE YOUR TIME
                 </p>
-                <div class="row py-5 pt-0 flex-nowrap overflow-auto justify-content-center">
+                <div class="row py-5 pt-0 flex-nowrap justify-content-center">
                     <div class="col-2 px-3">
                         <div
                             class="px-3 py-4 rounded-3 position-relative">
