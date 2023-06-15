@@ -44,7 +44,7 @@ include "../koneksi.php";
             <ul>
                 <li><a class="#" href="dashboard.php">Dashboard</a></li>
                 <li><a class="#" href="#">Tabel Pesanan</a></li>
-                <li><a class="#" href="tabel_payment.php">Tabel Pembayaran</a></li>
+                <li><a class="#" href="tabel_payment.php">Tabel Payment</a></li>
                 <li><a class="#" href="tabel_pelanggan.php">Tabel Pelanggan</a></li>
                 <li><a class="#" href="tabel_feedback.php">Tabel Feedback</a></li>
                 
