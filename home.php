@@ -383,7 +383,7 @@ include "koneksi.php";
             <div class="container">
                 <div class="row">
                     <div class="col-6 d-flex my-auto">
-                        <p class="m-0">2023 © All Right Reserved</p>
+                        <p class="m-0">2024 © All Right Reserved</p>
                     </div>
                     <div class="col-6 d-flex justify-content-end gap-3">
                         <img src="assets/Group 68.svg" alt="" />
