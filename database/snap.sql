@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `cws`
+-- Database: `snap`
 --
 
 -- --------------------------------------------------------
@@ -43,10 +43,9 @@ CREATE TABLE `konfirmasi` (
 --
 
 INSERT INTO `konfirmasi` (`id_confirm`, `name`, `email`, `phone`, `instagram`, `numOfPeople`, `background`, `paket`) VALUES
-(1, 'afiqah fatina zahra', 'afiqah23@gmail.com', '082834798213', 'fiqa23__', 2, 'Brown', 'Weekdays'),
-(2, 'nabila ummul husna', 'nabila24@gmail.com', '081991916331', 'beee24__', 2, 'Blue', 'Weekdays'),
-(3, 'nazmi wardiani', 'nazmi@gmail.com', '081234567890', 'nazmiwardiani', 2, 'Brown', 'Weekend'),
-(4, 'fairuz hanifah', 'fairuzhnf@gmail.com', '081987654321', 'fairuzzhanifah', 1, 'White', 'Promo'),
+(1, 'rahel tiona gracella simanjuntak', 'rahel@gmail.com', '081775284771', 'gracella._r', 2, 'Brown', 'Weekdays'),
+(2, 'aditya rahmatdiyansyah', 'adit@gmail.com', '08233966056', 'randyaadt', 2, 'Blue', 'Weekdays'),
+(3, 'risfanda audiarrahman c', 'risfanda@gmail.com', '085338966734', 'ifanrisfanda_', 2, 'Brown', 'Weekend'),
 (9, '', '', '', '', 0, '', ''),
 (10, '', '', '', '', 0, '', ''),
 (11, '', '', '', '', 0, '', ''),
@@ -55,7 +54,7 @@ INSERT INTO `konfirmasi` (`id_confirm`, `name`, `email`, `phone`, `instagram`, `
 (14, '', '', '', '', 0, '', ''),
 (15, '', '', '', '', 0, '', ''),
 (16, '', '', '', '', 0, '', ''),
-(17, 'nabila ummul husna', 'afiqachu23@gmail.com', '081991916331', 'beee24__', 2, 'Blue', 'Weekdays'),
+(17, 'rahel tiona gracella simanjuntak', 'rahel@gmail.com', '081775284771', 'gracella._r', 2, 'Blue', 'Weekdays'),
 (18, '', '', '', '', 0, '', ''),
 (19, 'nabila ummul husna', 'afiqachu23@gmail.com', '081991916331', 'beee24__', 2, 'Blue', 'Weekdays'),
 (20, 'nabila ummul husna', 'afiqachu23@gmail.com', '081991916331', 'beee24__', 2, 'Blue', 'Weekdays'),

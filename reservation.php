@@ -26,7 +26,7 @@ include "koneksi.php";
         <nav class="navbar navbar-expand-lg fixed-top bg-dark">
             <div class="container">
                 <a class="navbar-brand fs-4 text-white" href="#"
-                    ><img src="assets/logo.svg" alt=""
+                    ><img src="" alt=""
                 /></a>
                 <button
                     class="navbar-toggler"
@@ -577,7 +577,7 @@ include "koneksi.php";
             <div class="container">
                 <div class="row">
                     <div class="col-6 d-flex my-auto">
-                        <p class="m-0">2023 © All Right Reserved</p>
+                        <p class="m-0">2024 © All Right Reserved</p>
                     </div>
                     <div class="col-6 d-flex justify-content-end gap-3">
                         <img src="assets/Group 68.svg" alt="" />

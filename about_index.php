@@ -20,7 +20,7 @@ include "koneksi.php";
     <nav class="navbar navbar-expand-lg fixed-top bg-dark">
             <div class="container">
                 <a class="navbar-brand fs-4 text-white" href="#"
-                    ><img src="assets/logo.svg" alt=""
+                    ><img src="" alt=""
                 /></a>
                 <button
                     class="navbar-toggler"
@@ -98,10 +98,10 @@ include "koneksi.php";
                             <p><img src="assets/lineabout.svg" alt="" /></p>
                         </div>
                         <p style="font-size: 16px">
-                            Chis with us is the first photo studio that is
+                            Snap is the first photo studio that is
                             present in Lombok that applies the concept of a self
                             photo studio. In addition, you will also get various
-                            conveniences for taking pictures at Chis with us,
+                            conveniences for taking pictures at Snap,
                             you can make reservations anytime and anywhere, can
                             make payments using various methods and can
                             reschedule easily and quickly.
@@ -131,7 +131,7 @@ include "koneksi.php";
                                 Whatsapp
                             </p>
                             <p class="m-0" style="font-size: 16px">
-                                +628990231974
+                                +6281775284771
                             </p>
                         </div>
                     </div>
@@ -155,7 +155,7 @@ include "koneksi.php";
                                 Email
                             </p>
                             <p class="m-0" style="font-size: 16px">
-                                chiswithus@gmail.com
+                                snapstudio@gmail.com
                             </p>
                         </div>
                     </div>
@@ -167,7 +167,7 @@ include "koneksi.php";
                                 Facebook
                             </p>
                             <p class="m-0" style="font-size: 16px">
-                                chis with us
+                                snap studio
                             </p>
                         </div>
                     </div>
@@ -179,7 +179,7 @@ include "koneksi.php";
                                 Instagram
                             </p>
                             <p class="m-0" style="font-size: 16px">
-                                @chiswithus30
+                                @snapstudio
                             </p>
                         </div>
                     </div>
@@ -191,7 +191,7 @@ include "koneksi.php";
                                 Tiktok
                             </p>
                             <p class="m-0" style="font-size: 16px">
-                                @chiswithus
+                                @snapstudio
                             </p>
                         </div>
                     </div>
@@ -206,27 +206,26 @@ include "koneksi.php";
                 </h1>
                 <div class="row">
                     <div class="col-12">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3945.117890031836!2d116.10179627376034!3d-8.584662587131387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dcdc12f7afd4a59%3A0x1af4d21fb68c196b!2sInside%20Studio%20(Self%20Photo%20Studio%20Lombok)!5e0!3m2!1sen!2sid!4v1684312806565!5m2!1sen!2sid"
-                            height="640px"
-                            width="1320px"
-                            style="border: 0"
-                            allowfullscreen=""
-                            loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"
-                            >lorem</iframe
-                        >
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3945.568748994352!2d116.0556349!3d-8.5034358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dcdc21be817f579%3A0x2e3a6d88898a0830!2sJl.%20Teratai%20No.24%2C%20Batu%20Layar%2C%20Kec.%20Batu%20Layar%2C%20Kabupaten%20Lombok%20Barat%2C%20Nusa%20Tenggara%20Bar.%2083355!5e0!3m2!1sen!2sid!4v1684312806565!5m2!1sen!2sid"
+                        height="640px"
+                        width="1320px"
+                        style="border: 0"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                    ></iframe>
                         <div class="py-3 d-flex" style="font-size: 16px">
-                            <img src="assets/location.svg" alt="" />
-                            <p class="ms-2 align-items-center my-auto">
-                                Jl. Angsoka II No 2, Mataram Bar, Kec.
-                                Selaparang, Kota Mataram, Nusa Tenggara Barat.
-                            </p>
-                        </div>
+                        <img src="assets/location.svg" alt="" />
+                        <p class="ms-2 align-items-center my-auto">
+                        Jl. Teratai No.24, BTN Greenvalley, Senggigi, Kec. 
+                        Batu Layar, Kab. Lombok Barat, Nusa Tenggara Barat.
+                        </p>
+                    </div>
                         <div class="py-3 d-flex" style="font-size: 16px">
                             <img src="assets/time.svg" alt="" />
                             <p class="ms-2 align-items-center my-auto">
-                                Open 11.00 AM
+                                Open 10.00 AM
                             </p>
                         </div>
                     </div>
@@ -238,7 +237,7 @@ include "koneksi.php";
             <div class="container">
                 <div class="row">
                     <div class="col-6 d-flex my-auto">
-                        <p class="m-0">2023 © All Right Reserved</p>
+                        <p class="m-0">2024 © All Right Reserved</p>
                     </div>
                     <div class="col-6 d-flex justify-content-end gap-3">
                         <img src="assets/Group 68.svg" alt="" />

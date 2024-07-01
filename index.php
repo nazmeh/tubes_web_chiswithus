@@ -26,7 +26,7 @@ include "koneksi.php";
         <nav class="navbar navbar-expand-lg fixed-top bg-dark">
             <div class="container">
                 <a class="navbar-brand fs-4 text-white" href="#"
-                    ><img src="assets/logo.svg" alt=""
+                    ><img src="" alt=""
                 /></a>
                 <button
                     class="navbar-toggler"
@@ -86,7 +86,7 @@ include "koneksi.php";
         <section
             id="Home"
             style="
-                background-image: url(./assets/studiohome.jpg);
+                background-image: url(studio.jpeg);
                 height: 100vh;
                 background-size: cover;
                 background-repeat: no-repeat;
@@ -94,14 +94,15 @@ include "koneksi.php";
             <div
                 class="container h-100 d-flex align-items-center justify-content-between">
                 <div>
-                    <h1 class="text-white fw-bold" style="font-size: 72px">
+                    <h1 class="text-white fw-bold" style="font-size: 74px">
+                        Hey, There <br />
                         Do You Want <br />
                         To Take a Photo ?
                     </h1>
-                    <p class="text-white" style="font-size: 12px">
+                    <p class="text-white" style="font-size: 14px">
                         Buy your ticket without having come to the studio!
                         <br />
-                        Enjoy the photos in our studio!
+                        Take In Snap And Post In Your Snap! 
                     </p>
                 </div>
                 <p class="text-white" style="transform: rotate(-90deg)">
@@ -110,7 +111,7 @@ include "koneksi.php";
                         alt=""
                         style="transform: rotate(90deg)"
                         class="me-3" />
-                    scroll down to read more
+                    scroll down to know us more!
                 </p>
             </div>
         </section>
@@ -121,7 +122,7 @@ include "koneksi.php";
             <div class="container py-5">
                 <div class="row pt-80">
                     <div class="col-md-6">
-                        <p class="fw-medium" style="font-size: 16px">01</p>
+                        <p class="fw-medium" style="font-size: 18px">01</p>
                         <h1 class="fw-semibold" style="font-size: 56px">
                             Gallery
                         </h1>
@@ -147,67 +148,7 @@ include "koneksi.php";
                         <div class="card card-hover">
                             <img
                                 class="card-img-top"
-                                src="assets/family.jpg"
-                                alt="Card image cap" />
-                            <div
-                                class="obj-overlay d-flex justify-content-center">
-                                family
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 child">
-                        <div class="card">
-                            <img
-                                class="card-img-top"
-                                src="assets/friends.jpg"
-                                alt="Banana Boat" />
-                            <div
-                                class="obj-overlay d-flex justify-content-center">
-                                Friend
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 child">
-                        <div class="card">
-                            <img
-                                class="card-img-top"
-                                src="assets/couple.jpg"
-                                alt="Card image cap" />
-                            <div
-                                class="obj-overlay d-flex justify-content-center">
-                                Couple
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 child">
-                        <div class="card">
-                            <img
-                                class="card-img-top"
-                                src="assets/selfphoto.jpg"
-                                alt="Card image cap" />
-                            <div
-                                class="obj-overlay d-flex justify-content-center">
-                                SelfPhoto
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 child">
-                        <div class="card">
-                            <img
-                                class="card-img-top"
-                                src="assets/graduation.jpg"
-                                alt="Card image cap" />
-                            <div
-                                class="obj-overlay d-flex justify-content-center">
-                                Graduation
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 child">
-                        <div class="card card-hover">
-                            <img
-                                class="card-img-top"
-                                src="assets/family.jpg"
+                                src="family.jpg"
                                 alt="Card image cap" />
                             <div
                                 class="obj-overlay d-flex justify-content-center">
@@ -219,7 +160,67 @@ include "koneksi.php";
                         <div class="card">
                             <img
                                 class="card-img-top"
-                                src="assets/friends.jpg"
+                                src="friend.jpg"
+                                alt="Banana Boat" />
+                            <div
+                                class="obj-overlay d-flex justify-content-center">
+                                Friend
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 child">
+                        <div class="card">
+                            <img
+                                class="card-img-top"
+                                src="couple.jpg"
+                                alt="Card image cap" />
+                            <div
+                                class="obj-overlay d-flex justify-content-center">
+                                Couple
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 child">
+                        <div class="card">
+                            <img
+                                class="card-img-top"
+                                src="self.jpg"
+                                alt="Card image cap" />
+                            <div
+                                class="obj-overlay d-flex justify-content-center">
+                                SelfPhoto
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 child">
+                        <div class="card">
+                            <img
+                                class="card-img-top"
+                                src="graduation.jpg"
+                                alt="Card image cap" />
+                            <div
+                                class="obj-overlay d-flex justify-content-center">
+                                Graduation
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 child">
+                        <div class="card card-hover">
+                            <img
+                                class="card-img-top"
+                                src="family.jpg"
+                                alt="Card image cap" />
+                            <div
+                                class="obj-overlay d-flex justify-content-center">
+                                Family
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 child">
+                        <div class="card">
+                            <img
+                                class="card-img-top"
+                                src="friend.jpg"
                                 alt="Banana Boat" />
                             <div
                                 class="obj-overlay d-flex justify-content-center">
@@ -235,7 +236,7 @@ include "koneksi.php";
             <div class="container py-5">
                 <div class="row justify-content-end">
                     <div class="col-6">
-                        <p class="fw-medium" style="font-size: 16px">02</p>
+                        <p class="fw-medium" style="font-size: 18px">02</p>
                         <h1 class="fw-semibold" style="font-size: 56px">
                             Pricelist
                         </h1>
@@ -255,7 +256,7 @@ include "koneksi.php";
                                 style="background-color: #ffab2f; color: white">
                                 Weekdays
                             </button>
-                            <h1 class="">80K</h1>
+                            <h1 class="">75k</h1>
                             <p>
                                 Weekdays is a package that can be used from
                                 Monday-Friday
@@ -289,7 +290,7 @@ include "koneksi.php";
                                 style="background-color: #214b73; color: white">
                                 Promo
                             </button>
-                            <h1 class="">60K</h1>
+                            <h1 class="">65K</h1>
                             <p>
                                 Promo is a package that can be used for National
                                 Holiday
@@ -350,7 +351,7 @@ include "koneksi.php";
                     </div>
                 </div>
                 <p class="pt-4">
-                    *Addition 20K/Person in 1 Session
+                    *Addition 15K/Person in 1 Session
                 </p>
             </div>
         </section>
@@ -360,7 +361,7 @@ include "koneksi.php";
             <div class="container">
                 <div class="row">
                     <div class="col-6 d-flex my-auto">
-                        <p class="m-0">2023 © All Right Reserved</p>
+                        <p class="m-0">2024 © All Right Reserved</p>
                     </div>
                     <div class="col-6 d-flex justify-content-end gap-3">
                         <img src="assets/Group 68.svg" alt="" />

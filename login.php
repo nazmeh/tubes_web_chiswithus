@@ -43,7 +43,7 @@ include "koneksi.php";
                 <div class="row px-0 mx-0">
                     <div class="col-md-6 px-0 d-none d-md-block">
                         <img
-                            src="assets/login.jpg"
+                            src="login.png"
                             alt=""
                             style="
                                 width: 100%;

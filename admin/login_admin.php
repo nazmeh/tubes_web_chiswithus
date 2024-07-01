@@ -10,7 +10,7 @@ if (isset($_POST['username']) && isset($_POST['password'])){
         header('Location: dashboard.php');
         exit;
     }else {
-       $errorMessage = "Maaf, username atau password tidak sesuai!!!" ;
+       $errorMessage = "Soryy, your password and username is incorrect!!!" ;
        echo "<script>
                alert('$errorMessage');
                window.location = 'login_admin.php';
