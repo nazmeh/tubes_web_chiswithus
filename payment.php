@@ -112,7 +112,7 @@ $total = $subtotal + 1000;
                         <div class="g-col-2 rounded-3 d justify-content-center text-center">
                             <div class="border rounded-2 text-center" style="background-color: #fec84b">
                                 <p class="mb-2 mt-2">
-                                    Pay Before 01th June 2023, 11.00 WITA
+                                    Pay Before 16th June 2024, 12.00 WITA
                                 </p>
                             </div>
                             <div class="p-5">

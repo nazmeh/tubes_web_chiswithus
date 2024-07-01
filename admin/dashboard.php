@@ -59,7 +59,7 @@
                 </div>
             </nav>
         <section>
-            <h1 style="padding:none">Welcome to Chis With Us!</h1>
+            <h1 style="padding:none">Welcome Snap!</h1>
         </section>
 </body>
 </html>

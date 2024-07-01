@@ -48,7 +48,7 @@ if (isset($_SESSION['id_confirm'])) {
 <body>
     <nav class="navbar navbar-expand-lg fixed-top bg-dark">
         <div class="container">
-            <a class="navbar-brand fs-4 text-white" href="#"><img src="assets/logo.svg" alt="" /></a>
+            <a class="navbar-brand fs-4 text-white" href="#"><img src="" alt="" /></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -260,7 +260,7 @@ if (isset($_SESSION['id_confirm'])) {
         <div class="container">
             <div class="row">
                 <div class="col-6 d-flex my-auto">
-                    <p class="m-0">2023 © All Right Reserved</p>
+                    <p class="m-0">2024 © All Right Reserved</p>
                 </div>
                 <div class="col-6 d-flex justify-content-end gap-3">
                     <img src="assets/Group 68.svg" alt="" />
